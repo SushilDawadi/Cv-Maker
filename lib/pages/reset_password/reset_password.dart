@@ -1,4 +1,5 @@
 import 'package:cv_maker/components/button.dart';
+import 'package:cv_maker/components/my_appbar.dart';
 import 'package:cv_maker/components/text.dart';
 import 'package:cv_maker/components/text_field.dart';
 import 'package:cv_maker/pages/home/home_page.dart';
@@ -12,33 +13,15 @@ class ResetPasswordPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 20.w),
+        padding: EdgeInsets.symmetric(horizontal: 26.w, vertical: 16.h),
         child: SingleChildScrollView(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              SizedBox(
-                height: 70.h,
-              ),
-              Image.asset(
-                'lib/assets/images/cvMaker.png',
-                width: 62.w,
-                height: 62.h,
-              ),
-              SizedBox(
-                height: 30.h,
-              ),
-              Text(
-                "Reset Password",
-                style: TextStyle(fontSize: 24.sp, fontWeight: FontWeight.w600),
-              ),
-              SizedBox(
-                height: 5.h,
-              ),
-              Text(
-                "Please enter the verification code sent to the provided email",
-                style: TextStyle(fontSize: 14.sp, fontWeight: FontWeight.w400),
-              ),
+              const MyAppBar(
+                  titleText: "Reset Password",
+                  subText:
+                      "Please enter the verification code send to the provided email"),
               SizedBox(
                 height: 15.h,
               ),
@@ -56,6 +39,8 @@ class ResetPasswordPage extends StatelessWidget {
               ),
               MyButton(
                 text: "Reset Password",
+                fontSize: 20.sp,
+                width: double.infinity,
                 onPressed: () {},
               ),
               SizedBox(

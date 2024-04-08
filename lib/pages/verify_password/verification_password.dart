@@ -1,5 +1,6 @@
 import 'package:cv_maker/components/box.dart';
 import 'package:cv_maker/components/button.dart';
+import 'package:cv_maker/components/my_appbar.dart';
 import 'package:cv_maker/components/text.dart';
 import 'package:cv_maker/pages/reset_password/reset_password.dart';
 import 'package:flutter/material.dart';
@@ -12,33 +13,15 @@ class VerificationPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 20.w),
+        padding: EdgeInsets.symmetric(horizontal: 26.w, vertical: 16.h),
         child: SingleChildScrollView(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              SizedBox(
-                height: 70.h,
-              ),
-              Image.asset(
-                'lib/assets/images/cvMaker.png',
-                width: 62.w,
-                height: 62.h,
-              ),
-              SizedBox(
-                height: 30.h,
-              ),
-              Text(
-                "Verify Yourself",
-                style: TextStyle(fontSize: 24.sp, fontWeight: FontWeight.w600),
-              ),
-              SizedBox(
-                height: 5.h,
-              ),
-              Text(
-                "Please enter verification code send to provided email",
-                style: TextStyle(fontSize: 14.sp, fontWeight: FontWeight.w400),
-              ),
+              const MyAppBar(
+                  titleText: "Verify Yourself",
+                  subText:
+                      "Please enter verification code send to provided email"),
               SizedBox(
                 height: 160.h,
               ),
@@ -54,6 +37,8 @@ class VerificationPage extends StatelessWidget {
                 height: 180.h,
               ),
               MyButton(
+                  fontSize: 20.sp,
+                  width: double.infinity,
                   text: "Verify",
                   onPressed: () {
                     Navigator.push(

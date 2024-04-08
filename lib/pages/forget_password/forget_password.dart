@@ -1,4 +1,5 @@
 import 'package:cv_maker/components/button.dart';
+import 'package:cv_maker/components/my_appbar.dart';
 import 'package:cv_maker/components/text.dart';
 import 'package:cv_maker/components/text_field.dart';
 import 'package:cv_maker/pages/verify_password/verification_password.dart';
@@ -12,33 +13,14 @@ class ForgetPasswordPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 27.w),
+        padding: EdgeInsets.symmetric(horizontal: 26.w, vertical: 16),
         child: SingleChildScrollView(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              SizedBox(
-                height: 70.h,
-              ),
-              Image.asset(
-                'lib/assets/images/cvMaker.png',
-                width: 62.w,
-                height: 62.h,
-              ),
-              SizedBox(
-                height: 30.h,
-              ),
-              Text(
-                "Let's get you enrolled",
-                style: TextStyle(fontSize: 24.sp, fontWeight: FontWeight.w600),
-              ),
-              SizedBox(
-                height: 5.h,
-              ),
-              Text(
-                "Please Provide us with your email to continue",
-                style: TextStyle(fontSize: 14.sp, fontWeight: FontWeight.w400),
-              ),
+              const MyAppBar(
+                  titleText: "Forgot password",
+                  subText: "Please provide us with your email to continue"),
               SizedBox(
                 height: 30.h,
               ),
@@ -47,7 +29,9 @@ class ForgetPasswordPage extends StatelessWidget {
                 height: 30.h,
               ),
               MyButton(
+                fontSize: 20.sp,
                 text: "Continue",
+                width: double.infinity,
                 onPressed: () {
                   Navigator.push(
                     context,
@@ -58,7 +42,7 @@ class ForgetPasswordPage extends StatelessWidget {
                 },
               ),
               SizedBox(
-                height: 35.h,
+                height: 20.h,
               ),
               Center(
                 child: TextButton(
