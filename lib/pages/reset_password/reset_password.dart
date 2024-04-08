@@ -19,9 +19,11 @@ class ResetPasswordPage extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               const MyAppBar(
-                  titleText: "Reset Password",
-                  subText:
-                      "Please enter the verification code send to the provided email"),
+                titleText: "Reset Password",
+                subText:
+                    "Please enter the verification code send to the provided email",
+                showDropButton: false,
+              ),
               SizedBox(
                 height: 15.h,
               ),

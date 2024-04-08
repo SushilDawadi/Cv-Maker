@@ -7,26 +7,37 @@ class MyButtonBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: 88.h,
-      width: 430.w,
-      decoration: BoxDecoration(
-        border: Border.all(
-          color: textFieldInputColor,
-        ),
-        borderRadius: BorderRadius.circular(12.r),
-      ),
-      child: Row(
-        children: [
-          Icon(
-            Icons.home_outlined,
-            size: 35.w,
+    return Padding(
+      padding: EdgeInsets.symmetric(horizontal: 13.w, vertical: 15.h),
+      child: Container(
+        height: 88.h,
+        width: 430.w,
+        decoration: BoxDecoration(
+          border: Border.all(
+            color: textFieldInputColor,
           ),
-          Icon(
-            Icons.copy_outlined,
-            size: 35.w,
-          )
-        ],
+          borderRadius: BorderRadius.circular(12.r),
+        ),
+        child: Padding(
+          padding: EdgeInsets.symmetric(horizontal: 26.w, vertical: 15.h),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              Icon(
+                Icons.home_rounded,
+                size: 35.w,
+                color: primaryColor,
+              ),
+              SizedBox(
+                width: 68.w,
+              ),
+              Icon(
+                Icons.copy_outlined,
+                size: 35.w,
+              )
+            ],
+          ),
+        ),
       ),
     );
   }

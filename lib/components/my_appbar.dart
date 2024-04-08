@@ -6,7 +6,14 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 class MyAppBar extends StatelessWidget {
   final String titleText;
   final String subText;
-  const MyAppBar({super.key, required this.titleText, required this.subText});
+  final void Function()? onPressed;
+  final bool? showDropButton;
+  const MyAppBar(
+      {super.key,
+      required this.titleText,
+      required this.subText,
+      this.onPressed,
+      this.showDropButton});
 
   @override
   Widget build(BuildContext context) {
@@ -16,10 +23,15 @@ class MyAppBar extends StatelessWidget {
         SizedBox(
           height: 70.h,
         ),
-        Image.asset(
-          'lib/assets/images/cvMaker.png',
-          width: 62.w,
-          height: 62.h,
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Image.asset(
+              'lib/assets/images/cvMaker.png',
+              width: 62.w,
+              height: 62.h,
+            ),
+          ],
         ),
         SizedBox(
           height: 30.h,

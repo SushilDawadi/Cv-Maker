@@ -13,15 +13,17 @@ class VerificationPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 26.w, vertical: 16.h),
+        padding: EdgeInsets.symmetric(horizontal: 27.w, vertical: 16.h),
         child: SingleChildScrollView(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               const MyAppBar(
-                  titleText: "Verify Yourself",
-                  subText:
-                      "Please enter verification code send to provided email"),
+                titleText: "Verify Yourself",
+                subText:
+                    "Please enter verification code send to provided email",
+                showDropButton: false,
+              ),
               SizedBox(
                 height: 160.h,
               ),
