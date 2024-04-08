@@ -1,6 +1,6 @@
-import 'package:cv_maker/pages/components/button.dart';
-import 'package:cv_maker/pages/components/text.dart';
-import 'package:cv_maker/pages/components/text_field.dart';
+import 'package:cv_maker/components/button.dart';
+import 'package:cv_maker/components/text.dart';
+import 'package:cv_maker/components/text_field.dart';
 import 'package:cv_maker/pages/login/login_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';

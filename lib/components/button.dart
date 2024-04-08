@@ -4,16 +4,19 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class MyButton extends StatelessWidget {
   final String text;
-  const MyButton({super.key, required this.text});
+  final void Function()? onPressed;
+  const MyButton({super.key, required this.text, this.onPressed});
 
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 20.w),
+      padding: EdgeInsets.symmetric(horizontal: 15.w),
       child: SizedBox(
           width: double.infinity,
           child: TextButton(
-            onPressed: () {},
+            onPressed: () {
+              onPressed!();
+            },
             style: ButtonStyle(
               shape: MaterialStateProperty.all(
                 RoundedRectangleBorder(

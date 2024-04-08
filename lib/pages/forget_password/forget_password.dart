@@ -1,6 +1,7 @@
-import 'package:cv_maker/pages/components/button.dart';
-import 'package:cv_maker/pages/components/text.dart';
-import 'package:cv_maker/pages/components/text_field.dart';
+import 'package:cv_maker/components/button.dart';
+import 'package:cv_maker/components/text.dart';
+import 'package:cv_maker/components/text_field.dart';
+import 'package:cv_maker/pages/verify_password/verification_password.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -39,13 +40,23 @@ class ForgetPasswordPage extends StatelessWidget {
                 style: TextStyle(fontSize: 14.sp, fontWeight: FontWeight.w400),
               ),
               SizedBox(
-                height: 15.h,
+                height: 30.h,
               ),
               const MyTextField(hintText: 'Email', icon: Icons.email),
               SizedBox(
                 height: 30.h,
               ),
-              const MyButton(text: "Continue"),
+              MyButton(
+                text: "Continue",
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const VerificationPage(),
+                    ),
+                  );
+                },
+              ),
               SizedBox(
                 height: 35.h,
               ),
