@@ -44,6 +44,7 @@ class ResetPasswordPage extends StatelessWidget {
                 fontSize: 20.sp,
                 width: double.infinity,
                 onPressed: () {},
+                borderColor: false,
               ),
               SizedBox(
                 height: 20.h,

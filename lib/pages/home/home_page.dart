@@ -29,13 +29,14 @@ class HomePage extends StatelessWidget {
                       titleText: "Compelete Setup",
                       subText:
                           "Provide with additional details to complete setup",
+                      showDropButton: true,
                     ),
                     SizedBox(
                       height: 30.h,
                     ),
                     Container(
                       width: 405.w,
-                      height: 139.h,
+                      height: 150.h,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(12.r),
                         border: Border.all(
@@ -64,6 +65,7 @@ class HomePage extends StatelessWidget {
                                 padding:
                                     EdgeInsets.only(left: 27.w, bottom: 32.h),
                                 child: MyButton(
+                                    borderColor: false,
                                     onPressed: () {
                                       Navigator.push(
                                         context,
@@ -123,7 +125,7 @@ class HomePage extends StatelessWidget {
           ),
         ),
       ),
-      bottomNavigationBar: const MyButtonBar(),
+      bottomNavigationBar: const MyBottomBar(),
     );
   }
 }

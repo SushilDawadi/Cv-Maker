@@ -19,8 +19,10 @@ class ForgetPasswordPage extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               const MyAppBar(
-                  titleText: "Forgot password",
-                  subText: "Please provide us with your email to continue"),
+                titleText: "Forgot password",
+                subText: "Please provide us with your email to continue",
+                showDropButton: false,
+              ),
               SizedBox(
                 height: 30.h,
               ),
@@ -32,6 +34,7 @@ class ForgetPasswordPage extends StatelessWidget {
                 fontSize: 20.sp,
                 text: "Continue",
                 width: double.infinity,
+                borderColor: false,
                 onPressed: () {
                   Navigator.push(
                     context,

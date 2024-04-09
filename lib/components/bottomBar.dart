@@ -2,8 +2,8 @@ import 'package:cv_maker/assets/colors/color.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class MyButtonBar extends StatelessWidget {
-  const MyButtonBar({super.key});
+class MyBottomBar extends StatelessWidget {
+  const MyBottomBar({super.key});
 
   @override
   Widget build(BuildContext context) {

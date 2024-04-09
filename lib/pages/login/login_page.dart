@@ -65,6 +65,7 @@ class LoginPage extends StatelessWidget {
                   fontSize: 20.sp,
                   text: "Login",
                   width: double.infinity,
+                  borderColor: false,
                 ),
                 SizedBox(
                   height: 20.h,

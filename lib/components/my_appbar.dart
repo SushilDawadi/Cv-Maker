@@ -31,6 +31,25 @@ class MyAppBar extends StatelessWidget {
               width: 62.w,
               height: 62.h,
             ),
+            showDropButton!
+                ? Center(
+                    child: Container(
+                        height: 35.h,
+                        width: 35.w,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.all(Radius.circular(20.r)),
+                          color: downButtonBackgroundColor,
+                        ),
+                        child: IconButton(
+                          onPressed: onPressed,
+                          icon: Icon(
+                            Icons.arrow_downward,
+                            color: primaryColor,
+                            size: 20.sp,
+                          ),
+                        )),
+                  )
+                : Container(),
           ],
         ),
         SizedBox(

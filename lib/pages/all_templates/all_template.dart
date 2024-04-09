@@ -25,6 +25,7 @@ class AllTemplatePage extends StatelessWidget {
                       titleText: "Find templates",
                       subText:
                           "Find suitable templates based on your requirement.",
+                      showDropButton: true,
                       onPressed: () {
                         Navigator.push(
                             context,
@@ -64,7 +65,7 @@ class AllTemplatePage extends StatelessWidget {
           ),
         ),
       ),
-      bottomNavigationBar: const MyButtonBar(),
+      bottomNavigationBar: const MyBottomBar(),
     );
   }
 }

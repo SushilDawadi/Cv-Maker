@@ -9,13 +9,15 @@ class MyButton extends StatelessWidget {
   final double width;
   final double? height;
   final double fontSize;
+  final bool? borderColor;
   const MyButton(
       {super.key,
       required this.text,
       this.onPressed,
       required this.width,
       this.height,
-      required this.fontSize});
+      required this.fontSize,
+      this.borderColor});
 
   @override
   Widget build(BuildContext context) {
@@ -28,23 +30,41 @@ class MyButton extends StatelessWidget {
         },
         style: ButtonStyle(
           shape: MaterialStateProperty.all(
-            RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(12.r),
-            ),
+            borderColor!
+                ? RoundedRectangleBorder(
+                    side: const BorderSide(color: primaryColor, width: 2),
+                    borderRadius: BorderRadius.circular(12.r),
+                  )
+                : RoundedRectangleBorder(
+                    side: const BorderSide(color: primaryColor, width: 2),
+                    borderRadius: BorderRadius.circular(12.r),
+                  ),
           ),
-          backgroundColor: MaterialStateProperty.all(primaryColor),
+          backgroundColor: borderColor!
+              ? MaterialStateProperty.all(Colors.transparent)
+              : MaterialStateProperty.all(primaryColor),
           foregroundColor: MaterialStateProperty.all(Colors.white),
           padding: MaterialStateProperty.all(
             EdgeInsets.symmetric(horizontal: 10.w, vertical: 14.h),
           ),
         ),
-        child: Text(
-          text,
-          style: TextStyle(
-              fontSize: fontSize,
-              fontFamily: fontFamily,
-              fontWeight: FontWeight.w600),
-        ),
+        child: borderColor!
+            ? Text(
+                text,
+                style: TextStyle(
+                    color: primaryColor,
+                    fontSize: fontSize,
+                    fontFamily: fontFamily,
+                    fontWeight: FontWeight.w600),
+              )
+            : Text(
+                text,
+                style: TextStyle(
+                    color: white,
+                    fontSize: fontSize,
+                    fontFamily: fontFamily,
+                    fontWeight: FontWeight.w600),
+              ),
       ),
     );
   }

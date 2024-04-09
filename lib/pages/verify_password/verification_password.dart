@@ -42,6 +42,7 @@ class VerificationPage extends StatelessWidget {
                   fontSize: 20.sp,
                   width: double.infinity,
                   text: "Verify",
+                  borderColor: false,
                   onPressed: () {
                     Navigator.push(
                       context,
