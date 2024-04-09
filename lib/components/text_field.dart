@@ -18,8 +18,6 @@ class MyTextField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 383.w,
-      height: 56.h,
       decoration: BoxDecoration(
           border: Border.all(
             color: textFieldInputColor,

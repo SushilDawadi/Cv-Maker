@@ -49,7 +49,6 @@ class MyErrorPage extends StatelessWidget {
                   text: "Add",
                   width: 164.w,
                   fontSize: 13.sp,
-                  height: 45.h,
                   borderColor: true,
                 )
               ],
@@ -62,7 +61,6 @@ class MyErrorPage extends StatelessWidget {
         MyButton(
           text: "Next",
           width: 129.w,
-          height: 56.h,
           fontSize: 20.sp,
           borderColor: false,
         )

@@ -19,26 +19,28 @@ class _MyNavTitleState extends State<MyNavTitle> {
         children: [
           Expanded(
             child: ListView.builder(
-                scrollDirection: Axis.horizontal,
-                itemCount: navTitles.length,
-                itemBuilder: (context, index) => GestureDetector(
-                      onTap: () {
-                        setState(() {
-                          selectedIndex = index;
-                        });
-                      },
-                      child: Padding(
-                        padding: EdgeInsets.only(right: 38.w, top: 29.h),
-                        child: Text(
-                          navTitles[index],
-                          style: TextStyle(
-                            fontWeight: index == selectedIndex
-                                ? FontWeight.bold
-                                : FontWeight.normal,
-                          ),
-                        ),
-                      ),
-                    )),
+              scrollDirection: Axis.horizontal,
+              itemCount: navTitles.length,
+              itemBuilder: (context, index) => GestureDetector(
+                onTap: () {
+                  setState(() {
+                    selectedIndex = index;
+                  });
+                },
+                child: Padding(
+                  padding: EdgeInsets.only(right: 38.w, top: 29.h),
+                  child: Text(
+                    navTitles[index],
+                    style: TextStyle(
+                      fontSize: 16.sp,
+                      fontWeight: index == selectedIndex
+                          ? FontWeight.bold
+                          : FontWeight.normal,
+                    ),
+                  ),
+                ),
+              ),
+            ),
           ),
         ],
       ),

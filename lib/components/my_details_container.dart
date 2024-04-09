@@ -29,8 +29,6 @@ class MyDetailsContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 383.w,
-      height: 250.h,
       decoration: BoxDecoration(
         border: Border.all(
           color: textFieldInputColor,

@@ -20,9 +20,6 @@ class MyAppBar extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        SizedBox(
-          height: 70.h,
-        ),
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
@@ -34,10 +31,8 @@ class MyAppBar extends StatelessWidget {
             showDropButton!
                 ? Center(
                     child: Container(
-                        height: 35.h,
-                        width: 35.w,
                         decoration: BoxDecoration(
-                          borderRadius: BorderRadius.all(Radius.circular(20.r)),
+                          borderRadius: BorderRadius.all(Radius.circular(30.r)),
                           color: downButtonBackgroundColor,
                         ),
                         child: IconButton(

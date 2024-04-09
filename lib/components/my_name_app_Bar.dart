@@ -24,9 +24,6 @@ class MyNameAppBar extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        SizedBox(
-          height: 70.h,
-        ),
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -44,7 +41,6 @@ class MyNameAppBar extends StatelessWidget {
               children: [
                 SizedBox(
                     width: 250.w,
-                    height: 170.h,
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
@@ -98,9 +94,6 @@ class MyNameAppBar extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        SizedBox(
-          height: 70.h,
-        ),
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [

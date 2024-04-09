@@ -7,8 +7,7 @@ class MyBox extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: 56.w,
-      height: 56.w,
+      width: MediaQuery.of(context).size.width * 0.13,
       child: TextField(
         decoration: InputDecoration(
           border: OutlineInputBorder(

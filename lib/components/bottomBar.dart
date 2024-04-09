@@ -10,8 +10,6 @@ class MyBottomBar extends StatelessWidget {
     return Padding(
       padding: EdgeInsets.symmetric(horizontal: 13.w, vertical: 15.h),
       child: Container(
-        height: 88.h,
-        width: 430.w,
         decoration: BoxDecoration(
           border: Border.all(
             color: textFieldInputColor,

@@ -34,8 +34,6 @@ class GeneralInformation extends StatelessWidget {
                 Padding(
                   padding: EdgeInsets.only(bottom: 19.0.h),
                   child: Container(
-                    height: 199.h,
-                    width: 199.h,
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(99.5.r)),
                     child: ClipRRect(
@@ -43,6 +41,8 @@ class GeneralInformation extends StatelessWidget {
                       child: Image.asset(
                         'lib/assets/images/yashwindar_sir.png',
                         fit: BoxFit.cover,
+                        height: 199.h,
+                        width: 199.h,
                       ),
                     ),
                   ),

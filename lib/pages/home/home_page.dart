@@ -18,7 +18,7 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       body: SafeArea(
         child: Padding(
-          padding: EdgeInsets.symmetric(horizontal: 26.w, vertical: 16.h),
+          padding: EdgeInsets.symmetric(horizontal: 27.w, vertical: 16.h),
           child: SingleChildScrollView(
             child: Column(
               children: [
@@ -35,8 +35,6 @@ class HomePage extends StatelessWidget {
                       height: 30.h,
                     ),
                     Container(
-                      width: 405.w,
-                      height: 150.h,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(12.r),
                         border: Border.all(
@@ -64,9 +62,25 @@ class HomePage extends StatelessWidget {
                               Padding(
                                 padding:
                                     EdgeInsets.only(left: 27.w, bottom: 32.h),
-                                child: MyButton(
-                                    borderColor: false,
-                                    onPressed: () {
+                                // child: MyButton(
+                                //     borderColor: false,
+                                //     onPressed: () {
+                                //       Navigator.push(
+                                //         context,
+                                //         MaterialPageRoute(
+                                //           builder: (context) =>
+                                //               const AllTemplatePage(),
+                                //         ),
+                                //       );
+                                //     },
+                                //     text: "Complete",
+                                //     width: 164.w,
+                                //     height: 48.h,
+                                //     fontSize: 14.sp),
+                                child: Padding(
+                                  padding: EdgeInsets.only(top: 15.h),
+                                  child: GestureDetector(
+                                    onTap: () {
                                       Navigator.push(
                                         context,
                                         MaterialPageRoute(
@@ -75,10 +89,30 @@ class HomePage extends StatelessWidget {
                                         ),
                                       );
                                     },
-                                    text: "Complete",
-                                    width: 164.w,
-                                    height: 48.h,
-                                    fontSize: 14.sp),
+                                    child: Container(
+                                      decoration: BoxDecoration(
+                                        color: primaryColor,
+                                        borderRadius:
+                                            BorderRadius.circular(8.r),
+                                      ),
+                                      child: Center(
+                                          child: Padding(
+                                        padding: EdgeInsets.symmetric(
+                                          horizontal: 45.w,
+                                          vertical: 10.h,
+                                        ),
+                                        child: Text(
+                                          "Complete",
+                                          style: TextStyle(
+                                              color: white,
+                                              fontFamily: fontFamily,
+                                              fontSize: 14.sp,
+                                              fontWeight: FontWeight.w600),
+                                        ),
+                                      )),
+                                    ),
+                                  ),
+                                ),
                               ),
                             ],
                           ),
