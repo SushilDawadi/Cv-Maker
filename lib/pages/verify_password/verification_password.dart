@@ -12,59 +12,61 @@ class VerificationPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 27.w, vertical: 16.h),
-        child: SingleChildScrollView(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              const MyAppBar(
-                titleText: "Verify Yourself",
-                subText:
-                    "Please enter verification code send to provided email",
-                showDropButton: false,
-              ),
-              SizedBox(
-                height: 160.h,
-              ),
-              Wrap(spacing: 7.w, children: const [
-                MyBox(),
-                MyBox(),
-                MyBox(),
-                MyBox(),
-                MyBox(),
-                MyBox(),
-              ]),
-              SizedBox(
-                height: 180.h,
-              ),
-              MyButton(
-                  fontSize: 20.sp,
-                  width: double.infinity,
-                  text: "Verify",
-                  borderColor: false,
-                  onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => const ResetPasswordPage(),
-                      ),
-                    );
-                  }),
-              SizedBox(
-                height: 20.h,
-              ),
-              Center(
-                child: TextButton(
-                  onPressed: () {
-                    Navigator.pop(context);
-                  },
-                  child: const MyText(
-                    text: "Go Back",
+      body: SafeArea(
+        child: Padding(
+          padding: EdgeInsets.symmetric(horizontal: 27.w, vertical: 16.h),
+          child: SingleChildScrollView(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                const MyAppBar(
+                  titleText: "Verify Yourself",
+                  subText:
+                      "Please enter verification code send to provided email",
+                  showDropButton: false,
+                ),
+                SizedBox(
+                  height: 160.h,
+                ),
+                Wrap(spacing: 7.w, children: const [
+                  MyBox(),
+                  MyBox(),
+                  MyBox(),
+                  MyBox(),
+                  MyBox(),
+                  MyBox(),
+                ]),
+                SizedBox(
+                  height: 180.h,
+                ),
+                MyButton(
+                    fontSize: 20.sp,
+                    width: double.infinity,
+                    text: "Verify",
+                    borderColor: false,
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const ResetPasswordPage(),
+                        ),
+                      );
+                    }),
+                SizedBox(
+                  height: 20.h,
+                ),
+                Center(
+                  child: TextButton(
+                    onPressed: () {
+                      Navigator.pop(context);
+                    },
+                    child: const MyText(
+                      text: "Go Back",
+                    ),
                   ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
         ),
       ),

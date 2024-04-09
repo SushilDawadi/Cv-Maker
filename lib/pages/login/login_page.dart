@@ -1,7 +1,6 @@
 import 'package:cv_maker/components/button.dart';
 import 'package:cv_maker/components/text.dart';
 import 'package:cv_maker/components/text_field.dart';
-
 import 'package:cv_maker/pages/forget_password/forget_password.dart';
 import 'package:cv_maker/pages/signup/signup_page.dart';
 import 'package:flutter/material.dart';

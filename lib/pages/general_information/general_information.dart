@@ -1,3 +1,4 @@
+import 'package:cv_maker/assets/colors/color.dart';
 import 'package:cv_maker/components/bottomBar.dart';
 import 'package:cv_maker/components/button.dart';
 import 'package:cv_maker/components/my_name_app_Bar.dart';
@@ -6,6 +7,7 @@ import 'package:cv_maker/components/text_field.dart';
 import 'package:cv_maker/pages/objective/objective_page.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class GeneralInformation extends StatelessWidget {
@@ -36,14 +38,36 @@ class GeneralInformation extends StatelessWidget {
                   child: Container(
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(99.5.r)),
-                    child: ClipRRect(
-                      borderRadius: BorderRadius.all(Radius.circular(99.5.r)),
-                      child: Image.asset(
-                        'lib/assets/images/yashwindar_sir.png',
-                        fit: BoxFit.cover,
-                        height: 199.h,
-                        width: 199.h,
-                      ),
+                    child: Stack(
+                      children: [
+                        ClipRRect(
+                          borderRadius:
+                              BorderRadius.all(Radius.circular(99.5.r)),
+                          child: Image.asset(
+                            'lib/assets/images/yashwindar_sir.png',
+                            fit: BoxFit.cover,
+                            height: 199.h,
+                            width: 199.h,
+                          ),
+                        ),
+                        Positioned(
+                          right: 0,
+                          bottom: 0,
+                          child: IconButton(
+                              onPressed: () {},
+                              icon: Container(
+                                decoration: BoxDecoration(
+                                    color: primaryColor,
+                                    borderRadius:
+                                        BorderRadius.circular(99.5.r)),
+                                child: Icon(
+                                  Icons.add,
+                                  color: white,
+                                  size: 39.sp,
+                                ),
+                              )),
+                        )
+                      ],
                     ),
                   ),
                 ),

@@ -1,7 +1,6 @@
 import 'package:cv_maker/assets/colors/color.dart';
 import 'package:cv_maker/assets/fonts/font.dart';
 import 'package:cv_maker/components/bottomBar.dart';
-import 'package:cv_maker/components/button.dart';
 import 'package:cv_maker/components/myTemplateHeading.dart';
 import 'package:cv_maker/components/my_appbar.dart';
 import 'package:cv_maker/components/template_title.dart';

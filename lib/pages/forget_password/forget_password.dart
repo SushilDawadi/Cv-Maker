@@ -12,49 +12,51 @@ class ForgetPasswordPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 26.w, vertical: 16),
-        child: SingleChildScrollView(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              const MyAppBar(
-                titleText: "Forgot password",
-                subText: "Please provide us with your email to continue",
-                showDropButton: false,
-              ),
-              SizedBox(
-                height: 30.h,
-              ),
-              const MyTextField(hintText: 'Email', icon: Icons.email),
-              SizedBox(
-                height: 30.h,
-              ),
-              MyButton(
-                fontSize: 20.sp,
-                text: "Continue",
-                width: double.infinity,
-                borderColor: false,
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => const VerificationPage(),
-                    ),
-                  );
-                },
-              ),
-              SizedBox(
-                height: 20.h,
-              ),
-              Center(
-                child: TextButton(
-                    onPressed: () {
-                      Navigator.pop(context);
-                    },
-                    child: const MyText(text: "Go back")),
-              )
-            ],
+      body: SafeArea(
+        child: Padding(
+          padding: EdgeInsets.symmetric(horizontal: 26.w, vertical: 16),
+          child: SingleChildScrollView(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                const MyAppBar(
+                  titleText: "Forgot password",
+                  subText: "Please provide us with your email to continue",
+                  showDropButton: false,
+                ),
+                SizedBox(
+                  height: 30.h,
+                ),
+                const MyTextField(hintText: 'Email', icon: Icons.email),
+                SizedBox(
+                  height: 30.h,
+                ),
+                MyButton(
+                  fontSize: 20.sp,
+                  text: "Continue",
+                  width: double.infinity,
+                  borderColor: false,
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const VerificationPage(),
+                      ),
+                    );
+                  },
+                ),
+                SizedBox(
+                  height: 20.h,
+                ),
+                Center(
+                  child: TextButton(
+                      onPressed: () {
+                        Navigator.pop(context);
+                      },
+                      child: const MyText(text: "Go back")),
+                )
+              ],
+            ),
           ),
         ),
       ),

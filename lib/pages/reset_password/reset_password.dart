@@ -12,58 +12,61 @@ class ResetPasswordPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 26.w, vertical: 16.h),
-        child: SingleChildScrollView(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              const MyAppBar(
-                titleText: "Reset Password",
-                subText:
-                    "Please enter the verification code send to the provided email",
-                showDropButton: false,
-              ),
-              SizedBox(
-                height: 15.h,
-              ),
-              const MyTextField(hintText: "Code", icon: Icons.code_outlined),
-              SizedBox(
-                height: 10.h,
-              ),
-              const MyTextField(hintText: "Password", icon: Icons.lock),
-              SizedBox(
-                height: 10.h,
-              ),
-              const MyTextField(hintText: "Re-type Password", icon: Icons.lock),
-              SizedBox(
-                height: 40.h,
-              ),
-              MyButton(
-                text: "Reset Password",
-                fontSize: 20.sp,
-                width: double.infinity,
-                onPressed: () {},
-                borderColor: false,
-              ),
-              SizedBox(
-                height: 20.h,
-              ),
-              Center(
-                child: TextButton(
-                    onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => const HomePage(),
-                        ),
-                      );
-                    },
-                    child: const MyText(
-                      text: "Change Password",
-                    )),
-              )
-            ],
+      body: SafeArea(
+        child: Padding(
+          padding: EdgeInsets.symmetric(horizontal: 26.w, vertical: 16.h),
+          child: SingleChildScrollView(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                const MyAppBar(
+                  titleText: "Reset Password",
+                  subText:
+                      "Please enter the verification code send to the provided email",
+                  showDropButton: false,
+                ),
+                SizedBox(
+                  height: 15.h,
+                ),
+                const MyTextField(hintText: "Code", icon: Icons.code_outlined),
+                SizedBox(
+                  height: 10.h,
+                ),
+                const MyTextField(hintText: "Password", icon: Icons.lock),
+                SizedBox(
+                  height: 10.h,
+                ),
+                const MyTextField(
+                    hintText: "Re-type Password", icon: Icons.lock),
+                SizedBox(
+                  height: 40.h,
+                ),
+                MyButton(
+                  text: "Reset Password",
+                  fontSize: 20.sp,
+                  width: double.infinity,
+                  onPressed: () {},
+                  borderColor: false,
+                ),
+                SizedBox(
+                  height: 20.h,
+                ),
+                Center(
+                  child: TextButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const HomePage(),
+                          ),
+                        );
+                      },
+                      child: const MyText(
+                        text: "Change Password",
+                      )),
+                )
+              ],
+            ),
           ),
         ),
       ),
