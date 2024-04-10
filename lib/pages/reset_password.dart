@@ -3,12 +3,12 @@ import 'package:cv_maker/components/custom/my_custom_app_bar.dart';
 import 'package:cv_maker/components/custom/my_custom_heading_text.dart';
 import 'package:cv_maker/components/text.dart';
 import 'package:cv_maker/components/text_field.dart';
-import 'package:cv_maker/pages/verify_password/verification_password.dart';
+import 'package:cv_maker/pages/home_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class ForgetPasswordPage extends StatelessWidget {
-  const ForgetPasswordPage({super.key});
+class ResetPasswordPage extends StatelessWidget {
+  const ResetPasswordPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -19,45 +19,47 @@ class ForgetPasswordPage extends StatelessWidget {
       ),
       body: SafeArea(
         child: Padding(
-          padding: EdgeInsets.symmetric(horizontal: 26.w, vertical: 16),
+          padding: EdgeInsets.symmetric(horizontal: 26.w, vertical: 16.h),
           child: SingleChildScrollView(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const MyCustomHeadingText(
-                    titleText: "Forget Password",
+                MyCustomHeadingText(
+                    width: 370.w,
+                    titleText: "Reset Password",
                     showTemplateImage: false,
-                    subText: "Please provide us with your email to continue"),
+                    subText:
+                        "Please enter the verification code send to the provided email"),
                 SizedBox(
-                  height: 20.h,
+                  height: 15.h,
                 ),
-                const MyTextField(hintText: 'Email', icon: Icons.email),
+                const MyTextField(hintText: "Code", icon: Icons.code_outlined),
+                const MyTextField(hintText: "Password", icon: Icons.lock),
+                const MyTextField(
+                    hintText: "Re-type Password", icon: Icons.lock),
                 SizedBox(
                   height: 25.h,
                 ),
                 MyButton(
+                  text: "Reset Password",
                   fontSize: 20.sp,
-                  text: "Continue",
                   width: double.infinity,
+                  onPressed: () {},
                   borderColor: false,
-                  onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => const VerificationPage(),
-                      ),
-                    );
-                  },
-                ),
-                SizedBox(
-                  height: 20.h,
                 ),
                 Center(
                   child: TextButton(
                       onPressed: () {
-                        Navigator.pop(context);
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const HomePage(),
+                          ),
+                        );
                       },
-                      child: const MyText(text: "Go back")),
+                      child: const MyText(
+                        text: "Change Password",
+                      )),
                 )
               ],
             ),

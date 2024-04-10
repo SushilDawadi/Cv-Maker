@@ -23,19 +23,21 @@ class _MyNavTitleState extends State<MyNavTitle> {
               itemCount: Utils.navTitles.length,
               itemBuilder: (context, index) {
                 final navKeys = Utils.navTitles.keys.toList();
-                final navValues = Utils.navTitles.values.toList();
+                // final navValues = Utils.navTitles.values.toList();
 
                 return GestureDetector(
                   onTap: () {
-                    setState(() {
-                      selectedIndex = index;
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => navValues[index],
-                        ),
-                      );
-                    });
+                    setState(
+                      () {
+                        selectedIndex = index;
+                        // Navigator.push(
+                        //   context,
+                        //   MaterialPageRoute(
+                        //     builder: (context) => navValues[index],
+                        //   ),
+                        // );
+                      },
+                    );
                   },
                   child: Padding(
                     padding: EdgeInsets.only(right: 38.w, top: 29.h),

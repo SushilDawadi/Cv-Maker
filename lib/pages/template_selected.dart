@@ -4,7 +4,7 @@ import 'package:cv_maker/components/button.dart';
 import 'package:cv_maker/components/custom/my_custom_app_bar.dart';
 import 'package:cv_maker/components/custom/my_custom_heading_text.dart';
 import 'package:cv_maker/components/my_details_container.dart';
-import 'package:cv_maker/pages/general_information/general_information.dart';
+import 'package:cv_maker/pages/TabPages/general_information_tab.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 

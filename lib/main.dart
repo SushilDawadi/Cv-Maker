@@ -1,4 +1,4 @@
-import 'package:cv_maker/pages/splash/splash.dart';
+import 'package:cv_maker/pages/TabPages/tab_main_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -12,10 +12,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ScreenUtilInit(
-      builder: (BuildContext context, child) => const MaterialApp(
+      builder: (BuildContext context, child) => MaterialApp(
         debugShowCheckedModeBanner: false,
         title: 'CV Maker',
-        home: Splash(),
+        home: MyCustomTabBar(),
       ),
       designSize: const Size(430, 932),
     );

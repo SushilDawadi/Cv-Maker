@@ -1,5 +1,5 @@
 import 'package:cv_maker/assets/colors/color.dart';
-import 'package:cv_maker/pages/login/login_page.dart';
+import 'package:cv_maker/pages/login_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 

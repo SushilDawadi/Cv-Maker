@@ -5,7 +5,7 @@ import 'package:cv_maker/components/custom/my_custom_app_bar.dart';
 import 'package:cv_maker/components/custom/my_custom_heading_text.dart';
 import 'package:cv_maker/components/custom/my_custom_template_heading.dart';
 import 'package:cv_maker/components/custom/my_custom_template_tile.dart';
-import 'package:cv_maker/pages/all_templates/all_template.dart';
+import 'package:cv_maker/pages/all_template.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:percent_indicator/circular_percent_indicator.dart';

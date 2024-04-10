@@ -62,7 +62,7 @@ class MyCustomAppBar extends StatelessWidget implements PreferredSizeWidget {
                       ),
                     ),
                     Padding(
-                      padding: EdgeInsets.only(bottom: 11.h),
+                      padding: EdgeInsets.only(bottom: 4.h),
                       child: Text(
                         "Basic  •  Prasiddha Nepane",
                         style: TextStyle(
