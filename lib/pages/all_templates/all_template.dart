@@ -1,7 +1,8 @@
 import 'package:cv_maker/components/bottomBar.dart';
-import 'package:cv_maker/components/myTemplateHeading.dart';
-import 'package:cv_maker/components/my_appbar.dart';
-import 'package:cv_maker/components/template_title.dart';
+import 'package:cv_maker/components/custom/my_custom_app_bar.dart';
+import 'package:cv_maker/components/custom/my_custom_heading_text.dart';
+import 'package:cv_maker/components/custom/my_custom_template_heading.dart';
+import 'package:cv_maker/components/custom/my_custom_template_tile.dart';
 import 'package:cv_maker/pages/single_category_Template/single_category_Template.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -12,6 +13,16 @@ class AllTemplatePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: MyCustomAppBar(
+        showDropButton: true,
+        showUserDetails: false,
+        onPressed: () {
+          Navigator.push(
+              context,
+              MaterialPageRoute(
+                  builder: (context) => const SingleCategoryTemplate()));
+        },
+      ),
       body: SafeArea(
         child: Padding(
           padding: EdgeInsets.symmetric(horizontal: 26.w, vertical: 16.h),
@@ -21,43 +32,36 @@ class AllTemplatePage extends StatelessWidget {
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    MyAppBar(
-                      titleText: "Find templates",
-                      subText:
-                          "Find suitable templates based on your requirement.",
-                      showDropButton: true,
-                      onPressed: () {
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) =>
-                                    const SingleCategoryTemplate()));
-                      },
-                    ),
+                    MyCustomHeadingText(
+                        titleText: "Find Templates",
+                        width: 370.w,
+                        showTemplateImage: false,
+                        subText:
+                            "Find suitable templates based on your requirement."),
                     SizedBox(
                       height: 30.h,
                     ),
-                    const MyTemplateHeading(
+                    const MyCustomTemplateHeading(
                       titleText: "Basic",
                       seeAllText: "See All",
                     ),
-                    const MyTemplateTile(),
+                    const MyCustomTemplateTile(),
                     SizedBox(
                       height: 28.h,
                     ),
-                    const MyTemplateHeading(
+                    const MyCustomTemplateHeading(
                       titleText: "Professional",
                       seeAllText: "See All",
                     ),
-                    const MyTemplateTile(),
+                    const MyCustomTemplateTile(),
                     SizedBox(
                       height: 28.h,
                     ),
-                    const MyTemplateHeading(
+                    const MyCustomTemplateHeading(
                       titleText: "Educational",
                       seeAllText: "See All",
                     ),
-                    const MyTemplateTile(),
+                    const MyCustomTemplateTile(),
                   ],
                 ),
               ],

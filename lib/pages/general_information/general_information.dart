@@ -1,7 +1,7 @@
 import 'package:cv_maker/assets/colors/color.dart';
 import 'package:cv_maker/components/bottomBar.dart';
 import 'package:cv_maker/components/button.dart';
-import 'package:cv_maker/components/my_name_app_Bar.dart';
+import 'package:cv_maker/components/custom/my_custom_app_bar.dart';
 import 'package:cv_maker/components/my_nav_title.dart';
 import 'package:cv_maker/components/text_field.dart';
 import 'package:flutter/material.dart';
@@ -18,6 +18,10 @@ class _GeneralInformationState extends State<GeneralInformation> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: const MyCustomAppBar(
+        showDropButton: false,
+        showUserDetails: true,
+      ),
       body: SafeArea(
         child: Padding(
           padding: EdgeInsets.symmetric(horizontal: 26.w, vertical: 16.h),
@@ -27,11 +31,11 @@ class _GeneralInformationState extends State<GeneralInformation> {
                 const Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    MyNameAppBar(
-                      isHorizontal: false,
-                      showImage: false,
-                      showText: false,
-                    ),
+                    // MyNameAppBar(
+                    //   isHorizontal: false,
+                    //   showImage: false,
+                    //   showText: false,
+                    // ),
                   ],
                 ),
                 const MyNavTitle(),

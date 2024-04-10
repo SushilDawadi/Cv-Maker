@@ -1,8 +1,9 @@
 import 'package:cv_maker/assets/fonts/font.dart';
 import 'package:cv_maker/components/bottomBar.dart';
 import 'package:cv_maker/components/button.dart';
+import 'package:cv_maker/components/custom/my_custom_app_bar.dart';
+import 'package:cv_maker/components/custom/my_custom_heading_text.dart';
 import 'package:cv_maker/components/my_details_container.dart';
-import 'package:cv_maker/components/my_name_app_Bar.dart';
 import 'package:cv_maker/pages/general_information/general_information.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -13,6 +14,10 @@ class TemplateSelected extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: const MyCustomAppBar(
+        showDropButton: false,
+        showUserDetails: false,
+      ),
       body: SafeArea(
         child: Padding(
           padding: EdgeInsets.symmetric(horizontal: 26.w, vertical: 16.h),
@@ -22,11 +27,17 @@ class TemplateSelected extends StatelessWidget {
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    const MyNameAppBar(
-                      isHorizontal: true,
-                      showImage: true,
-                      showText: true,
-                    ),
+                    // const MyNameAppBar(
+                    //   isHorizontal: true,
+                    //   showImage: true,
+                    //   showText: true,
+                    // ),
+                    MyCustomHeadingText(
+                        titleText: "Subtle me",
+                        width: 250.w,
+                        showTemplateImage: true,
+                        subText:
+                            "Basic  •  Prasiddha Nepane\n\nThis template is designed for you to introduce yourself in very basic but subtle manner."),
                     Padding(
                       padding: EdgeInsets.only(top: 50.h),
                       child: MyButton(

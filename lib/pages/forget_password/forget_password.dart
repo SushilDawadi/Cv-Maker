@@ -1,5 +1,6 @@
 import 'package:cv_maker/components/button.dart';
-import 'package:cv_maker/components/my_appbar.dart';
+import 'package:cv_maker/components/custom/my_custom_app_bar.dart';
+import 'package:cv_maker/components/custom/my_custom_heading_text.dart';
 import 'package:cv_maker/components/text.dart';
 import 'package:cv_maker/components/text_field.dart';
 import 'package:cv_maker/pages/verify_password/verification_password.dart';
@@ -12,6 +13,10 @@ class ForgetPasswordPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: const MyCustomAppBar(
+        showDropButton: false,
+        showUserDetails: false,
+      ),
       body: SafeArea(
         child: Padding(
           padding: EdgeInsets.symmetric(horizontal: 26.w, vertical: 16),
@@ -19,17 +24,16 @@ class ForgetPasswordPage extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const MyAppBar(
-                  titleText: "Forgot password",
-                  subText: "Please provide us with your email to continue",
-                  showDropButton: false,
-                ),
+                const MyCustomHeadingText(
+                    titleText: "Forget Password",
+                    showTemplateImage: false,
+                    subText: "Please provide us with your email to continue"),
                 SizedBox(
-                  height: 30.h,
+                  height: 20.h,
                 ),
                 const MyTextField(hintText: 'Email', icon: Icons.email),
                 SizedBox(
-                  height: 30.h,
+                  height: 25.h,
                 ),
                 MyButton(
                   fontSize: 20.sp,

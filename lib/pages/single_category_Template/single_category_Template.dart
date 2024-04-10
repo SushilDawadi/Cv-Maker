@@ -1,5 +1,6 @@
 import 'package:cv_maker/components/bottomBar.dart';
-import 'package:cv_maker/components/my_appbar.dart';
+import 'package:cv_maker/components/custom/my_custom_app_bar.dart';
+import 'package:cv_maker/components/custom/my_custom_heading_text.dart';
 import 'package:cv_maker/pages/template_selected/template_selected.dart';
 import 'package:cv_maker/utils/utilsClass.dart';
 import 'package:flutter/material.dart';
@@ -11,6 +12,18 @@ class SingleCategoryTemplate extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: MyCustomAppBar(
+        showUserDetails: false,
+        showDropButton: true,
+        onPressed: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => const TemplateSelected(),
+            ),
+          );
+        },
+      ),
       body: SafeArea(
         child: Padding(
           padding: EdgeInsets.symmetric(horizontal: 26.w, vertical: 16.h),
@@ -20,21 +33,14 @@ class SingleCategoryTemplate extends StatelessWidget {
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    MyAppBar(
-                      titleText: "Compelete Setup",
-                      subText:
-                          "Provide with additional details to complete setup",
-                      showDropButton: true,
-                      onPressed: () {
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) =>
-                                    const TemplateSelected()));
-                      },
-                    ),
+                    MyCustomHeadingText(
+                        titleText: "Basic",
+                        width: 370.w,
+                        showTemplateImage: false,
+                        subText:
+                            "Basic templates suitable to introduce yourself"),
                     SizedBox(
-                      height: 30.h,
+                      height: 20.h,
                     ),
                     GridView.builder(
                       physics: const NeverScrollableScrollPhysics(),

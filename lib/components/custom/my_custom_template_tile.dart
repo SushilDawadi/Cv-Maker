@@ -2,8 +2,8 @@ import 'package:cv_maker/utils/utilsClass.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class MyTemplateTile extends StatelessWidget {
-  const MyTemplateTile({super.key});
+class MyCustomTemplateTile extends StatelessWidget {
+  const MyCustomTemplateTile({super.key});
 
   @override
   Widget build(BuildContext context) {

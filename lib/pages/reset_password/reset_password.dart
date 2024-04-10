@@ -1,5 +1,6 @@
 import 'package:cv_maker/components/button.dart';
-import 'package:cv_maker/components/my_appbar.dart';
+import 'package:cv_maker/components/custom/my_custom_app_bar.dart';
+import 'package:cv_maker/components/custom/my_custom_heading_text.dart';
 import 'package:cv_maker/components/text.dart';
 import 'package:cv_maker/components/text_field.dart';
 import 'package:cv_maker/pages/home/home_page.dart';
@@ -12,6 +13,10 @@ class ResetPasswordPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: const MyCustomAppBar(
+        showDropButton: false,
+        showUserDetails: false,
+      ),
       body: SafeArea(
         child: Padding(
           padding: EdgeInsets.symmetric(horizontal: 26.w, vertical: 16.h),
@@ -19,12 +24,12 @@ class ResetPasswordPage extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const MyAppBar(
-                  titleText: "Reset Password",
-                  subText:
-                      "Please enter the verification code send to the provided email",
-                  showDropButton: false,
-                ),
+                MyCustomHeadingText(
+                    width: 370.w,
+                    titleText: "Reset Password",
+                    showTemplateImage: false,
+                    subText:
+                        "Please enter the verification code send to the provided email"),
                 SizedBox(
                   height: 15.h,
                 ),

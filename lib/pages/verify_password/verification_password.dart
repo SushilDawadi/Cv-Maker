@@ -1,6 +1,7 @@
 import 'package:cv_maker/components/box.dart';
 import 'package:cv_maker/components/button.dart';
-import 'package:cv_maker/components/my_appbar.dart';
+import 'package:cv_maker/components/custom/my_custom_app_bar.dart';
+import 'package:cv_maker/components/custom/my_custom_heading_text.dart';
 import 'package:cv_maker/components/text.dart';
 import 'package:cv_maker/pages/reset_password/reset_password.dart';
 import 'package:flutter/material.dart';
@@ -12,6 +13,10 @@ class VerificationPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: const MyCustomAppBar(
+        showDropButton: false,
+        showUserDetails: false,
+      ),
       body: SafeArea(
         child: Padding(
           padding: EdgeInsets.symmetric(horizontal: 27.w, vertical: 16.h),
@@ -19,12 +24,11 @@ class VerificationPage extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const MyAppBar(
-                  titleText: "Verify Yourself",
-                  subText:
-                      "Please enter verification code send to provided email",
-                  showDropButton: false,
-                ),
+                const MyCustomHeadingText(
+                    showTemplateImage: false,
+                    titleText: "Verify Yourself",
+                    subText:
+                        "Please enter verification code send to provided email"),
                 SizedBox(
                   height: 160.h,
                 ),

@@ -1,5 +1,7 @@
+import 'package:cv_maker/assets/colors/color.dart';
 import 'package:cv_maker/components/button.dart';
-import 'package:cv_maker/components/my_appbar.dart';
+import 'package:cv_maker/components/custom/my_custom_app_bar.dart';
+import 'package:cv_maker/components/custom/my_custom_heading_text.dart';
 import 'package:cv_maker/components/text.dart';
 import 'package:cv_maker/components/text_field.dart';
 import 'package:cv_maker/pages/login/login_page.dart';
@@ -12,6 +14,11 @@ class SignUpPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: white,
+      appBar: const MyCustomAppBar(
+        showDropButton: false,
+        showUserDetails: false,
+      ),
       body: SafeArea(
         child: Padding(
           padding: EdgeInsets.symmetric(horizontal: 26.w, vertical: 16.h),
@@ -19,10 +26,10 @@ class SignUpPage extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const MyAppBar(
+                const MyCustomHeadingText(
                   titleText: "Let’s get you enrolled",
                   subText: "Provide some basic information to get started",
-                  showDropButton: false,
+                  showTemplateImage: false,
                 ),
                 SizedBox(
                   height: 30.h,

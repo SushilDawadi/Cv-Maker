@@ -3,10 +3,10 @@ import 'package:cv_maker/assets/fonts/font.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class MyTemplateHeading extends StatelessWidget {
+class MyCustomTemplateHeading extends StatelessWidget {
   final String titleText;
   final String? seeAllText;
-  const MyTemplateHeading(
+  const MyCustomTemplateHeading(
       {super.key, required this.titleText, this.seeAllText});
 
   @override

@@ -1,9 +1,10 @@
 import 'package:cv_maker/assets/colors/color.dart';
 import 'package:cv_maker/assets/fonts/font.dart';
 import 'package:cv_maker/components/bottomBar.dart';
-import 'package:cv_maker/components/myTemplateHeading.dart';
-import 'package:cv_maker/components/my_appbar.dart';
-import 'package:cv_maker/components/template_title.dart';
+import 'package:cv_maker/components/custom/my_custom_app_bar.dart';
+import 'package:cv_maker/components/custom/my_custom_heading_text.dart';
+import 'package:cv_maker/components/custom/my_custom_template_heading.dart';
+import 'package:cv_maker/components/custom/my_custom_template_tile.dart';
 import 'package:cv_maker/pages/all_templates/all_template.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -15,6 +16,10 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: const MyCustomAppBar(
+        showDropButton: true,
+        showUserDetails: false,
+      ),
       body: SafeArea(
         child: Padding(
           padding: EdgeInsets.symmetric(horizontal: 27.w, vertical: 16.h),
@@ -24,14 +29,15 @@ class HomePage extends StatelessWidget {
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    const MyAppBar(
-                      titleText: "Compelete Setup",
+                    MyCustomHeadingText(
+                      titleText: "Complete Setup",
+                      width: 370.w,
                       subText:
                           "Provide with additional details to complete setup",
-                      showDropButton: true,
+                      showTemplateImage: false,
                     ),
                     SizedBox(
-                      height: 30.h,
+                      height: 20.h,
                     ),
                     Container(
                       decoration: BoxDecoration(
@@ -125,17 +131,17 @@ class HomePage extends StatelessWidget {
                     SizedBox(
                       height: 30.h,
                     ),
-                    const MyTemplateHeading(
+                    const MyCustomTemplateHeading(
                       titleText: "Lastest Templates",
                     ),
-                    const MyTemplateTile(),
+                    const MyCustomTemplateTile(),
                     SizedBox(
                       height: 28.h,
                     ),
-                    const MyTemplateHeading(
+                    const MyCustomTemplateHeading(
                       titleText: "Popular Templates",
                     ),
-                    const MyTemplateTile(),
+                    const MyCustomTemplateTile(),
                   ],
                 ),
               ],
