@@ -3,7 +3,7 @@ import 'package:cv_maker/components/button.dart';
 import 'package:cv_maker/components/custom/my_custom_app_bar.dart';
 import 'package:cv_maker/components/custom/my_custom_heading_text.dart';
 import 'package:cv_maker/components/text.dart';
-import 'package:cv_maker/components/text_field.dart';
+import 'package:cv_maker/components/custom/my_custom_text_field.dart';
 import 'package:cv_maker/pages/login_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';

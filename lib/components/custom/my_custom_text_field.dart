@@ -18,7 +18,7 @@ class MyTextField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.symmetric(vertical: 8.h),
+      padding: EdgeInsets.symmetric(vertical: 6.h),
       child: Container(
         decoration: BoxDecoration(
             border: Border.all(

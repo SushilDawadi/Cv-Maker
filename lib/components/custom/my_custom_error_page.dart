@@ -1,17 +1,13 @@
 import 'package:cv_maker/assets/colors/color.dart';
 import 'package:cv_maker/assets/fonts/font.dart';
 import 'package:cv_maker/components/button.dart';
-import 'package:flutter/cupertino.dart';
-
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
-
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class MyErrorPage extends StatelessWidget {
+class MyCustomErrorPage extends StatelessWidget {
   final String errorText;
   final void Function()? onPressed;
-  const MyErrorPage({super.key, required this.errorText, this.onPressed});
+  const MyCustomErrorPage({super.key, required this.errorText, this.onPressed});
 
   @override
   Widget build(BuildContext context) {

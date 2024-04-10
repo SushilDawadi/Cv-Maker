@@ -1,4 +1,4 @@
-import 'package:cv_maker/components/my_error.dart';
+import 'package:cv_maker/components/custom/my_custom_error_page.dart';
 import 'package:flutter/material.dart';
 
 class ExperienceEmpty extends StatelessWidget {
@@ -7,7 +7,7 @@ class ExperienceEmpty extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const SingleChildScrollView(
-      child: MyErrorPage(
+      child: MyCustomErrorPage(
         errorText: "No Experience details found",
       ),
     );

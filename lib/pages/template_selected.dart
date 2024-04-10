@@ -4,7 +4,7 @@ import 'package:cv_maker/components/button.dart';
 import 'package:cv_maker/components/custom/my_custom_app_bar.dart';
 import 'package:cv_maker/components/custom/my_custom_heading_text.dart';
 import 'package:cv_maker/components/my_details_container.dart';
-import 'package:cv_maker/pages/TabPages/general_information_tab.dart';
+import 'package:cv_maker/pages/TabPages/tab_main_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -27,11 +27,6 @@ class TemplateSelected extends StatelessWidget {
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    // const MyNameAppBar(
-                    //   isHorizontal: true,
-                    //   showImage: true,
-                    //   showText: true,
-                    // ),
                     MyCustomHeadingText(
                         titleText: "Subtle me",
                         width: 250.w,
@@ -49,7 +44,7 @@ class TemplateSelected extends StatelessWidget {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => const GeneralInformation(),
+                              builder: (context) => MyCustomTabBar(),
                             ),
                           );
                         },
