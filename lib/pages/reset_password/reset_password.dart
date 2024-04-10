@@ -29,17 +29,11 @@ class ResetPasswordPage extends StatelessWidget {
                   height: 15.h,
                 ),
                 const MyTextField(hintText: "Code", icon: Icons.code_outlined),
-                SizedBox(
-                  height: 10.h,
-                ),
                 const MyTextField(hintText: "Password", icon: Icons.lock),
-                SizedBox(
-                  height: 10.h,
-                ),
                 const MyTextField(
                     hintText: "Re-type Password", icon: Icons.lock),
                 SizedBox(
-                  height: 40.h,
+                  height: 25.h,
                 ),
                 MyButton(
                   text: "Reset Password",
@@ -47,9 +41,6 @@ class ResetPasswordPage extends StatelessWidget {
                   width: double.infinity,
                   onPressed: () {},
                   borderColor: false,
-                ),
-                SizedBox(
-                  height: 20.h,
                 ),
                 Center(
                   child: TextButton(

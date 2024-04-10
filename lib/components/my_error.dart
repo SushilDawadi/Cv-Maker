@@ -4,6 +4,7 @@ import 'package:cv_maker/components/button.dart';
 import 'package:cv_maker/components/my_name_app_Bar.dart';
 import 'package:cv_maker/components/my_nav_title.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class MyErrorPage extends StatelessWidget {
@@ -45,7 +46,6 @@ class MyErrorPage extends StatelessWidget {
                   ),
                 ),
                 MyButton(
-                  onPressed: onPressed,
                   text: "Add",
                   width: 164.w,
                   fontSize: 13.sp,

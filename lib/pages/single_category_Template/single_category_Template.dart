@@ -1,7 +1,7 @@
 import 'package:cv_maker/components/bottomBar.dart';
 import 'package:cv_maker/components/my_appbar.dart';
 import 'package:cv_maker/pages/template_selected/template_selected.dart';
-import 'package:cv_maker/utils/imagePath.dart';
+import 'package:cv_maker/utils/utilsClass.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -43,14 +43,12 @@ class SingleCategoryTemplate extends StatelessWidget {
                           crossAxisCount: 2,
                           mainAxisSpacing: 10.h,
                           crossAxisSpacing: 10.w),
-                      itemCount: imgPath.length,
+                      itemCount: Utils.imgPath.length,
                       itemBuilder: (context, index) {
                         return ClipRRect(
                           borderRadius: BorderRadius.circular(18.r),
                           child: Image.asset(
-                            imgPath[index],
-                            height: 205.h,
-                            width: 139.w,
+                            Utils.imgPath[index],
                             fit: BoxFit.fill,
                           ),
                         );

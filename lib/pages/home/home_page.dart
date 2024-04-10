@@ -61,21 +61,6 @@ class HomePage extends StatelessWidget {
                               Padding(
                                 padding:
                                     EdgeInsets.only(left: 27.w, bottom: 32.h),
-                                // child: MyButton(
-                                //     borderColor: false,
-                                //     onPressed: () {
-                                //       Navigator.push(
-                                //         context,
-                                //         MaterialPageRoute(
-                                //           builder: (context) =>
-                                //               const AllTemplatePage(),
-                                //         ),
-                                //       );
-                                //     },
-                                //     text: "Complete",
-                                //     width: 164.w,
-                                //     height: 48.h,
-                                //     fontSize: 14.sp),
                                 child: Padding(
                                   padding: EdgeInsets.only(top: 15.h),
                                   child: GestureDetector(

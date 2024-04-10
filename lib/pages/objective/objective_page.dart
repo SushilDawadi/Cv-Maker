@@ -5,8 +5,6 @@ import 'package:cv_maker/components/button.dart';
 import 'package:cv_maker/components/my_example_container.dart';
 import 'package:cv_maker/components/my_name_app_Bar.dart';
 import 'package:cv_maker/components/my_nav_title.dart';
-import 'package:cv_maker/pages/EducationEmpty/education_empty.dart';
-import 'package:cv_maker/pages/ExperienceEmpty/experience_empty.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -110,14 +108,7 @@ class Objective extends StatelessWidget {
                         width: 129.w,
                         fontSize: 20.sp,
                         borderColor: true,
-                        onPressed: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => const EducationEmpty(),
-                            ),
-                          );
-                        },
+                        onPressed: () {},
                       ),
                     ),
                     SizedBox(
@@ -130,14 +121,7 @@ class Objective extends StatelessWidget {
                         width: 129.w,
                         fontSize: 20.sp,
                         borderColor: false,
-                        onPressed: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => const ExperienceEmpty(),
-                            ),
-                          );
-                        },
+                        onPressed: () {},
                       ),
                     ),
                     SizedBox(

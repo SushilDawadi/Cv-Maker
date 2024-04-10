@@ -17,35 +17,38 @@ class MyTextField extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      decoration: BoxDecoration(
-          border: Border.all(
-            color: textFieldInputColor,
-          ),
-          borderRadius: BorderRadius.circular(12.r)),
-      child: Padding(
-        padding: EdgeInsets.only(left: 24.w),
-        child: TextField(
-          controller: controller,
-          style: TextStyle(
-            fontSize: 16.sp,
-            color: black,
-            fontWeight: FontWeight.w400,
-          ),
-          obscureText: obscureText,
-          decoration: InputDecoration(
-            border: InputBorder.none,
-            hintText: hintText,
-            hintStyle: TextStyle(
-                fontSize: 16.sp,
-                color: hinttextColor,
-                fontFamily: fontFamily,
-                fontWeight: FontWeight.w400),
-            suffixIcon: Icon(
-              icon,
-              color: iconColor,
-              size: 20.h,
-              weight: 400,
+    return Padding(
+      padding: EdgeInsets.symmetric(vertical: 8.h),
+      child: Container(
+        decoration: BoxDecoration(
+            border: Border.all(
+              color: textFieldInputColor,
+            ),
+            borderRadius: BorderRadius.circular(12.r)),
+        child: Padding(
+          padding: EdgeInsets.only(left: 24.w),
+          child: TextField(
+            controller: controller,
+            style: TextStyle(
+              fontSize: 16.sp,
+              color: black,
+              fontWeight: FontWeight.w400,
+            ),
+            obscureText: obscureText,
+            decoration: InputDecoration(
+              border: InputBorder.none,
+              hintText: hintText,
+              hintStyle: TextStyle(
+                  fontSize: 16.sp,
+                  color: hinttextColor,
+                  fontFamily: fontFamily,
+                  fontWeight: FontWeight.w400),
+              suffixIcon: Icon(
+                icon,
+                color: iconColor,
+                size: 20.h,
+                weight: 400,
+              ),
             ),
           ),
         ),

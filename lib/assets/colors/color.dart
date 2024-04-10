@@ -12,3 +12,4 @@ const Color progressBarTextColor = Color.fromRGBO(166, 96, 80, 1);
 const Color progressBarRadiusColor = Color.fromRGBO(255, 159, 28, 0.29);
 const Color buttomIconColor = Color.fromRGBO(255, 159, 28, 1);
 const Color downButtonBackgroundColor = Color.fromRGBO(243, 243, 243, 1);
+const Color containerBackgroundColor = Color.fromRGBO(245, 245, 245, 1);

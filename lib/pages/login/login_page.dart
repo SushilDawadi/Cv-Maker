@@ -32,9 +32,6 @@ class LoginPage extends StatelessWidget {
             Column(
               children: [
                 const MyTextField(hintText: "Email", icon: Icons.email),
-                const SizedBox(
-                  height: 10,
-                ),
                 const MyTextField(
                   hintText: "Password",
                   icon: Icons.lock,
@@ -57,17 +54,11 @@ class LoginPage extends StatelessWidget {
                     ],
                   ),
                 ),
-                SizedBox(
-                  height: 30.h,
-                ),
                 MyButton(
                   fontSize: 20.sp,
                   text: "Login",
                   width: double.infinity,
                   borderColor: false,
-                ),
-                SizedBox(
-                  height: 20.h,
                 ),
                 Center(
                   child: TextButton(

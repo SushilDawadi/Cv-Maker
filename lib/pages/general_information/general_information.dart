@@ -4,15 +4,17 @@ import 'package:cv_maker/components/button.dart';
 import 'package:cv_maker/components/my_name_app_Bar.dart';
 import 'package:cv_maker/components/my_nav_title.dart';
 import 'package:cv_maker/components/text_field.dart';
-import 'package:cv_maker/pages/objective/objective_page.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class GeneralInformation extends StatelessWidget {
+class GeneralInformation extends StatefulWidget {
   const GeneralInformation({super.key});
 
+  @override
+  State<GeneralInformation> createState() => _GeneralInformationState();
+}
+
+class _GeneralInformationState extends State<GeneralInformation> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -71,46 +73,17 @@ class GeneralInformation extends StatelessWidget {
                     ),
                   ),
                 ),
-                Padding(
-                  padding: EdgeInsets.symmetric(vertical: 10.h),
-                  child: const MyTextField(
-                      hintText: "Firstname", icon: Icons.person),
-                ),
-                Padding(
-                  padding: EdgeInsets.symmetric(vertical: 10.h),
-                  child: const MyTextField(
-                      hintText: "Middlename", icon: Icons.person),
-                ),
-                Padding(
-                  padding: EdgeInsets.symmetric(vertical: 10.h),
-                  child: const MyTextField(
-                      hintText: "Lastname", icon: Icons.person),
-                ),
-                Padding(
-                  padding: EdgeInsets.symmetric(vertical: 10.h),
-                  child: const MyTextField(
-                      hintText: "Address", icon: Icons.location_on),
-                ),
-                Padding(
-                  padding: EdgeInsets.symmetric(vertical: 10.h),
-                  child: const MyTextField(
-                      hintText: "Phonenumber", icon: Icons.phone),
-                ),
-                Padding(
-                  padding: EdgeInsets.symmetric(vertical: 10.h),
-                  child: const MyTextField(hintText: "Email", icon: Icons.mail),
-                ),
-                Padding(
-                  padding: EdgeInsets.symmetric(vertical: 10.h),
-                  child: const MyTextField(
-                      hintText: "Profession(Job Title)", icon: Icons.work),
-                ),
-                Padding(
-                  padding: EdgeInsets.symmetric(vertical: 10.h),
-                  child: const MyTextField(
-                      hintText: "Portfolio link(i.e Linked/Behance etc)",
-                      icon: Icons.link),
-                ),
+                const MyTextField(hintText: "Firstname", icon: Icons.person),
+                const MyTextField(hintText: "Middlename", icon: Icons.person),
+                const MyTextField(hintText: "Lastname", icon: Icons.person),
+                const MyTextField(hintText: "Address", icon: Icons.location_on),
+                const MyTextField(hintText: "Phonenumber", icon: Icons.phone),
+                const MyTextField(hintText: "Email", icon: Icons.mail),
+                const MyTextField(
+                    hintText: "Profession(Job Title)", icon: Icons.work),
+                const MyTextField(
+                    hintText: "Portfolio link(i.e Linked/Behance etc)",
+                    icon: Icons.link),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -121,6 +94,7 @@ class GeneralInformation extends StatelessWidget {
                         width: 129.w,
                         fontSize: 20.sp,
                         borderColor: true,
+                        onPressed: () {},
                       ),
                     ),
                     SizedBox(
@@ -133,14 +107,7 @@ class GeneralInformation extends StatelessWidget {
                         width: 129.w,
                         fontSize: 20.sp,
                         borderColor: false,
-                        onPressed: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => const Objective(),
-                            ),
-                          );
-                        },
+                        onPressed: () {},
                       ),
                     ),
                     SizedBox(

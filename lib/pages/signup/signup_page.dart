@@ -28,53 +28,23 @@ class SignUpPage extends StatelessWidget {
                   height: 30.h,
                 ),
                 const MyTextField(hintText: 'First name', icon: Icons.person),
-                SizedBox(
-                  height: 10.h,
-                ),
                 const MyTextField(hintText: 'Middle name', icon: Icons.person),
-                SizedBox(
-                  height: 10.h,
-                ),
                 const MyTextField(hintText: 'Last name', icon: Icons.person),
-                SizedBox(
-                  height: 10.h,
-                ),
                 const MyTextField(hintText: 'Address', icon: Icons.location_on),
-                SizedBox(
-                  height: 10.h,
-                ),
                 const MyTextField(hintText: 'Phone number', icon: Icons.phone),
-                SizedBox(
-                  height: 10.h,
-                ),
                 const MyTextField(hintText: 'Email', icon: Icons.mail),
-                SizedBox(
-                  height: 10.h,
-                ),
                 const MyTextField(
-                  hintText: 'Password',
-                  icon: Icons.lock,
-                  obscureText: true,
-                ),
-                SizedBox(
-                  height: 10.h,
-                ),
+                    hintText: 'Password', icon: Icons.lock, obscureText: true),
                 const MyTextField(
                   hintText: 'Re-type password',
                   icon: Icons.lock,
                   obscureText: true,
-                ),
-                SizedBox(
-                  height: 30.h,
                 ),
                 MyButton(
                   fontSize: 20.sp,
                   text: "Sign up",
                   width: double.infinity,
                   borderColor: false,
-                ),
-                SizedBox(
-                  height: 20.h,
                 ),
                 Center(
                   child: TextButton(

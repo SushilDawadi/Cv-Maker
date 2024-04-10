@@ -21,50 +21,53 @@ class MyButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      width: width,
-      height: height,
-      child: TextButton(
-        onPressed: () {
-          onPressed!();
-        },
-        style: ButtonStyle(
-          shape: MaterialStateProperty.all(
-            borderColor!
-                ? RoundedRectangleBorder(
-                    side: const BorderSide(color: primaryColor, width: 2),
-                    borderRadius: BorderRadius.circular(12.r),
-                  )
-                : RoundedRectangleBorder(
-                    side: const BorderSide(color: primaryColor, width: 2),
-                    borderRadius: BorderRadius.circular(12.r),
-                  ),
+    return Padding(
+      padding: EdgeInsets.symmetric(vertical: 10.h),
+      child: SizedBox(
+        width: width,
+        height: height,
+        child: TextButton(
+          onPressed: () {
+            onPressed!();
+          },
+          style: ButtonStyle(
+            shape: MaterialStateProperty.all(
+              borderColor!
+                  ? RoundedRectangleBorder(
+                      side: const BorderSide(color: primaryColor, width: 2),
+                      borderRadius: BorderRadius.circular(12.r),
+                    )
+                  : RoundedRectangleBorder(
+                      side: const BorderSide(color: primaryColor, width: 2),
+                      borderRadius: BorderRadius.circular(12.r),
+                    ),
+            ),
+            backgroundColor: borderColor!
+                ? MaterialStateProperty.all(Colors.transparent)
+                : MaterialStateProperty.all(primaryColor),
+            foregroundColor: MaterialStateProperty.all(Colors.white),
+            padding: MaterialStateProperty.all(
+              EdgeInsets.symmetric(horizontal: 10.w, vertical: 14.h),
+            ),
           ),
-          backgroundColor: borderColor!
-              ? MaterialStateProperty.all(Colors.transparent)
-              : MaterialStateProperty.all(primaryColor),
-          foregroundColor: MaterialStateProperty.all(Colors.white),
-          padding: MaterialStateProperty.all(
-            EdgeInsets.symmetric(horizontal: 10.w, vertical: 14.h),
-          ),
+          child: borderColor!
+              ? Text(
+                  text,
+                  style: TextStyle(
+                      color: primaryColor,
+                      fontSize: fontSize,
+                      fontFamily: fontFamily,
+                      fontWeight: FontWeight.w600),
+                )
+              : Text(
+                  text,
+                  style: TextStyle(
+                      color: white,
+                      fontSize: fontSize,
+                      fontFamily: fontFamily,
+                      fontWeight: FontWeight.w600),
+                ),
         ),
-        child: borderColor!
-            ? Text(
-                text,
-                style: TextStyle(
-                    color: primaryColor,
-                    fontSize: fontSize,
-                    fontFamily: fontFamily,
-                    fontWeight: FontWeight.w600),
-              )
-            : Text(
-                text,
-                style: TextStyle(
-                    color: white,
-                    fontSize: fontSize,
-                    fontFamily: fontFamily,
-                    fontWeight: FontWeight.w600),
-              ),
       ),
     );
   }

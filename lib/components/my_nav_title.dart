@@ -1,4 +1,4 @@
-import 'package:cv_maker/utils/imagePath.dart';
+import 'package:cv_maker/utils/utilsClass.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -20,26 +20,37 @@ class _MyNavTitleState extends State<MyNavTitle> {
           Expanded(
             child: ListView.builder(
               scrollDirection: Axis.horizontal,
-              itemCount: navTitles.length,
-              itemBuilder: (context, index) => GestureDetector(
-                onTap: () {
-                  setState(() {
-                    selectedIndex = index;
-                  });
-                },
-                child: Padding(
-                  padding: EdgeInsets.only(right: 38.w, top: 29.h),
-                  child: Text(
-                    navTitles[index],
-                    style: TextStyle(
-                      fontSize: 16.sp,
-                      fontWeight: index == selectedIndex
-                          ? FontWeight.bold
-                          : FontWeight.normal,
+              itemCount: Utils.navTitles.length,
+              itemBuilder: (context, index) {
+                final navKeys = Utils.navTitles.keys.toList();
+                final navValues = Utils.navTitles.values.toList();
+
+                return GestureDetector(
+                  onTap: () {
+                    setState(() {
+                      selectedIndex = index;
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => navValues[index],
+                        ),
+                      );
+                    });
+                  },
+                  child: Padding(
+                    padding: EdgeInsets.only(right: 38.w, top: 29.h),
+                    child: Text(
+                      navKeys[index],
+                      style: TextStyle(
+                        fontSize: 16.sp,
+                        fontWeight: index == selectedIndex
+                            ? FontWeight.bold
+                            : FontWeight.normal,
+                      ),
                     ),
                   ),
-                ),
-              ),
+                );
+              },
             ),
           ),
         ],
