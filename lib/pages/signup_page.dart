@@ -58,6 +58,9 @@ class SignUpPage extends StatelessWidget {
                   icon: Icons.vpn_key,
                   obscureText: true,
                 ),
+                SizedBox(
+                  height: 30.h,
+                ),
                 MyButton(
                   fontSize: 20.sp,
                   text: "Sign up",

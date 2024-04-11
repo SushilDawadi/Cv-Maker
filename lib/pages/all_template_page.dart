@@ -4,7 +4,7 @@ import 'package:cv_maker/components/custom/my_custom_app_bar.dart';
 import 'package:cv_maker/components/custom/my_custom_heading_text.dart';
 import 'package:cv_maker/components/custom/my_custom_template_heading.dart';
 import 'package:cv_maker/components/custom/my_custom_template_tile.dart';
-import 'package:cv_maker/pages/single_category_template.dart';
+import 'package:cv_maker/pages/single_category_template_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -19,9 +19,11 @@ class AllTemplatePage extends StatelessWidget {
         showUserDetails: false,
         onPressed: () {
           Navigator.push(
-              context,
-              MaterialPageRoute(
-                  builder: (context) => const SingleCategoryTemplate()));
+            context,
+            MaterialPageRoute(
+              builder: (context) => SingleCategoryTemplate(),
+            ),
+          );
         },
       ),
       body: SafeArea(

@@ -4,17 +4,23 @@ import 'package:cv_maker/components/custom/my_custom_bottom_bar.dart';
 import 'package:cv_maker/pages/tabpages/education_empty_tab.dart';
 import 'package:cv_maker/pages/tabpages/general_information_tab.dart';
 import 'package:cv_maker/pages/tabpages/objective_page_tab.dart';
-import 'package:cv_maker/pages/education_data.dart';
-import 'package:cv_maker/pages/experience_data.dart';
+import 'package:cv_maker/pages/education_data_page.dart';
+import 'package:cv_maker/pages/experience_data_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class MyCustomTabBar extends StatelessWidget {
+class MyCustomTabBar extends StatefulWidget {
   const MyCustomTabBar({super.key});
+
+  @override
+  State<MyCustomTabBar> createState() => _MyCustomTabBarState();
+}
+
+class _MyCustomTabBarState extends State<MyCustomTabBar> {
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
-      length: 7,
+      length: 6,
       child: Scaffold(
         appBar: AppBar(
           surfaceTintColor: white,
@@ -77,7 +83,7 @@ class MyCustomTabBar extends StatelessWidget {
                 Tab(text: 'Experience'),
                 Tab(text: 'Projects'),
                 Tab(text: 'Additional'),
-                Tab(text: 'Export'),
+                // Tab(text: 'Export'),
               ],
             ),
           ),

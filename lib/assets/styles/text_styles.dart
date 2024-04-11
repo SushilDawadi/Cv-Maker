@@ -47,6 +47,12 @@ final subTextStylePrimary = TextStyle(
   fontFamily: fontFamily,
   color: primaryColor,
 );
+final subTextIconOne = TextStyle(
+  fontWeight: FontWeight.w400,
+  fontSize: 12.sp,
+  fontFamily: fontFamily,
+  color: iconColor,
+);
 
 final buttonTextStyle = TextStyle(
   fontWeight: FontWeight.w600,
@@ -86,6 +92,12 @@ final whiteTextStyle = TextStyle(
   fontSize: 14.sp,
   fontFamily: fontFamily,
   color: white,
+);
+final blackTextStyle = TextStyle(
+  fontWeight: FontWeight.w600,
+  fontSize: 14.sp,
+  fontFamily: fontFamily,
+  color: black,
 );
 
 final percentTextStyle = TextStyle(

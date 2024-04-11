@@ -1,8 +1,7 @@
 import 'package:cv_maker/assets/colors/color.dart';
-import 'package:cv_maker/assets/fonts/font.dart';
+import 'package:cv_maker/assets/styles/text_styles.dart';
 import 'package:cv_maker/components/custom/my_custom_botton.dart';
 import 'package:cv_maker/components/custom/my_custom_example_container.dart';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -51,10 +50,7 @@ class Objective extends StatelessWidget {
                 padding: EdgeInsets.only(top: 7.0.h, bottom: 23.h),
                 child: Text(
                   "0/700",
-                  style: TextStyle(
-                      fontFamily: fontFamily,
-                      fontSize: 12.sp,
-                      color: iconColor),
+                  style: subTextIconOne,
                 ),
               ),
               Column(
@@ -62,13 +58,7 @@ class Objective extends StatelessWidget {
                 children: [
                   Padding(
                     padding: EdgeInsets.only(bottom: 15.h),
-                    child: Text(
-                      "Examples",
-                      style: TextStyle(
-                          fontFamily: fontFamily,
-                          fontSize: 14.sp,
-                          fontWeight: FontWeight.w500),
-                    ),
+                    child: Text("Examples", style: blackTextStyle),
                   ),
                   SizedBox(
                     height: 301.h,

@@ -4,7 +4,7 @@ import 'package:cv_maker/components/custom/my_custom_app_bar.dart';
 import 'package:cv_maker/components/custom/my_custom_heading_text.dart';
 import 'package:cv_maker/components/custom/my_custom_text.dart';
 import 'package:cv_maker/components/custom/my_custom_text_field.dart';
-import 'package:cv_maker/pages/verification_password.dart';
+import 'package:cv_maker/pages/verification_password_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 

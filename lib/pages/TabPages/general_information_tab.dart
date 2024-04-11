@@ -25,8 +25,6 @@ class _GeneralInformationState extends State<GeneralInformation> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [],
               ),
-              // const MyNavTitle(),
-
               Padding(
                 padding: EdgeInsets.only(bottom: 19.0.h),
                 child: Container(
