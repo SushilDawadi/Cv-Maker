@@ -6,11 +6,33 @@ import 'package:cv_maker/components/custom/my_custom_text_field.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class MyCustomAddBottomSheet extends StatelessWidget {
-  const MyCustomAddBottomSheet({super.key});
+class MyCustomAddBottomSheetEducation extends StatefulWidget {
+  const MyCustomAddBottomSheetEducation({super.key});
 
   @override
+  State<MyCustomAddBottomSheetEducation> createState() =>
+      _MyCustomAddBottomSheetEducationState();
+}
+
+class _MyCustomAddBottomSheetEducationState
+    extends State<MyCustomAddBottomSheetEducation> {
+  TextEditingController _dateController = TextEditingController();
+  @override
   Widget build(BuildContext context) {
+    Future<void> selectDate() async {
+      DateTime? _picked = await showDatePicker(
+        context: context,
+        initialDate: DateTime.now(),
+        firstDate: DateTime(2000),
+        lastDate: DateTime(2100),
+      );
+      if (_picked != null) {
+        setState(() {
+          _dateController.text = _picked.toString();
+        });
+      }
+    }
+
     return ElevatedButton(
       onPressed: () {
         showModalBottomSheet(
@@ -69,17 +91,23 @@ class MyCustomAddBottomSheet extends StatelessWidget {
                           icon: Icons.school),
                       const MyTextField(
                           value: 1, hintText: "Cgpa/ Grade", icon: Icons.edit),
-                      const Row(
+                      Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             MyTextField(
-                                value: 0.45,
-                                hintText: "Start Date",
-                                icon: Icons.date_range),
+                              controller: _dateController,
+                              onTap: selectDate,
+                              value: 0.45,
+                              hintText: "Start Date",
+                              icon: Icons.date_range,
+                            ),
                             MyTextField(
-                                value: 0.45,
-                                hintText: "End Date",
-                                icon: Icons.date_range)
+                              controller: _dateController,
+                              onTap: selectDate,
+                              value: 0.45,
+                              hintText: "End Date",
+                              icon: Icons.date_range,
+                            ),
                           ]),
                       Padding(
                         padding: EdgeInsets.symmetric(vertical: 7.h),

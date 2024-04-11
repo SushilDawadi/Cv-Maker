@@ -9,13 +9,15 @@ class MyTextField extends StatelessWidget {
   final bool obscureText;
   final TextEditingController? controller;
   final double value;
+  final void Function()? onTap;
   const MyTextField(
       {super.key,
       required this.hintText,
       required this.icon,
       this.obscureText = false,
       this.controller,
-      required this.value});
+      required this.value,
+      this.onTap});
 
   @override
   Widget build(BuildContext context) {
@@ -31,6 +33,9 @@ class MyTextField extends StatelessWidget {
         child: Padding(
           padding: EdgeInsets.only(left: 24.w),
           child: TextField(
+            onTap: () {
+              onTap!();
+            },
             controller: controller,
             style: TextStyle(
               fontSize: 16.sp,

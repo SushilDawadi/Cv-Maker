@@ -1,4 +1,4 @@
-import 'package:cv_maker/components/custom/my_custom_error_page.dart';
+import 'package:cv_maker/components/custom/my_custom_error_page_education.dart';
 import 'package:flutter/material.dart';
 
 class EducationEmpty extends StatelessWidget {
@@ -6,8 +6,8 @@ class EducationEmpty extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const SingleChildScrollView(
-        child: MyCustomErrorPage(
+    return SingleChildScrollView(
+        child: MyCustomErrorPageEducation(
       errorText: "No education details found",
     ));
   }

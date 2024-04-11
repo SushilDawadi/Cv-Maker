@@ -1,14 +1,15 @@
 import 'package:cv_maker/assets/colors/color.dart';
 import 'package:cv_maker/assets/fonts/font.dart';
+import 'package:cv_maker/components/custom/my_custom_add_bottom_sheet_experience.dart';
 import 'package:cv_maker/components/custom/my_custom_botton.dart';
-import 'package:cv_maker/components/custom/my_custom_add_bottom_sheet.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class MyCustomErrorPage extends StatelessWidget {
+class MyCustomErrorPageExperience extends StatelessWidget {
   final String errorText;
   final void Function()? onPressed;
-  const MyCustomErrorPage({super.key, required this.errorText, this.onPressed});
+  const MyCustomErrorPageExperience(
+      {super.key, required this.errorText, this.onPressed});
 
   @override
   Widget build(BuildContext context) {
@@ -37,7 +38,7 @@ class MyCustomErrorPage extends StatelessWidget {
                       fontWeight: FontWeight.w700),
                 ),
               ),
-              const MyCustomAddBottomSheet()
+              const MyCustomAddBottomSheetExperience()
             ],
           ),
           SizedBox(

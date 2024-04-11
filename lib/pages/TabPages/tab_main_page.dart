@@ -2,6 +2,7 @@ import 'package:cv_maker/assets/colors/color.dart';
 import 'package:cv_maker/assets/fonts/font.dart';
 import 'package:cv_maker/components/custom/my_custom_bottom_bar.dart';
 import 'package:cv_maker/pages/tabpages/education_empty_tab.dart';
+import 'package:cv_maker/pages/tabpages/experience_empty_tab.dart';
 import 'package:cv_maker/pages/tabpages/general_information_tab.dart';
 import 'package:cv_maker/pages/tabpages/objective_page_tab.dart';
 import 'package:cv_maker/pages/education_data_page.dart';
@@ -93,7 +94,7 @@ class _MyCustomTabBarState extends State<MyCustomTabBar> {
             GeneralInformation(),
             Objective(),
             EducationEmpty(),
-            EducationEmpty(),
+            ExperienceEmpty(),
             EducationData(),
             ExperienceData(),
           ],
