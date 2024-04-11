@@ -1,5 +1,5 @@
 import 'package:cv_maker/assets/colors/color.dart';
-import 'package:cv_maker/assets/fonts/font.dart';
+import 'package:cv_maker/assets/styles/text_styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -8,18 +8,21 @@ class MyTextField extends StatelessWidget {
   final IconData icon;
   final bool obscureText;
   final TextEditingController? controller;
+  final double value;
   const MyTextField(
       {super.key,
       required this.hintText,
       required this.icon,
       this.obscureText = false,
-      this.controller});
+      this.controller,
+      required this.value});
 
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: EdgeInsets.symmetric(vertical: 6.h),
       child: Container(
+        width: MediaQuery.of(context).size.width * value,
         decoration: BoxDecoration(
             border: Border.all(
               color: textFieldInputColor,
@@ -38,11 +41,7 @@ class MyTextField extends StatelessWidget {
             decoration: InputDecoration(
               border: InputBorder.none,
               hintText: hintText,
-              hintStyle: TextStyle(
-                  fontSize: 16.sp,
-                  color: hinttextColor,
-                  fontFamily: fontFamily,
-                  fontWeight: FontWeight.w400),
+              hintStyle: hintTextStyle,
               suffixIcon: Icon(
                 icon,
                 color: iconColor,

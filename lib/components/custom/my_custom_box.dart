@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class MyBox extends StatelessWidget {
-  const MyBox({super.key});
+class MyCustomBox extends StatelessWidget {
+  const MyCustomBox({super.key});
 
   @override
   Widget build(BuildContext context) {

@@ -1,8 +1,9 @@
-import 'package:cv_maker/components/button.dart';
+import 'package:cv_maker/assets/styles/container_padding.dart';
+import 'package:cv_maker/components/custom/my_custom_botton.dart';
 import 'package:cv_maker/components/custom/my_custom_app_bar.dart';
 import 'package:cv_maker/components/custom/my_custom_heading_text.dart';
 import 'package:cv_maker/components/custom/my_custom_text_field.dart';
-import 'package:cv_maker/components/text.dart';
+import 'package:cv_maker/components/custom/my_custom_text.dart';
 import 'package:cv_maker/pages/home_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -19,7 +20,7 @@ class ResetPasswordPage extends StatelessWidget {
       ),
       body: SafeArea(
         child: Padding(
-          padding: EdgeInsets.symmetric(horizontal: 26.w, vertical: 16.h),
+          padding: containerPadding,
           child: SingleChildScrollView(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -33,10 +34,14 @@ class ResetPasswordPage extends StatelessWidget {
                 SizedBox(
                   height: 15.h,
                 ),
-                const MyTextField(hintText: "Code", icon: Icons.code_outlined),
-                const MyTextField(hintText: "Password", icon: Icons.lock),
                 const MyTextField(
-                    hintText: "Re-type Password", icon: Icons.lock),
+                    value: 1, hintText: "Code", icon: Icons.fiber_smart_record),
+                const MyTextField(
+                    value: 1, hintText: "Password", icon: Icons.vpn_key),
+                const MyTextField(
+                    value: 1,
+                    hintText: "Re-type Password",
+                    icon: Icons.vpn_key),
                 SizedBox(
                   height: 25.h,
                 ),

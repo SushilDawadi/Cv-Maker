@@ -1,10 +1,12 @@
 import 'package:cv_maker/assets/colors/color.dart';
-import 'package:cv_maker/assets/fonts/font.dart';
-import 'package:cv_maker/components/bottomBar.dart';
+import 'package:cv_maker/assets/styles/container_padding.dart';
+import 'package:cv_maker/assets/styles/text_styles.dart';
+import 'package:cv_maker/components/custom/my_custom_bottom_bar.dart';
 import 'package:cv_maker/components/custom/my_custom_app_bar.dart';
 import 'package:cv_maker/components/custom/my_custom_heading_text.dart';
 import 'package:cv_maker/components/custom/my_custom_template_heading.dart';
 import 'package:cv_maker/components/custom/my_custom_template_tile.dart';
+import 'package:cv_maker/pages/add_category_template.dart';
 import 'package:cv_maker/pages/all_template.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -16,13 +18,21 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: const MyCustomAppBar(
+      appBar: MyCustomAppBar(
         showDropButton: true,
         showUserDetails: false,
+        onPressed: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => const AddCategoryTemplate(),
+            ),
+          );
+        },
       ),
       body: SafeArea(
         child: Padding(
-          padding: EdgeInsets.symmetric(horizontal: 27.w, vertical: 16.h),
+          padding: containerPadding,
           child: SingleChildScrollView(
             child: Column(
               children: [
@@ -53,13 +63,7 @@ class HomePage extends StatelessWidget {
                             children: [
                               Padding(
                                 padding: EdgeInsets.only(left: 51.w, top: 11.h),
-                                child: Text(
-                                  "1 out of 4",
-                                  style: TextStyle(
-                                      fontWeight: FontWeight.w600,
-                                      fontFamily: fontFamily,
-                                      fontSize: 24.sp),
-                                ),
+                                child: Text("1 out of 4", style: mainTextStyle),
                               ),
                               SizedBox(
                                 height: 8.h,
@@ -86,20 +90,15 @@ class HomePage extends StatelessWidget {
                                             BorderRadius.circular(8.r),
                                       ),
                                       child: Center(
-                                          child: Padding(
-                                        padding: EdgeInsets.symmetric(
-                                          horizontal: 45.w,
-                                          vertical: 10.h,
+                                        child: Padding(
+                                          padding: EdgeInsets.symmetric(
+                                            horizontal: 45.w,
+                                            vertical: 10.h,
+                                          ),
+                                          child: Text("Complete",
+                                              style: homeButtonTextStyle),
                                         ),
-                                        child: Text(
-                                          "Complete",
-                                          style: TextStyle(
-                                              color: white,
-                                              fontFamily: fontFamily,
-                                              fontSize: 14.sp,
-                                              fontWeight: FontWeight.w600),
-                                        ),
-                                      )),
+                                      ),
                                     ),
                                   ),
                                 ),
@@ -117,11 +116,7 @@ class HomePage extends StatelessWidget {
                               backgroundColor: progressBarRadiusColor,
                               center: Text(
                                 '25%',
-                                style: TextStyle(
-                                    fontFamily: fontFamily2,
-                                    fontSize: 24.sp,
-                                    fontWeight: FontWeight.w900,
-                                    color: progressBarTextColor),
+                                style: percentTextStyle,
                               ),
                             ),
                           ),
@@ -129,7 +124,7 @@ class HomePage extends StatelessWidget {
                       ),
                     ),
                     SizedBox(
-                      height: 30.h,
+                      height: 28.h,
                     ),
                     const MyCustomTemplateHeading(
                       titleText: "Lastest Templates",

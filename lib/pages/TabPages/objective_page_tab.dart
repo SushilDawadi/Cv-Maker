@@ -1,7 +1,8 @@
 import 'package:cv_maker/assets/colors/color.dart';
 import 'package:cv_maker/assets/fonts/font.dart';
-import 'package:cv_maker/components/button.dart';
-import 'package:cv_maker/components/my_example_container.dart';
+import 'package:cv_maker/components/custom/my_custom_botton.dart';
+import 'package:cv_maker/components/custom/my_custom_example_container.dart';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 

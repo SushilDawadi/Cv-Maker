@@ -1,8 +1,9 @@
 import 'package:cv_maker/assets/colors/color.dart';
-import 'package:cv_maker/components/button.dart';
+import 'package:cv_maker/assets/styles/container_padding.dart';
+import 'package:cv_maker/components/custom/my_custom_botton.dart';
 import 'package:cv_maker/components/custom/my_custom_app_bar.dart';
 import 'package:cv_maker/components/custom/my_custom_heading_text.dart';
-import 'package:cv_maker/components/text.dart';
+import 'package:cv_maker/components/custom/my_custom_text.dart';
 import 'package:cv_maker/components/custom/my_custom_text_field.dart';
 import 'package:cv_maker/pages/login_page.dart';
 import 'package:flutter/material.dart';
@@ -21,7 +22,7 @@ class SignUpPage extends StatelessWidget {
       ),
       body: SafeArea(
         child: Padding(
-          padding: EdgeInsets.symmetric(horizontal: 26.w, vertical: 16.h),
+          padding: containerPadding,
           child: SingleChildScrollView(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -34,17 +35,27 @@ class SignUpPage extends StatelessWidget {
                 SizedBox(
                   height: 30.h,
                 ),
-                const MyTextField(hintText: 'First name', icon: Icons.person),
-                const MyTextField(hintText: 'Middle name', icon: Icons.person),
-                const MyTextField(hintText: 'Last name', icon: Icons.person),
-                const MyTextField(hintText: 'Address', icon: Icons.location_on),
-                const MyTextField(hintText: 'Phone number', icon: Icons.phone),
-                const MyTextField(hintText: 'Email', icon: Icons.mail),
                 const MyTextField(
-                    hintText: 'Password', icon: Icons.lock, obscureText: true),
+                    value: 1, hintText: 'First name', icon: Icons.person),
                 const MyTextField(
+                    value: 1, hintText: 'Middle name', icon: Icons.person),
+                const MyTextField(
+                    value: 1, hintText: 'Last name', icon: Icons.person),
+                const MyTextField(
+                    value: 1, hintText: 'Address', icon: Icons.location_on),
+                const MyTextField(
+                    value: 1, hintText: 'Phone number', icon: Icons.phone),
+                const MyTextField(
+                    value: 1, hintText: 'Email', icon: Icons.mail),
+                const MyTextField(
+                    value: 1,
+                    hintText: 'Password',
+                    icon: Icons.vpn_key,
+                    obscureText: true),
+                const MyTextField(
+                  value: 1,
                   hintText: 'Re-type password',
-                  icon: Icons.lock,
+                  icon: Icons.vpn_key,
                   obscureText: true,
                 ),
                 MyButton(

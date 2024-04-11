@@ -1,9 +1,9 @@
-import 'package:cv_maker/pages/TabPages/education_empty_tab.dart';
+import 'package:cv_maker/pages/tabpages/education_empty_tab.dart';
 import 'package:cv_maker/pages/education_data.dart';
-import 'package:cv_maker/pages/TabPages/experience_empty_tab.dart';
+import 'package:cv_maker/pages/tabpages/experience_empty_tab.dart';
 import 'package:cv_maker/pages/experience_data.dart';
-import 'package:cv_maker/pages/TabPages/general_information_tab.dart';
-import 'package:cv_maker/pages/TabPages/objective_page_tab.dart';
+import 'package:cv_maker/pages/tabpages/general_information_tab.dart';
+import 'package:cv_maker/pages/tabpages/objective_page_tab.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 

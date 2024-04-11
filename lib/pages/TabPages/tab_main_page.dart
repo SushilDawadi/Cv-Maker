@@ -1,14 +1,16 @@
 import 'package:cv_maker/assets/colors/color.dart';
 import 'package:cv_maker/assets/fonts/font.dart';
-import 'package:cv_maker/components/bottomBar.dart';
-import 'package:cv_maker/pages/TabPages/education_empty_tab.dart';
-import 'package:cv_maker/pages/TabPages/experience_empty_tab.dart';
-import 'package:cv_maker/pages/TabPages/general_information_tab.dart';
-import 'package:cv_maker/pages/TabPages/objective_page_tab.dart';
+import 'package:cv_maker/components/custom/my_custom_bottom_bar.dart';
+import 'package:cv_maker/pages/tabpages/education_empty_tab.dart';
+import 'package:cv_maker/pages/tabpages/general_information_tab.dart';
+import 'package:cv_maker/pages/tabpages/objective_page_tab.dart';
+import 'package:cv_maker/pages/education_data.dart';
+import 'package:cv_maker/pages/experience_data.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class MyCustomTabBar extends StatelessWidget {
+  const MyCustomTabBar({super.key});
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
@@ -56,7 +58,7 @@ class MyCustomTabBar extends StatelessWidget {
             )
           ],
           bottom: PreferredSize(
-            preferredSize: Size.fromHeight(48.h),
+            preferredSize: Size.fromHeight(68.h),
             child: const TabBar(
               isScrollable: true,
               indicatorColor: Colors.transparent,
@@ -85,10 +87,12 @@ class MyCustomTabBar extends StatelessWidget {
             GeneralInformation(),
             Objective(),
             EducationEmpty(),
-            ExperienceEmpty(),
+            EducationEmpty(),
+            EducationData(),
+            ExperienceData(),
           ],
         ),
-        bottomNavigationBar: MyBottomBar(),
+        bottomNavigationBar: const MyBottomBar(),
       ),
     );
   }

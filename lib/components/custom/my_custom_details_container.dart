@@ -1,5 +1,5 @@
 import 'package:cv_maker/assets/colors/color.dart';
-import 'package:cv_maker/assets/fonts/font.dart';
+import 'package:cv_maker/assets/styles/text_styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -43,74 +43,39 @@ class MyDetailsContainer extends StatelessWidget {
           children: [
             Text(
               titleText,
-              style: TextStyle(
-                  fontFamily: fontFamily,
-                  fontSize: 16.sp,
-                  color: subTextColor,
-                  fontWeight: FontWeight.w600),
+              style: mainTextStyle1,
             ),
             Text(
               subText,
-              style: TextStyle(
-                  fontFamily: fontFamily,
-                  fontSize: 12.sp,
-                  color: subTextColor,
-                  fontWeight: FontWeight.w400),
+              style: subTextStylethin,
             ),
             Padding(
               padding: EdgeInsets.only(top: 16.h),
               child: Text(
                 subtitleTextOne,
-                style: TextStyle(
-                    fontFamily: fontFamily,
-                    fontSize: 12.sp,
-                    color: subTextColor,
-                    fontWeight: FontWeight.w600),
+                style: subTextStylebold,
               ),
             ),
             Text(
               innerTextOne,
-              style: TextStyle(
-                  fontFamily: fontFamily,
-                  fontSize: 12.sp,
-                  color: subTextColor,
-                  fontWeight: FontWeight.w400),
+              style: subTextStylethin,
             ),
             Text(
               innerTextTwo,
-              style: TextStyle(
-                  fontFamily: fontFamily,
-                  fontSize: 12.sp,
-                  color: subTextColor,
-                  fontWeight: FontWeight.w400),
+              style: subTextStylethin,
             ),
             Padding(
               padding: EdgeInsets.only(top: 16.h),
               child: Text(
                 subtitleTextTwo,
-                style: TextStyle(
-                    fontFamily: fontFamily,
-                    fontSize: 12.sp,
-                    color: subTextColor,
-                    fontWeight: FontWeight.w600),
+                style: subTextStylebold,
               ),
             ),
             Text(
               innerTextthree,
-              style: TextStyle(
-                  fontFamily: fontFamily,
-                  fontSize: 12.sp,
-                  color: subTextColor,
-                  fontWeight: FontWeight.w400),
+              style: subTextStylethin,
             ),
-            Text(
-              innerTextfour,
-              style: TextStyle(
-                  fontFamily: fontFamily,
-                  fontSize: 12.sp,
-                  color: subTextColor,
-                  fontWeight: FontWeight.w400),
-            ),
+            Text(innerTextfour, style: subTextStylethin),
           ],
         ),
       ),

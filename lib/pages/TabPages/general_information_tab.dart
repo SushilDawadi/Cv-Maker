@@ -1,5 +1,6 @@
 import 'package:cv_maker/assets/colors/color.dart';
-import 'package:cv_maker/components/button.dart';
+import 'package:cv_maker/components/custom/my_custom_botton.dart';
+import 'package:cv_maker/components/custom/my_custom_button_with_bottom_sheet.dart';
 import 'package:cv_maker/components/custom/my_custom_text_field.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -62,30 +63,39 @@ class _GeneralInformationState extends State<GeneralInformation> {
                   ),
                 ),
               ),
-              const MyTextField(hintText: "Firstname", icon: Icons.person),
-              const MyTextField(hintText: "Middlename", icon: Icons.person),
-              const MyTextField(hintText: "Lastname", icon: Icons.person),
-              const MyTextField(hintText: "Address", icon: Icons.location_on),
-              const MyTextField(hintText: "Phonenumber", icon: Icons.phone),
-              const MyTextField(hintText: "Email", icon: Icons.mail),
               const MyTextField(
-                  hintText: "Profession(Job Title)", icon: Icons.work),
+                  value: 1, hintText: "Firstname", icon: Icons.person),
               const MyTextField(
+                  value: 1, hintText: "Middlename", icon: Icons.person),
+              const MyTextField(
+                  value: 1, hintText: "Lastname", icon: Icons.person),
+              const MyTextField(
+                  value: 1, hintText: "Address", icon: Icons.location_on),
+              const MyTextField(
+                  value: 1, hintText: "Phonenumber", icon: Icons.phone),
+              const MyTextField(value: 1, hintText: "Email", icon: Icons.mail),
+              const MyTextField(
+                  value: 1,
+                  hintText: "Profession(Job Title)",
+                  icon: Icons.work),
+              const MyTextField(
+                  value: 1,
                   hintText: "Portfolio link(i.e Linked/Behance etc)",
                   icon: Icons.link),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Padding(
-                    padding: EdgeInsets.symmetric(vertical: 19.h),
-                    child: MyButton(
-                      text: "Help",
-                      width: 129.w,
-                      fontSize: 20.sp,
-                      borderColor: true,
-                      onPressed: () {},
-                    ),
-                  ),
+                      padding: EdgeInsets.symmetric(vertical: 19.h),
+                      child: const MyCustomButtonWithBottomSheet(
+                        buttonText: "Help",
+                        contentSub:
+                            "Help to fill out the details related to your general and personal information.",
+                        contentMain:
+                            "Required fields:\n 1.First Name\n 2.Last Name \n3.Address \n4.Phone Number \n5.Email Address ",
+                        subtext:
+                            "Help to fill out the details related to your general and personal information.",
+                      )),
                   SizedBox(
                     width: 115.w,
                   ),

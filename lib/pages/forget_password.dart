@@ -1,7 +1,8 @@
-import 'package:cv_maker/components/button.dart';
+import 'package:cv_maker/assets/styles/container_padding.dart';
+import 'package:cv_maker/components/custom/my_custom_botton.dart';
 import 'package:cv_maker/components/custom/my_custom_app_bar.dart';
 import 'package:cv_maker/components/custom/my_custom_heading_text.dart';
-import 'package:cv_maker/components/text.dart';
+import 'package:cv_maker/components/custom/my_custom_text.dart';
 import 'package:cv_maker/components/custom/my_custom_text_field.dart';
 import 'package:cv_maker/pages/verification_password.dart';
 import 'package:flutter/material.dart';
@@ -19,7 +20,7 @@ class ForgetPasswordPage extends StatelessWidget {
       ),
       body: SafeArea(
         child: Padding(
-          padding: EdgeInsets.symmetric(horizontal: 26.w, vertical: 16),
+          padding: containerPadding,
           child: SingleChildScrollView(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -31,7 +32,8 @@ class ForgetPasswordPage extends StatelessWidget {
                 SizedBox(
                   height: 20.h,
                 ),
-                const MyTextField(hintText: 'Email', icon: Icons.email),
+                const MyTextField(
+                    value: 1, hintText: 'Email', icon: Icons.email),
                 SizedBox(
                   height: 25.h,
                 ),

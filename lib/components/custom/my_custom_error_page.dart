@@ -1,6 +1,7 @@
 import 'package:cv_maker/assets/colors/color.dart';
 import 'package:cv_maker/assets/fonts/font.dart';
-import 'package:cv_maker/components/button.dart';
+import 'package:cv_maker/components/custom/my_custom_botton.dart';
+import 'package:cv_maker/components/custom/my_custom_add_bottom_sheet.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -36,12 +37,7 @@ class MyCustomErrorPage extends StatelessWidget {
                       fontWeight: FontWeight.w700),
                 ),
               ),
-              MyButton(
-                text: "Add",
-                width: 164.w,
-                fontSize: 13.sp,
-                borderColor: true,
-              ),
+              const MyCustomAddBottomSheet()
             ],
           ),
           SizedBox(
@@ -52,11 +48,13 @@ class MyCustomErrorPage extends StatelessWidget {
                 SizedBox(
                   height: 241.h,
                 ),
+                //add button with modal
                 MyButton(
                   text: "Next",
                   width: 129.w,
                   fontSize: 20.sp,
                   borderColor: false,
+                  onPressed: () {},
                 )
               ],
             ),

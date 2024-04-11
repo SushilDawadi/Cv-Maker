@@ -1,8 +1,9 @@
-import 'package:cv_maker/components/bottomBar.dart';
+import 'package:cv_maker/assets/styles/container_padding.dart';
+import 'package:cv_maker/components/custom/my_custom_bottom_bar.dart';
 import 'package:cv_maker/components/custom/my_custom_app_bar.dart';
 import 'package:cv_maker/components/custom/my_custom_heading_text.dart';
 import 'package:cv_maker/pages/template_selected.dart';
-import 'package:cv_maker/utils/utilsClass.dart';
+import 'package:cv_maker/utils/utils_class.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -26,7 +27,7 @@ class SingleCategoryTemplate extends StatelessWidget {
       ),
       body: SafeArea(
         child: Padding(
-          padding: EdgeInsets.symmetric(horizontal: 26.w, vertical: 16.h),
+          padding: containerPadding,
           child: SingleChildScrollView(
             child: Column(
               children: [

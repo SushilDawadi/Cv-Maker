@@ -1,5 +1,4 @@
-import 'package:cv_maker/assets/colors/color.dart';
-import 'package:cv_maker/assets/fonts/font.dart';
+import 'package:cv_maker/assets/styles/text_styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -26,12 +25,7 @@ class MyCustomHeadingText extends StatelessWidget {
           children: [
             Text(
               titleText,
-              style: TextStyle(
-                fontSize: 24.sp,
-                fontWeight: FontWeight.w600,
-                fontFamily: fontFamily,
-                color: black,
-              ),
+              style: headingTextStyle,
             ),
             SizedBox(
               height: 5.h,
@@ -40,11 +34,7 @@ class MyCustomHeadingText extends StatelessWidget {
               width: width,
               child: Text(
                 subText,
-                style: TextStyle(
-                    fontSize: 14.sp,
-                    fontWeight: FontWeight.w400,
-                    fontFamily: fontFamily,
-                    color: subTextColor),
+                style: subTextStyle,
               ),
             ),
           ],

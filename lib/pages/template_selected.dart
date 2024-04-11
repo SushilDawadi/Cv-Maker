@@ -1,10 +1,11 @@
-import 'package:cv_maker/assets/fonts/font.dart';
-import 'package:cv_maker/components/bottomBar.dart';
-import 'package:cv_maker/components/button.dart';
+import 'package:cv_maker/assets/styles/container_padding.dart';
+import 'package:cv_maker/assets/styles/text_styles.dart';
+import 'package:cv_maker/components/custom/my_custom_bottom_bar.dart';
+import 'package:cv_maker/components/custom/my_custom_botton.dart';
 import 'package:cv_maker/components/custom/my_custom_app_bar.dart';
 import 'package:cv_maker/components/custom/my_custom_heading_text.dart';
-import 'package:cv_maker/components/my_details_container.dart';
-import 'package:cv_maker/pages/TabPages/tab_main_page.dart';
+import 'package:cv_maker/components/custom/my_custom_details_container.dart';
+import 'package:cv_maker/pages/tabpages/tab_main_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -20,7 +21,7 @@ class TemplateSelected extends StatelessWidget {
       ),
       body: SafeArea(
         child: Padding(
-          padding: EdgeInsets.symmetric(horizontal: 26.w, vertical: 16.h),
+          padding: containerPadding,
           child: SingleChildScrollView(
             child: Column(
               children: [
@@ -44,7 +45,7 @@ class TemplateSelected extends StatelessWidget {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => MyCustomTabBar(),
+                              builder: (context) => const MyCustomTabBar(),
                             ),
                           );
                         },
@@ -54,11 +55,7 @@ class TemplateSelected extends StatelessWidget {
                       padding: EdgeInsets.only(top: 31.h),
                       child: Text(
                         "Saved details",
-                        style: TextStyle(
-                          fontFamily: fontFamily,
-                          fontSize: 16.sp,
-                          fontWeight: FontWeight.w600,
-                        ),
+                        style: mainTextStyle,
                       ),
                     ),
                     Padding(

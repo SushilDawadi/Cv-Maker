@@ -1,5 +1,6 @@
-import 'package:cv_maker/components/button.dart';
-import 'package:cv_maker/components/text.dart';
+import 'package:cv_maker/assets/styles/container_padding.dart';
+import 'package:cv_maker/components/custom/my_custom_botton.dart';
+import 'package:cv_maker/components/custom/my_custom_text.dart';
 import 'package:cv_maker/components/custom/my_custom_text_field.dart';
 import 'package:cv_maker/pages/forget_password.dart';
 import 'package:cv_maker/pages/signup_page.dart';
@@ -14,7 +15,7 @@ class LoginPage extends StatelessWidget {
     return Scaffold(
         body: SingleChildScrollView(
       child: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 26.w, vertical: 16.h),
+        padding: containerPadding,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -31,10 +32,12 @@ class LoginPage extends StatelessWidget {
             ),
             Column(
               children: [
-                const MyTextField(hintText: "Email", icon: Icons.email),
                 const MyTextField(
+                    value: 1, hintText: "Email", icon: Icons.email),
+                const MyTextField(
+                  value: 1,
                   hintText: "Password",
-                  icon: Icons.lock,
+                  icon: Icons.vpn_key,
                   obscureText: true,
                 ),
                 Padding(
@@ -45,10 +48,12 @@ class LoginPage extends StatelessWidget {
                       TextButton(
                           onPressed: () {
                             Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) =>
-                                        const ForgetPasswordPage()));
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) =>
+                                    const ForgetPasswordPage(),
+                              ),
+                            );
                           },
                           child: const MyText(text: "Forgot Password?"))
                     ],

@@ -1,7 +1,6 @@
 import 'package:cv_maker/assets/colors/color.dart';
 import 'package:cv_maker/assets/fonts/font.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class MyCustomAppBar extends StatelessWidget implements PreferredSizeWidget {
@@ -79,5 +78,6 @@ class MyCustomAppBar extends StatelessWidget implements PreferredSizeWidget {
     );
   }
 
+  @override
   Size get preferredSize => Size.fromHeight(90.h);
 }

@@ -1,6 +1,7 @@
 import 'package:cv_maker/assets/colors/color.dart';
-import 'package:cv_maker/components/bottomBar.dart';
-import 'package:cv_maker/components/button.dart';
+import 'package:cv_maker/assets/styles/container_padding.dart';
+import 'package:cv_maker/components/custom/my_custom_bottom_bar.dart';
+import 'package:cv_maker/components/custom/my_custom_botton.dart';
 import 'package:cv_maker/components/custom/my_custom_text_field.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -18,22 +19,10 @@ class _GeneralInformationState extends State<GeneralInformation> {
     return Scaffold(
       body: SafeArea(
         child: Padding(
-          padding: EdgeInsets.symmetric(horizontal: 26.w, vertical: 16.h),
+          padding: containerPadding,
           child: SingleChildScrollView(
             child: Column(
               children: [
-                const Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    // MyNameAppBar(
-                    //   isHorizontal: false,
-                    //   showImage: false,
-                    //   showText: false,
-                    // ),
-                  ],
-                ),
-                // const MyNavTitle(),
-
                 Padding(
                   padding: EdgeInsets.only(bottom: 19.0.h),
                   child: Container(
@@ -42,15 +31,14 @@ class _GeneralInformationState extends State<GeneralInformation> {
                     child: Stack(
                       children: [
                         ClipRRect(
-                          borderRadius:
-                              BorderRadius.all(Radius.circular(99.5.r)),
-                          child: Image.asset(
-                            'lib/assets/images/yashwindar_sir.png',
-                            fit: BoxFit.cover,
-                            height: 199.h,
-                            width: 199.h,
-                          ),
-                        ),
+                            borderRadius:
+                                BorderRadius.all(Radius.circular(99.5.r)),
+                            child: Image.asset(
+                              "assets/images/placeholder.png",
+                              fit: BoxFit.cover,
+                              height: 199.h,
+                              width: 199.h,
+                            )),
                         Positioned(
                           right: 0,
                           bottom: 0,
@@ -72,15 +60,24 @@ class _GeneralInformationState extends State<GeneralInformation> {
                     ),
                   ),
                 ),
-                const MyTextField(hintText: "Firstname", icon: Icons.person),
-                const MyTextField(hintText: "Middlename", icon: Icons.person),
-                const MyTextField(hintText: "Lastname", icon: Icons.person),
-                const MyTextField(hintText: "Address", icon: Icons.location_on),
-                const MyTextField(hintText: "Phonenumber", icon: Icons.phone),
-                const MyTextField(hintText: "Email", icon: Icons.mail),
                 const MyTextField(
-                    hintText: "Profession(Job Title)", icon: Icons.work),
+                    value: 1, hintText: "Firstname", icon: Icons.person),
                 const MyTextField(
+                    value: 1, hintText: "Middlename", icon: Icons.person),
+                const MyTextField(
+                    value: 1, hintText: "Lastname", icon: Icons.person),
+                const MyTextField(
+                    value: 1, hintText: "Address", icon: Icons.location_on),
+                const MyTextField(
+                    value: 1, hintText: "Phonenumber", icon: Icons.phone),
+                const MyTextField(
+                    value: 1, hintText: "Email", icon: Icons.mail),
+                const MyTextField(
+                    value: 1,
+                    hintText: "Profession(Job Title)",
+                    icon: Icons.work),
+                const MyTextField(
+                    value: 1,
                     hintText: "Portfolio link(i.e Linked/Behance etc)",
                     icon: Icons.link),
                 Row(
@@ -93,7 +90,6 @@ class _GeneralInformationState extends State<GeneralInformation> {
                         width: 129.w,
                         fontSize: 20.sp,
                         borderColor: true,
-                        onPressed: () {},
                       ),
                     ),
                     SizedBox(

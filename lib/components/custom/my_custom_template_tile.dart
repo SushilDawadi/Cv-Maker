@@ -1,4 +1,4 @@
-import 'package:cv_maker/utils/utilsClass.dart';
+import 'package:cv_maker/utils/utils_class.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
