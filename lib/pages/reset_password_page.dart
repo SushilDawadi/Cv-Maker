@@ -46,9 +46,10 @@ class ResetPasswordPage extends StatelessWidget {
                   height: 25.h,
                 ),
                 MyButton(
+                  showIcon: false,
                   text: "Reset Password",
                   fontSize: 20.sp,
-                  width: double.infinity,
+                  value: 1,
                   onPressed: () {},
                   borderColor: false,
                 ),

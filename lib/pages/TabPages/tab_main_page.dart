@@ -1,5 +1,6 @@
 import 'package:cv_maker/assets/colors/color.dart';
 import 'package:cv_maker/assets/fonts/font.dart';
+import 'package:cv_maker/assets/styles/text_styles.dart';
 import 'package:cv_maker/components/custom/my_custom_bottom_bar.dart';
 import 'package:cv_maker/pages/tabpages/education_empty_tab.dart';
 import 'package:cv_maker/pages/tabpages/experience_empty_tab.dart';
@@ -66,26 +67,59 @@ class _MyCustomTabBarState extends State<MyCustomTabBar> {
           ],
           bottom: PreferredSize(
             preferredSize: Size.fromHeight(68.h),
-            child: const TabBar(
-              isScrollable: true,
-              indicatorColor: Colors.transparent,
-              labelStyle: TextStyle(
-                fontWeight: FontWeight.bold,
-                color: Colors.black,
+            child: Padding(
+              padding: EdgeInsets.only(left: 27.w),
+              child: TabBar(
+                isScrollable: true,
+                indicatorColor: Colors.transparent,
+                labelStyle: const TextStyle(
+                  fontWeight: FontWeight.bold,
+                  color: Colors.black,
+                ),
+                unselectedLabelStyle: const TextStyle(
+                  fontWeight: FontWeight.normal,
+                  color: tabTitleColor,
+                ),
+                tabs: [
+                  Tab(
+                    child: Text(
+                      "General Information",
+                      style: boldTextStyle,
+                    ),
+                  ),
+                  Tab(
+                    child: Text(
+                      "Objective",
+                      style: boldTextStyle,
+                    ),
+                  ),
+                  Tab(
+                    child: Text(
+                      "Education",
+                      style: boldTextStyle,
+                    ),
+                  ),
+                  Tab(
+                    child: Text(
+                      "Experience",
+                      style: boldTextStyle,
+                    ),
+                  ),
+                  Tab(
+                    child: Text(
+                      "Projects",
+                      style: boldTextStyle,
+                    ),
+                  ),
+                  Tab(
+                    child: Text(
+                      "Additional",
+                      style: boldTextStyle,
+                    ),
+                  ),
+                  // Tab(text: 'Export'),
+                ],
               ),
-              unselectedLabelStyle: TextStyle(
-                fontWeight: FontWeight.normal,
-                color: tabTitleColor,
-              ),
-              tabs: [
-                Tab(text: 'General Information'),
-                Tab(text: 'Objective'),
-                Tab(text: 'Education'),
-                Tab(text: 'Experience'),
-                Tab(text: 'Projects'),
-                Tab(text: 'Additional'),
-                // Tab(text: 'Export'),
-              ],
             ),
           ),
         ),

@@ -86,8 +86,9 @@ class _GeneralInformationState extends State<GeneralInformation> {
                     Padding(
                       padding: EdgeInsets.symmetric(vertical: 19.h),
                       child: MyButton(
+                        showIcon: false,
                         text: "Help",
-                        width: 129.w,
+                        value: 1,
                         fontSize: 20.sp,
                         borderColor: true,
                       ),
@@ -98,8 +99,9 @@ class _GeneralInformationState extends State<GeneralInformation> {
                     Padding(
                       padding: EdgeInsets.symmetric(vertical: 19.h),
                       child: MyButton(
+                        showIcon: false,
                         text: "Next",
-                        width: 129.w,
+                        value: 1,
                         fontSize: 20.sp,
                         borderColor: false,
                         onPressed: () {},

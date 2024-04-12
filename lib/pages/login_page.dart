@@ -60,9 +60,10 @@ class LoginPage extends StatelessWidget {
                   ),
                 ),
                 MyButton(
+                  showIcon: false,
                   fontSize: 20.sp,
                   text: "Login",
-                  width: double.infinity,
+                  value: 1,
                   borderColor: false,
                 ),
                 Center(

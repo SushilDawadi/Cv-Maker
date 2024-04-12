@@ -37,8 +37,9 @@ class TemplateSelected extends StatelessWidget {
                     Padding(
                       padding: EdgeInsets.only(top: 50.h),
                       child: MyButton(
+                        showIcon: false,
                         text: "Use new data",
-                        width: 383.w,
+                        value: 1,
                         fontSize: 20.sp,
                         borderColor: true,
                         onPressed: () {

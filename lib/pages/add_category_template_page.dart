@@ -4,7 +4,7 @@ import 'package:cv_maker/assets/styles/text_styles.dart';
 import 'package:cv_maker/components/custom/my_custom_botton.dart';
 import 'package:cv_maker/components/custom/my_custom_app_bar.dart';
 import 'package:cv_maker/components/custom/my_custom_heading_text.dart';
-import 'package:cv_maker/pages/template_selected_page.dart';
+import 'package:cv_maker/pages/template_carousel_page.dart';
 import 'package:dotted_border/dotted_border.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -22,7 +22,7 @@ class AddCategoryTemplate extends StatelessWidget {
           Navigator.push(
             context,
             MaterialPageRoute(
-              builder: (context) => const TemplateSelected(),
+              builder: (context) => const TemplateCarousel(),
             ),
           );
         },
@@ -45,8 +45,9 @@ class AddCategoryTemplate extends StatelessWidget {
                     Padding(
                       padding: EdgeInsets.only(top: 50.h),
                       child: MyButton(
+                        showIcon: false,
                         text: "Use new data",
-                        width: 383.w,
+                        value: 1,
                         fontSize: 20.sp,
                         borderColor: true,
                         onPressed: () {},

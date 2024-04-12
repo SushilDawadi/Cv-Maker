@@ -2,6 +2,7 @@ import 'package:cv_maker/assets/colors/color.dart';
 import 'package:cv_maker/assets/fonts/font.dart';
 import 'package:cv_maker/components/custom/my_custom_botton.dart';
 import 'package:cv_maker/components/custom/my_custom_check_box.dart';
+import 'package:cv_maker/components/custom/my_custom_text_date_field.dart';
 import 'package:cv_maker/components/custom/my_custom_text_field.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -16,19 +17,19 @@ class MyCustomAddBottomSheetExperience extends StatefulWidget {
 
 class _MyCustomAddBottomSheetExperienceState
     extends State<MyCustomAddBottomSheetExperience> {
-  TextEditingController _dateController = TextEditingController();
+  final TextEditingController _dateController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     Future<void> selectDate() async {
-      DateTime? _picked = await showDatePicker(
+      DateTime? picked = await showDatePicker(
         context: context,
         initialDate: DateTime.now(),
         firstDate: DateTime(2000),
         lastDate: DateTime(2100),
       );
-      if (_picked != null) {
+      if (picked != null) {
         setState(() {
-          _dateController.text = _picked.toString();
+          _dateController.text = picked.toString();
         });
       }
     }
@@ -96,17 +97,17 @@ class _MyCustomAddBottomSheetExperienceState
                       Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            MyTextField(
+                            MyCustomDateFiedl(
                               controller: _dateController,
                               onTap: selectDate,
-                              value: 0.45,
+                              value: 0.4,
                               hintText: "Start Date",
                               icon: Icons.date_range,
                             ),
-                            MyTextField(
+                            MyCustomDateFiedl(
                               controller: _dateController,
                               onTap: selectDate,
-                              value: 0.45,
+                              value: 0.4,
                               hintText: "End Date",
                               icon: Icons.date_range,
                             ),
@@ -169,14 +170,16 @@ class _MyCustomAddBottomSheetExperienceState
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           MyButton(
+                            showIcon: false,
+                            value: 0.3,
                             text: "Help",
-                            width: 129.w,
                             fontSize: 20.sp,
                             borderColor: true,
                           ),
                           MyButton(
+                            showIcon: false,
                             text: "Save",
-                            width: 129.w,
+                            value: 0.3,
                             fontSize: 20.sp,
                             borderColor: false,
                           )

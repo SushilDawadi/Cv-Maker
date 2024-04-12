@@ -83,8 +83,9 @@ class Objective extends StatelessWidget {
                       Padding(
                         padding: EdgeInsets.symmetric(vertical: 19.h),
                         child: MyButton(
+                          showIcon: false,
                           text: "Help",
-                          width: 129.w,
+                          value: 0.3,
                           fontSize: 20.sp,
                           borderColor: true,
                           onPressed: () {},
@@ -96,8 +97,9 @@ class Objective extends StatelessWidget {
                       Padding(
                         padding: EdgeInsets.symmetric(vertical: 19.h),
                         child: MyButton(
+                          showIcon: false,
                           text: "Next",
-                          width: 129.w,
+                          value: 0.3,
                           fontSize: 20.sp,
                           borderColor: false,
                           onPressed: () {},

@@ -2,6 +2,7 @@ import 'package:cv_maker/assets/colors/color.dart';
 import 'package:cv_maker/assets/fonts/font.dart';
 import 'package:cv_maker/components/custom/my_custom_botton.dart';
 import 'package:cv_maker/components/custom/my_custom_check_box.dart';
+import 'package:cv_maker/components/custom/my_custom_text_date_field.dart';
 import 'package:cv_maker/components/custom/my_custom_text_field.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -16,17 +17,17 @@ class AddEducation extends StatefulWidget {
 class _AddEducationState extends State<AddEducation> {
   @override
   Widget build(BuildContext context) {
-    TextEditingController _dateController = TextEditingController();
+    TextEditingController dateController = TextEditingController();
     Future<void> selectDate() async {
-      DateTime? _picked = await showDatePicker(
+      DateTime? picked = await showDatePicker(
         context: context,
         initialDate: DateTime.now(),
         firstDate: DateTime(2000),
         lastDate: DateTime(2100),
       );
-      if (_picked != null) {
+      if (picked != null) {
         setState(() {
-          _dateController.text = _picked.toString().split(" ")[0];
+          dateController.text = picked.toString().split(" ")[0];
         });
       }
     }
@@ -85,16 +86,14 @@ class _AddEducationState extends State<AddEducation> {
                 Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      MyTextField(
-                        controller: _dateController,
-                        onTap: selectDate,
+                      MyCustomDateFiedl(
+                        controller: dateController,
                         value: 0.45,
                         hintText: "Start Date",
                         icon: Icons.date_range,
                       ),
-                      MyTextField(
-                        controller: _dateController,
-                        onTap: selectDate,
+                      MyCustomDateFiedl(
+                        controller: dateController,
                         value: 0.45,
                         hintText: "End Date",
                         icon: Icons.date_range,
@@ -157,14 +156,16 @@ class _AddEducationState extends State<AddEducation> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     MyButton(
+                      showIcon: false,
                       text: "Help",
-                      width: 129.w,
+                      value: 1,
                       fontSize: 20.sp,
                       borderColor: true,
                     ),
                     MyButton(
+                      showIcon: false,
                       text: "Save",
-                      width: 129.w,
+                      value: 1,
                       fontSize: 20.sp,
                       borderColor: false,
                     )

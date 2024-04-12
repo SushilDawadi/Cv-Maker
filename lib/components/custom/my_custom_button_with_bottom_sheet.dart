@@ -135,7 +135,7 @@ class MyCustomButtonWithBottomSheet extends StatelessWidget {
       child: Text(
         buttonText,
         style: TextStyle(
-            fontSize: 20.sp,
+            fontSize: 18.sp,
             fontFamily: fontFamily,
             fontWeight: FontWeight.w600),
       ),

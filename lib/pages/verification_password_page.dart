@@ -45,8 +45,9 @@ class VerificationPage extends StatelessWidget {
                   height: 180.h,
                 ),
                 MyButton(
+                    showIcon: false,
                     fontSize: 20.sp,
-                    width: double.infinity,
+                    value: 1,
                     text: "Verify",
                     borderColor: false,
                     onPressed: () {

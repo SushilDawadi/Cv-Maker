@@ -21,7 +21,7 @@ class AllTemplatePage extends StatelessWidget {
           Navigator.push(
             context,
             MaterialPageRoute(
-              builder: (context) => SingleCategoryTemplate(),
+              builder: (context) => const SingleCategoryTemplate(),
             ),
           );
         },

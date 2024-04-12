@@ -27,4 +27,12 @@ class Utils {
     "Experiencedata": const ExperienceData(),
     "Educationdata": const EducationData(),
   };
+  static final List tabTitles = [
+    "General information",
+    "Objective",
+    "Education",
+    "Experience",
+    "Experiencedata",
+    "Educationdata",
+  ];
 }

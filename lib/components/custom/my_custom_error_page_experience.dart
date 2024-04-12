@@ -51,8 +51,9 @@ class MyCustomErrorPageExperience extends StatelessWidget {
                 ),
                 //add button with modal
                 MyButton(
+                  showIcon: false,
                   text: "Next",
-                  width: 129.w,
+                  value: 0.3.h,
                   fontSize: 20.sp,
                   borderColor: false,
                   onPressed: () {},

@@ -16,17 +16,17 @@ class AddExperience extends StatefulWidget {
 class _AddExperienceState extends State<AddExperience> {
   @override
   Widget build(BuildContext context) {
-    TextEditingController _dateController = TextEditingController();
+    TextEditingController dateController = TextEditingController();
     Future<void> selectDate() async {
-      DateTime? _picked = await showDatePicker(
+      DateTime? picked = await showDatePicker(
         context: context,
         initialDate: DateTime.now(),
         firstDate: DateTime(2000),
         lastDate: DateTime(2100),
       );
-      if (_picked != null) {
+      if (picked != null) {
         setState(() {
-          _dateController.text = _picked.toString().split(" ")[0];
+          dateController.text = picked.toString().split(" ")[0];
         });
       }
     }
@@ -86,16 +86,14 @@ class _AddExperienceState extends State<AddExperience> {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       MyTextField(
-                        controller: _dateController,
-                        onTap: selectDate,
-                        value: 0.45,
+                        controller: dateController,
+                        value: 0.45.h,
                         hintText: "Start Date",
                         icon: Icons.date_range,
                       ),
                       MyTextField(
-                        controller: _dateController,
-                        onTap: selectDate,
-                        value: 0.45,
+                        controller: dateController,
+                        value: 0.45.h,
                         hintText: "End Date",
                         icon: Icons.date_range,
                       ),
@@ -157,14 +155,16 @@ class _AddExperienceState extends State<AddExperience> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     MyButton(
+                      showIcon: false,
                       text: "Help",
-                      width: 129.w,
+                      value: 1,
                       fontSize: 20.sp,
                       borderColor: true,
                     ),
                     MyButton(
+                      showIcon: false,
                       text: "Save",
-                      width: 129.w,
+                      value: 1,
                       fontSize: 20.sp,
                       borderColor: false,
                     )

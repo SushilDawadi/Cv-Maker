@@ -62,9 +62,10 @@ class SignUpPage extends StatelessWidget {
                   height: 30.h,
                 ),
                 MyButton(
+                  showIcon: false,
                   fontSize: 20.sp,
                   text: "Sign up",
-                  width: double.infinity,
+                  value: 1,
                   borderColor: false,
                 ),
                 Center(

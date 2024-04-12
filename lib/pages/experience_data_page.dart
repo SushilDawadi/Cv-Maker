@@ -15,7 +15,7 @@ class ExperienceData extends StatelessWidget {
           padding: containerPadding,
           child: SingleChildScrollView(
             child: SizedBox(
-              height: MediaQuery.of(context).size.height * 0.7.h,
+              height: MediaQuery.of(context).size.height * 0.8.h,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -39,14 +39,16 @@ class ExperienceData extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       MyButton(
+                        showIcon: false,
                         text: "Add+",
-                        width: 129.w,
+                        value: 0.3.h,
                         fontSize: 20.sp,
                         borderColor: true,
                       ),
                       MyButton(
+                        showIcon: false,
                         text: "Next",
-                        width: 129.w,
+                        value: 0.3.h,
                         fontSize: 20.sp,
                         borderColor: false,
                       ),

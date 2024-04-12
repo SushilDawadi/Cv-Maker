@@ -38,9 +38,10 @@ class ForgetPasswordPage extends StatelessWidget {
                   height: 25.h,
                 ),
                 MyButton(
+                  showIcon: false,
                   fontSize: 20.sp,
                   text: "Continue",
-                  width: double.infinity,
+                  value: 1,
                   borderColor: false,
                   onPressed: () {
                     Navigator.push(

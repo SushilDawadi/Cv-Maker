@@ -3,21 +3,20 @@ import 'package:cv_maker/assets/styles/text_styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class MyTextField extends StatelessWidget {
+class MyCustomDateFiedl extends StatelessWidget {
   final String hintText;
   final IconData icon;
-  final bool obscureText;
   final TextEditingController? controller;
   final double value;
+  final void Function()? onTap;
 
-  const MyTextField({
-    super.key,
-    required this.hintText,
-    required this.icon,
-    this.obscureText = false,
-    this.controller,
-    required this.value,
-  });
+  const MyCustomDateFiedl(
+      {super.key,
+      required this.hintText,
+      required this.icon,
+      this.controller,
+      required this.value,
+      this.onTap});
 
   @override
   Widget build(BuildContext context) {
@@ -33,13 +32,15 @@ class MyTextField extends StatelessWidget {
         child: Padding(
           padding: EdgeInsets.only(left: 24.w),
           child: TextField(
+            onTap: () {
+              onTap!();
+            },
             controller: controller,
             style: TextStyle(
               fontSize: 16.sp,
               color: black,
               fontWeight: FontWeight.w400,
             ),
-            obscureText: obscureText,
             decoration: InputDecoration(
               border: InputBorder.none,
               hintText: hintText,

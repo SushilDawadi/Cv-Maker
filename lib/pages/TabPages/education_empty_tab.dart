@@ -6,7 +6,7 @@ class EducationEmpty extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
+    return const SingleChildScrollView(
         child: MyCustomErrorPageEducation(
       errorText: "No education details found",
     ));
