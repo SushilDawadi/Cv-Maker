@@ -2,6 +2,7 @@ import 'package:cv_maker/assets/colors/color.dart';
 import 'package:cv_maker/assets/styles/text_styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
 
 class MyButton extends StatelessWidget {
   final String text;
@@ -30,7 +31,7 @@ class MyButton extends StatelessWidget {
     return Padding(
       padding: EdgeInsets.symmetric(vertical: 10.h),
       child: SizedBox(
-        width: MediaQuery.of(context).size.width * value,
+        width: Get.width * value,
         height: height,
         child: ElevatedButton(
             onPressed: () {
@@ -60,6 +61,7 @@ class MyButton extends StatelessWidget {
                 ? Icon(
                     icon,
                     size: 20.sp,
+                    color: primaryColor,
                   )
                 : borderColor!
                     ? Text(text, style: primaryTextStyle)

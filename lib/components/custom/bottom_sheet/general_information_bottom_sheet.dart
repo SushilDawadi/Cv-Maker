@@ -6,10 +6,12 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class MyGeneralBottomSheetContent extends StatefulWidget {
   @override
-  _MyGeneralBottomSheetContentState createState() => _MyGeneralBottomSheetContentState();
+  _MyGeneralBottomSheetContentState createState() =>
+      _MyGeneralBottomSheetContentState();
 }
 
-class _MyGeneralBottomSheetContentState extends State<MyGeneralBottomSheetContent>
+class _MyGeneralBottomSheetContentState
+    extends State<MyGeneralBottomSheetContent>
     with SingleTickerProviderStateMixin {
   late TabController _tabController;
 
@@ -38,8 +40,8 @@ class _MyGeneralBottomSheetContentState extends State<MyGeneralBottomSheetConten
           children: [
             const HelpWithExamples(),
 
-           Padding(
-              padding:  EdgeInsets.symmetric(horizontal: 70.w),
+            Padding(
+              padding: EdgeInsets.symmetric(horizontal: 70.w),
               child: TabBar(
                 controller: _tabController,
                 labelColor: Colors.black,
@@ -50,13 +52,12 @@ class _MyGeneralBottomSheetContentState extends State<MyGeneralBottomSheetConten
                 indicatorColor: Colors.transparent,
                 unselectedLabelColor: Colors.black38,
                 tabs: [
-                  Tab(
+                  const Tab(
                     text: 'Details',
                   ),
-                 Padding(
-                    padding:
-                        EdgeInsets.symmetric( vertical: 15.h),
-                    child: Tab(
+                  Padding(
+                    padding: EdgeInsets.symmetric(vertical: 15.h),
+                    child: const Tab(
                       text: 'Example',
                     ),
                   ),

@@ -52,12 +52,12 @@ class _MyObjectiveBottomSheetContentState
                 indicatorColor: Colors.transparent,
                 unselectedLabelColor: Colors.black38,
                 tabs: [
-                  Tab(
+                  const Tab(
                     text: 'Details',
                   ),
                   Padding(
                     padding: EdgeInsets.symmetric(vertical: 15.h),
-                    child: Tab(
+                    child: const Tab(
                       text: 'Example',
                     ),
                   ),

@@ -8,6 +8,7 @@ import 'package:cv_maker/components/custom/container/my_custom_details_container
 import 'package:cv_maker/pages/tabpages/tab_main_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
 
 class TemplateSelected extends StatelessWidget {
   const TemplateSelected({super.key});
@@ -43,12 +44,7 @@ class TemplateSelected extends StatelessWidget {
                         fontSize: 20.sp,
                         borderColor: true,
                         onPressed: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => const MyCustomTabBar(),
-                            ),
-                          );
+                          Get.to(() => const MyCustomTabBar());
                         },
                       ),
                     ),

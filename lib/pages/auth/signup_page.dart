@@ -8,6 +8,7 @@ import 'package:cv_maker/components/custom/text_field/my_custom_text_field.dart'
 import 'package:cv_maker/pages/auth/login_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
 
 class SignUpPage extends StatelessWidget {
   const SignUpPage({super.key});
@@ -71,10 +72,7 @@ class SignUpPage extends StatelessWidget {
                 Center(
                   child: TextButton(
                     onPressed: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const LoginPage()));
+                      Get.to(() => const LoginPage());
                     },
                     child: const MyText(text: "I already have an account"),
                   ),

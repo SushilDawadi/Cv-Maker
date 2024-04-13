@@ -7,6 +7,7 @@ import 'package:cv_maker/components/custom/tile/my_custom_template_tile.dart';
 import 'package:cv_maker/pages/authview/single_category_template_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
 
 class AllTemplatePage extends StatelessWidget {
   const AllTemplatePage({super.key});
@@ -18,12 +19,7 @@ class AllTemplatePage extends StatelessWidget {
         showDropButton: true,
         showUserDetails: false,
         onPressed: () {
-          Navigator.push(
-            context,
-            MaterialPageRoute(
-              builder: (context) => const SingleCategoryTemplate(),
-            ),
-          );
+          Get.to(() => const SingleCategoryTemplate());
         },
       ),
       body: SafeArea(

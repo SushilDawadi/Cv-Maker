@@ -10,6 +10,7 @@ import 'package:cv_maker/pages/authview/add_category_template_page.dart';
 import 'package:cv_maker/pages/authview/all_template_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
 import 'package:percent_indicator/circular_percent_indicator.dart';
 
 class HomePage extends StatelessWidget {
@@ -76,13 +77,7 @@ class HomePage extends StatelessWidget {
                                   padding: EdgeInsets.only(top: 15.h),
                                   child: GestureDetector(
                                     onTap: () {
-                                      Navigator.push(
-                                        context,
-                                        MaterialPageRoute(
-                                          builder: (context) =>
-                                              const AllTemplatePage(),
-                                        ),
-                                      );
+                                      Get.to(() => const AllTemplatePage());
                                     },
                                     child: Container(
                                       decoration: BoxDecoration(

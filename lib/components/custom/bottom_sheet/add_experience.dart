@@ -18,7 +18,7 @@ class AddExperience extends StatefulWidget {
 class _AddExperienceState extends State<AddExperience> {
   @override
   Widget build(BuildContext context) {
-    final isMobile = MediaQuery.of(context).size.width < 700;
+    final isMobile = Get.width < 700;
     TextEditingController dateController = TextEditingController();
     Future<void> selectDate() async {
       DateTime? picked = await showDatePicker(
@@ -44,7 +44,7 @@ class _AddExperienceState extends State<AddExperience> {
           padding: EdgeInsets.only(left: 16.w, right: 16.w, bottom: 24.h),
           child: SizedBox(
             width: double.infinity,
-            height: MediaQuery.of(context).size.height * 0.9,
+            height: Get.height * 0.9,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [

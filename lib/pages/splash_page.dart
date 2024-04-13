@@ -21,7 +21,11 @@ class _SplashState extends State<Splash> {
     await Future.delayed(const Duration(seconds: 3));
 
     Navigator.push(
-        context, MaterialPageRoute(builder: (context) => const LoginPage()));
+      context,
+      MaterialPageRoute(
+        builder: (context) => const LoginPage(),
+      ),
+    );
   }
 
   @override
@@ -38,7 +42,7 @@ class _SplashState extends State<Splash> {
             width: double.infinity,
             height: 252.h,
           ),
-        )
+        ),
       ],
     );
   }

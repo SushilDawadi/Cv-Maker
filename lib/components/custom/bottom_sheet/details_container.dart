@@ -13,39 +13,42 @@ class DetailsContainer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: EdgeInsets.only(left: 18.w, right: 17.w),
-      child: Container(
-        decoration: BoxDecoration(
-          border: Border.all(color: textFieldInputColor),
-          borderRadius: BorderRadius.circular(12.r),
-        ),
-        child: Column(
-          children: [
-            Container(
-              decoration: const BoxDecoration(color: containerBackgroundColor),
-              child: Padding(
-                padding: EdgeInsets.only(left: 14.w, top: 27.h, right: 32.w),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      subText,
-                      style: subTextStyle,
-                    ),
-                    Padding(
-                      padding: EdgeInsets.only(top: 28.h),
-                      child: Text(
-                        contentText,
-                        style: mainTextStyle,
+    return SingleChildScrollView(
+      child: Padding(
+        padding: EdgeInsets.only(left: 18.w, right: 17.w),
+        child: Container(
+          decoration: BoxDecoration(
+            border: Border.all(color: textFieldInputColor),
+            borderRadius: BorderRadius.circular(12.r),
+          ),
+          child: Column(
+            children: [
+              Container(
+                decoration:
+                    const BoxDecoration(color: containerBackgroundColor),
+                child: Padding(
+                  padding: EdgeInsets.only(left: 14.w, top: 27.h, right: 32.w),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        subText,
+                        style: subTextStyle,
                       ),
-                    ),
-                    SizedBox(height: Get.height * 0.2)
-                  ],
+                      Padding(
+                        padding: EdgeInsets.only(top: 28.h),
+                        child: Text(
+                          contentText,
+                          style: mainTextStyle,
+                        ),
+                      ),
+                      SizedBox(height: Get.height * 0.2)
+                    ],
+                  ),
                 ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );

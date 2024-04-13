@@ -2,10 +2,11 @@ import 'package:cv_maker/assets/styles/container_padding.dart';
 import 'package:cv_maker/components/custom/bottom_bar/my_custom_bottom_bar.dart';
 import 'package:cv_maker/components/custom/app_bar/my_custom_app_bar.dart';
 import 'package:cv_maker/components/custom/heading/my_custom_heading_text.dart';
-import 'package:cv_maker/pages/authview/template_selected_page.dart';
+import 'package:cv_maker/pages/authview/template_carousel_page.dart';
 import 'package:cv_maker/utils/utils_class.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
 
 class SingleCategoryTemplate extends StatelessWidget {
   const SingleCategoryTemplate({super.key});
@@ -17,11 +18,8 @@ class SingleCategoryTemplate extends StatelessWidget {
         showUserDetails: false,
         showDropButton: true,
         onPressed: () {
-          Navigator.push(
-            context,
-            MaterialPageRoute(
-              builder: (context) => const TemplateSelected(),
-            ),
+          Get.to(
+            () => const TemplateCarousel(),
           );
         },
       ),

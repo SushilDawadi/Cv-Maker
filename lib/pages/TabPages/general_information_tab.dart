@@ -1,5 +1,5 @@
 import 'package:cv_maker/assets/colors/color.dart';
-import 'package:cv_maker/components/custom/bottom_sheet/general_information_bottom_sheetdart';
+import 'package:cv_maker/components/custom/bottom_sheet/general_information_bottom_sheet.dart';
 import 'package:cv_maker/components/custom/button/my_custom_botton.dart';
 
 import 'package:get/get.dart';

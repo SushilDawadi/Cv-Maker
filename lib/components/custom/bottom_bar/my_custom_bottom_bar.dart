@@ -1,6 +1,8 @@
 import 'package:cv_maker/assets/colors/color.dart';
+import 'package:cv_maker/pages/authview/home_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
 
 class MyBottomBar extends StatelessWidget {
   const MyBottomBar({super.key});
@@ -21,10 +23,17 @@ class MyBottomBar extends StatelessWidget {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
-              Icon(
-                Icons.home_rounded,
-                size: 35.w,
-                color: primaryColor,
+              IconButton(
+                onPressed: () {
+                  Get.offAll(
+                    () => const HomePage(),
+                  );
+                },
+                icon: Icon(
+                  Icons.home_rounded,
+                  size: 38.sp,
+                  color: primaryColor,
+                ),
               ),
               SizedBox(
                 width: 68.w,

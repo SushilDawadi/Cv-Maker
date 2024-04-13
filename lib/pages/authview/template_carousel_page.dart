@@ -1,9 +1,11 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:cv_maker/components/custom/app_bar/my_custom_app_bar.dart';
 import 'package:cv_maker/components/custom/button/my_custom_botton.dart';
+import 'package:cv_maker/pages/authview/template_selected_page.dart';
 import 'package:cv_maker/utils/utils_class.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
 
 class TemplateCarousel extends StatefulWidget {
   const TemplateCarousel({super.key});
@@ -24,56 +26,60 @@ class _TemplateCarouselState extends State<TemplateCarousel> {
       body: Padding(
         padding: EdgeInsets.symmetric(horizontal: 15.w),
         child: SingleChildScrollView(
-          child: SizedBox(
-            height: MediaQuery.of(context).size.height * 0.8.h,
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                SizedBox(
-                  height: MediaQuery.of(context).size.height * 0.01,
-                ),
-                Center(
-                  child: CarouselSlider(
-                    carouselController: _controller,
-                    items: Utils.imgPath
-                        .map(
-                          (e) => Image.asset(
-                            e,
-                            fit: BoxFit.cover,
-                          ),
-                        )
-                        .toList(),
-                    options: CarouselOptions(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              SizedBox(
+                height: Get.height * 0.05,
+              ),
+              Center(
+                child: CarouselSlider(
+                  carouselController: _controller,
+                  items: Utils.imgPath
+                      .map(
+                        (e) => Image.asset(
+                          e,
+                          fit: BoxFit.fill,
+                          width: 354.w,
+                          height: 500.h,
+                        ),
+                      )
+                      .toList(),
+                  options: CarouselOptions(
                       enlargeCenterPage: true,
+                      viewportFraction: 0.9,
+                      height: 500.h),
+                ),
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.end,
+                children: [
+                  MyButton(
+                    onPressed: () {
+                      _controller.previousPage();
+                    },
+                    showIcon: true,
+                    icon: Icons.arrow_back_ios_rounded,
+                    fontSize: 20.sp,
+                    value: 0.14,
+                    borderColor: true,
+                    text: '',
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 7.0),
+                    child: MyButton(
+                      showIcon: false,
+                      text: "Use",
+                      value: 0.51,
+                      fontSize: 20.sp,
+                      borderColor: false,
+                      onPressed: () => Get.to(() => const TemplateSelected()),
                     ),
                   ),
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.end,
-                  children: [
-                    MyButton(
-                      onPressed: () {
-                        _controller.previousPage();
-                      },
-                      showIcon: true,
-                      icon: Icons.arrow_back_ios_rounded,
-                      fontSize: 20.sp,
-                      value: 0.14,
-                      borderColor: false,
-                      text: '',
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 7.0),
-                      child: MyButton(
-                        showIcon: false,
-                        text: "Use",
-                        value: 0.51,
-                        fontSize: 20.sp,
-                        borderColor: true,
-                      ),
-                    ),
-                    MyButton(
+                  Padding(
+                    padding: EdgeInsets.only(top: 100.h),
+                    child: MyButton(
                       onPressed: () {
                         _controller.nextPage();
                       },
@@ -81,13 +87,13 @@ class _TemplateCarouselState extends State<TemplateCarousel> {
                       icon: Icons.arrow_forward_ios_rounded,
                       fontSize: 20.sp,
                       value: 0.14,
-                      borderColor: false,
+                      borderColor: true,
                       text: '',
                     ),
-                  ],
-                ),
-              ],
-            ),
+                  ),
+                ],
+              ),
+            ],
           ),
         ),
       ),

@@ -7,6 +7,7 @@ import 'package:cv_maker/components/custom/text_field/my_custom_text_field.dart'
 import 'package:cv_maker/pages/auth/verification_password_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
 
 class ForgetPasswordPage extends StatelessWidget {
   const ForgetPasswordPage({super.key});
@@ -44,12 +45,7 @@ class ForgetPasswordPage extends StatelessWidget {
                   value: 1,
                   borderColor: false,
                   onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => const VerificationPage(),
-                      ),
-                    );
+                    Get.to(() => const VerificationPage());
                   },
                 ),
                 SizedBox(
@@ -58,7 +54,7 @@ class ForgetPasswordPage extends StatelessWidget {
                 Center(
                   child: TextButton(
                       onPressed: () {
-                        Navigator.pop(context);
+                        Get.back();
                       },
                       child: const MyText(text: "Go back")),
                 )

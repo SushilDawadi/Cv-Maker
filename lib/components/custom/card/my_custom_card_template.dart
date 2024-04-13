@@ -30,8 +30,9 @@ class MyCustomCardTemplate extends StatelessWidget {
               padding: EdgeInsets.symmetric(horizontal: 7.w, vertical: 7.h),
               child: Container(
                 decoration: BoxDecoration(
-                    color: textFieldInputColor,
-                    borderRadius: BorderRadius.circular(9.r)),
+                  color: textFieldInputColor,
+                  borderRadius: BorderRadius.circular(9.r),
+                ),
                 child: Padding(
                   padding:
                       EdgeInsets.symmetric(horizontal: 23.w, vertical: 23.h),

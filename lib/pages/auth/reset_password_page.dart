@@ -7,6 +7,7 @@ import 'package:cv_maker/components/custom/text/my_custom_text.dart';
 import 'package:cv_maker/pages/authview/home_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
 
 class ResetPasswordPage extends StatelessWidget {
   const ResetPasswordPage({super.key});
@@ -56,12 +57,7 @@ class ResetPasswordPage extends StatelessWidget {
                 Center(
                   child: TextButton(
                       onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => const HomePage(),
-                          ),
-                        );
+                        Get.to(() => const HomePage());
                       },
                       child: const MyText(
                         text: "Change Password",

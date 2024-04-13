@@ -44,7 +44,7 @@ class _AddEducationState extends State<AddEducation> {
           padding: EdgeInsets.only(left: 16.w, right: 16.w, bottom: 24.h),
           child: SizedBox(
             width: double.infinity,
-            height: MediaQuery.of(context).size.height * 0.9,
+            height: Get.height * 0.9,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
