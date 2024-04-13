@@ -1,4 +1,5 @@
-import 'package:cv_maker/components/custom/my_custom_error_page_education.dart';
+import 'package:cv_maker/components/custom/error/my_custom_error_page_education.dart';
+
 import 'package:flutter/material.dart';
 
 class EducationEmpty extends StatelessWidget {

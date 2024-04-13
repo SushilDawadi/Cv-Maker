@@ -1,10 +1,10 @@
 import 'package:cv_maker/assets/styles/container_padding.dart';
-import 'package:cv_maker/components/custom/my_custom_bottom_bar.dart';
-import 'package:cv_maker/components/custom/my_custom_app_bar.dart';
-import 'package:cv_maker/components/custom/my_custom_heading_text.dart';
-import 'package:cv_maker/components/custom/my_custom_template_heading.dart';
-import 'package:cv_maker/components/custom/my_custom_template_tile.dart';
-import 'package:cv_maker/pages/single_category_template_page.dart';
+import 'package:cv_maker/components/custom/bottom_bar/my_custom_bottom_bar.dart';
+import 'package:cv_maker/components/custom/app_bar/my_custom_app_bar.dart';
+import 'package:cv_maker/components/custom/heading/my_custom_heading_text.dart';
+import 'package:cv_maker/components/custom/heading/my_custom_template_heading.dart';
+import 'package:cv_maker/components/custom/tile/my_custom_template_tile.dart';
+import 'package:cv_maker/pages/authview/single_category_template_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 

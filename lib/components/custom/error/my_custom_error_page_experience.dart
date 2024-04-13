@@ -1,9 +1,10 @@
 import 'package:cv_maker/assets/colors/color.dart';
 import 'package:cv_maker/assets/fonts/font.dart';
-import 'package:cv_maker/components/custom/my_custom_add_bottom_sheet_experience.dart';
-import 'package:cv_maker/components/custom/my_custom_botton.dart';
+import 'package:cv_maker/components/custom/bottom_sheet/add_experience.dart';
+import 'package:cv_maker/components/custom/button/my_custom_botton.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
 
 class MyCustomErrorPageExperience extends StatelessWidget {
   final String errorText;
@@ -38,7 +39,16 @@ class MyCustomErrorPageExperience extends StatelessWidget {
                       fontWeight: FontWeight.w700),
                 ),
               ),
-              const MyCustomAddBottomSheetExperience()
+              MyButton(
+                  text: "Add",
+                  fontSize: 20.sp,
+                  value: 0.4.h,
+                  showIcon: false,
+                  borderColor: true,
+                  onPressed: () => Get.bottomSheet(
+                        isScrollControlled: true,
+                        const AddExperience(),
+                      ))
             ],
           ),
           SizedBox(
@@ -49,7 +59,6 @@ class MyCustomErrorPageExperience extends StatelessWidget {
                 SizedBox(
                   height: 241.h,
                 ),
-                //add button with modal
                 MyButton(
                   showIcon: false,
                   text: "Next",

@@ -1,15 +1,22 @@
 import 'package:cv_maker/assets/colors/color.dart';
 import 'package:cv_maker/assets/fonts/font.dart';
-import 'package:cv_maker/components/custom/my_custom_add_bottom_sheet_education.dart';
-import 'package:cv_maker/components/custom/my_custom_botton.dart';
+import 'package:cv_maker/components/custom/bottom_sheet/add_education.dart';
+import 'package:cv_maker/components/custom/button/my_custom_botton.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
 
 class MyCustomErrorPageEducation extends StatelessWidget {
   final String errorText;
   final void Function()? onPressed;
-  const MyCustomErrorPageEducation(
-      {super.key, required this.errorText, this.onPressed});
+  final void Function()? onTap;
+
+  const MyCustomErrorPageEducation({
+    super.key,
+    required this.errorText,
+    this.onPressed,
+    this.onTap,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -38,7 +45,16 @@ class MyCustomErrorPageEducation extends StatelessWidget {
                       fontWeight: FontWeight.w700),
                 ),
               ),
-              const MyCustomAddBottomSheetEducation()
+              MyButton(
+                  text: "Add",
+                  fontSize: 20.sp,
+                  value: 0.4.h,
+                  showIcon: false,
+                  borderColor: true,
+                  onPressed: () => Get.bottomSheet(
+                        const AddEducation(),
+                        isScrollControlled: true,
+                      ))
             ],
           ),
           SizedBox(

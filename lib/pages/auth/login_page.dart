@@ -1,9 +1,9 @@
 import 'package:cv_maker/assets/styles/container_padding.dart';
-import 'package:cv_maker/components/custom/my_custom_botton.dart';
-import 'package:cv_maker/components/custom/my_custom_text.dart';
-import 'package:cv_maker/components/custom/my_custom_text_field.dart';
-import 'package:cv_maker/pages/forget_password_page.dart';
-import 'package:cv_maker/pages/signup_page.dart';
+import 'package:cv_maker/components/custom/button/my_custom_botton.dart';
+import 'package:cv_maker/components/custom/text/my_custom_text.dart';
+import 'package:cv_maker/components/custom/text_field/my_custom_text_field.dart';
+import 'package:cv_maker/pages/auth/forget_password_page.dart';
+import 'package:cv_maker/pages/auth/signup_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 

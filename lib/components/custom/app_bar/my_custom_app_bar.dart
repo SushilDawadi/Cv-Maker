@@ -55,7 +55,7 @@ class MyCustomAppBar extends StatelessWidget implements PreferredSizeWidget {
                       child: Text(
                         "Subtle Me ",
                         style: TextStyle(
-                            fontSize: 16.sp,
+                            fontSize: 16,
                             fontFamily: fontFamily,
                             fontWeight: FontWeight.w600),
                       ),
@@ -66,7 +66,7 @@ class MyCustomAppBar extends StatelessWidget implements PreferredSizeWidget {
                         "Basic  •  Prasiddha Nepane",
                         style: TextStyle(
                             fontFamily: fontFamily,
-                            fontSize: 14.sp,
+                            fontSize: 14,
                             color: subTextColor),
                       ),
                     ),
@@ -79,5 +79,5 @@ class MyCustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   }
 
   @override
-  Size get preferredSize => Size.fromHeight(90.h);
+  Size get preferredSize => Size.fromHeight(100.h);
 }

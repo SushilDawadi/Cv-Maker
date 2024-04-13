@@ -1,9 +1,11 @@
 import 'package:cv_maker/assets/colors/color.dart';
 import 'package:cv_maker/assets/styles/text_styles.dart';
-import 'package:cv_maker/components/custom/my_custom_botton.dart';
-import 'package:cv_maker/components/custom/my_custom_example_container.dart';
+import 'package:cv_maker/components/custom/bottom_sheet/objective_bottom_sheet.dart';
+import 'package:cv_maker/components/custom/button/my_custom_botton.dart';
+import 'package:cv_maker/components/custom/container/my_custom_example_container.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
 
 class Objective extends StatelessWidget {
   const Objective({super.key});
@@ -88,7 +90,15 @@ class Objective extends StatelessWidget {
                           value: 0.3,
                           fontSize: 20.sp,
                           borderColor: true,
-                          onPressed: () {},
+                          onPressed: () {
+                            Get.bottomSheet(
+                                isScrollControlled: true,
+                                SizedBox(
+                                  width: Get.width,
+                                  height: Get.height * 0.75,
+                                  child: MyObjectiveBottomSheetContent(),
+                                ));
+                          },
                         ),
                       ),
                       SizedBox(

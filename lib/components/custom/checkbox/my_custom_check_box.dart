@@ -26,7 +26,7 @@ class _MyCustomCheckBoxState extends State<MyCustomCheckBox> {
         decoration: BoxDecoration(
           color: isChecked ? primaryColor : white,
           border: Border.all(
-            color: black,
+            color: iconColor,
             width: 0.5,
           ),
           borderRadius: BorderRadius.circular(2),

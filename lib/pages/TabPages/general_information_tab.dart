@@ -1,18 +1,15 @@
 import 'package:cv_maker/assets/colors/color.dart';
-import 'package:cv_maker/components/custom/my_custom_botton.dart';
-import 'package:cv_maker/components/custom/my_custom_button_with_bottom_sheet.dart';
-import 'package:cv_maker/components/custom/my_custom_text_field.dart';
+import 'package:cv_maker/components/custom/bottom_sheet/general_information_bottom_sheetdart';
+import 'package:cv_maker/components/custom/button/my_custom_botton.dart';
+
+import 'package:get/get.dart';
+import 'package:cv_maker/components/custom/text_field/my_custom_text_field.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class GeneralInformation extends StatefulWidget {
+class GeneralInformation extends StatelessWidget {
   const GeneralInformation({super.key});
 
-  @override
-  State<GeneralInformation> createState() => _GeneralInformationState();
-}
-
-class _GeneralInformationState extends State<GeneralInformation> {
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -83,17 +80,23 @@ class _GeneralInformationState extends State<GeneralInformation> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Padding(
-                      padding: EdgeInsets.symmetric(vertical: 19.h),
-                      child: const MyCustomButtonWithBottomSheet(
-                        buttonText: "Help",
-                        contentSub:
-                            "Help to fill out the details related to your general and personal information.",
-                        contentMain:
-                            "Required fields:\n 1.First Name\n 2.Last Name \n3.Address \n4.Phone Number \n5.Email Address ",
-                        subtext:
-                            "Help to fill out the details related to your general and personal information.",
-                      )),
+                  MyButton(
+                    text: "Help",
+                    fontSize: 20.sp,
+                    value: 0.22.h,
+                    showIcon: false,
+                    onPressed: () {
+                      Get.bottomSheet(
+                        isScrollControlled: true,
+                        SizedBox(
+                          width: double.infinity,
+                          height: Get.height * 0.75,
+                          child: MyGeneralBottomSheetContent(),
+                        ),
+                      );
+                    },
+                    borderColor: true,
+                  ),
                   SizedBox(
                     width: 115.w,
                   ),
@@ -102,7 +105,7 @@ class _GeneralInformationState extends State<GeneralInformation> {
                     child: MyButton(
                       showIcon: false,
                       text: "Next",
-                      value: 0.3.h,
+                      value: 0.22.h,
                       fontSize: 20.sp,
                       borderColor: false,
                       onPressed: () {},

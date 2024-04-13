@@ -73,6 +73,12 @@ final hintTextStyle = TextStyle(
   fontFamily: fontFamily,
   color: iconColor,
 );
+final blackHintTextStyle = TextStyle(
+  fontWeight: FontWeight.w400,
+  fontSize: 16.sp,
+  fontFamily: fontFamily,
+  color: black,
+);
 
 final boldTextStyle = TextStyle(
   fontWeight: FontWeight.w700,
@@ -80,6 +86,7 @@ final boldTextStyle = TextStyle(
   fontFamily: fontFamily,
   color: tabTitleColor,
 );
+
 final primaryTextStyle = TextStyle(
   fontWeight: FontWeight.w600,
   fontSize: 14.sp,
@@ -112,4 +119,10 @@ final primaryColorButtonTextStyle = TextStyle(
   fontSize: 20.sp,
   fontFamily: fontFamily,
   color: primaryColor,
+);
+final bottomSheetheadingStyle = TextStyle(
+  fontWeight: FontWeight.w600,
+  fontSize: 20.sp,
+  fontFamily: fontFamily,
+  color: black,
 );

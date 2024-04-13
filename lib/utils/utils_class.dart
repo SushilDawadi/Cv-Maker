@@ -1,7 +1,7 @@
 import 'package:cv_maker/pages/tabpages/education_empty_tab.dart';
-import 'package:cv_maker/pages/education_data_page.dart';
+import 'package:cv_maker/pages/authview/education_data_page.dart';
 import 'package:cv_maker/pages/tabpages/experience_empty_tab.dart';
-import 'package:cv_maker/pages/experience_data_page.dart';
+import 'package:cv_maker/pages/authview/experience_data_page.dart';
 import 'package:cv_maker/pages/tabpages/general_information_tab.dart';
 import 'package:cv_maker/pages/tabpages/objective_page_tab.dart';
 import 'package:flutter/cupertino.dart';
