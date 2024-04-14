@@ -43,8 +43,8 @@ class _MyCustomTabBarState extends State<MyCustomTabBar>
         padding: const EdgeInsets.only(),
         child: Column(
           children: [
-            // HelpWithExamples(),
-            // give the tab bar a height [can change hheight to preferred height]
+          
+           
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 18.w),
               child: TabBar(

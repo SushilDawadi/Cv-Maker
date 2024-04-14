@@ -8,14 +8,27 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 
-class AddEducation extends StatefulWidget {
-  const AddEducation({super.key});
+class AddBottomSheetTemplate extends StatefulWidget {
+  final String titleText;
+  final String hintTextOne;
+  final String hintTextTwo;
+  final String hintTextThree;
+  final String statusText;
+  final String descriptionText;
+  const AddBottomSheetTemplate(
+      {super.key,
+      required this.titleText,
+      required this.hintTextOne,
+      required this.hintTextTwo,
+      required this.hintTextThree,
+      required this.statusText,
+      required this.descriptionText});
 
   @override
-  State<AddEducation> createState() => _AddEducationState();
+  State<AddBottomSheetTemplate> createState() => _AddBottomSheetTemplateState();
 }
 
-class _AddEducationState extends State<AddEducation> {
+class _AddBottomSheetTemplateState extends State<AddBottomSheetTemplate> {
   @override
   Widget build(BuildContext context) {
     final isMobile = MediaQuery.of(context).size.width < 700;
@@ -71,7 +84,7 @@ class _AddEducationState extends State<AddEducation> {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text(
-                          "Add Education ",
+                          widget.titleText,
                           style: TextStyle(
                               fontSize: 20.sp,
                               fontFamily: fontFamily,
@@ -85,16 +98,18 @@ class _AddEducationState extends State<AddEducation> {
                         )
                       ],
                     ),
-                    const MyTextField(
+                    MyTextField(
                         value: 1,
-                        hintText: "Job Title / Position",
+                        hintText: widget.hintTextOne,
                         icon: Icons.apartment),
-                    const MyTextField(
+                    MyTextField(
                         value: 1,
-                        hintText: "Company / Organization",
+                        hintText: widget.hintTextTwo,
                         icon: Icons.school),
-                    const MyTextField(
-                        value: 1, hintText: "City/ Country", icon: Icons.edit),
+                    MyTextField(
+                        value: 1,
+                        hintText: widget.hintTextThree,
+                        icon: Icons.edit),
                     Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
@@ -122,7 +137,7 @@ class _AddEducationState extends State<AddEducation> {
                             width: 15.w,
                           ),
                           Text(
-                            "Currently working here",
+                            widget.statusText,
                             style: TextStyle(
                               fontFamily: fontFamily,
                               fontSize: 14.sp,
@@ -149,8 +164,7 @@ class _AddEducationState extends State<AddEducation> {
                         child: TextField(
                           maxLines: 10,
                           decoration: InputDecoration(
-                            hintText:
-                                "Description (i.e. Job Responsibilities) . . .",
+                            hintText: widget.descriptionText,
                             hintStyle: TextStyle(
                               color: iconColor,
                               fontSize: 14.sp,

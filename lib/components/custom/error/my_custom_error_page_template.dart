@@ -1,16 +1,24 @@
 import 'package:cv_maker/assets/colors/color.dart';
 import 'package:cv_maker/assets/fonts/font.dart';
-import 'package:cv_maker/components/custom/bottom_sheet/add_experience.dart';
+import 'package:cv_maker/components/custom/bottom_sheet/add_bottom_sheet_template.dart';
 import 'package:cv_maker/components/custom/button/my_custom_botton.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 
-class MyCustomErrorPageExperience extends StatelessWidget {
+class MyCustomErrorPageTemplate extends StatelessWidget {
   final String errorText;
   final void Function()? onPressed;
-  const MyCustomErrorPageExperience(
-      {super.key, required this.errorText, this.onPressed});
+  final void Function()? onTap;
+  final AddBottomSheetTemplate addBottomSheetTemplate;
+
+  const MyCustomErrorPageTemplate({
+    super.key,
+    required this.errorText,
+    this.onPressed,
+    this.onTap,
+    required this.addBottomSheetTemplate,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -46,8 +54,8 @@ class MyCustomErrorPageExperience extends StatelessWidget {
                   showIcon: false,
                   borderColor: true,
                   onPressed: () => Get.bottomSheet(
+                        addBottomSheetTemplate,
                         isScrollControlled: true,
-                        const AddExperience(),
                       ))
             ],
           ),
@@ -59,6 +67,7 @@ class MyCustomErrorPageExperience extends StatelessWidget {
                 SizedBox(
                   height: 241.h,
                 ),
+                //add button with modal
                 MyButton(
                   showIcon: false,
                   text: "Next",
