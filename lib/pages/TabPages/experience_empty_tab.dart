@@ -11,6 +11,7 @@ class ExperienceEmpty extends StatelessWidget {
     return const SingleChildScrollView(
       child: MyCustomErrorPageTemplate(
         addBottomSheetTemplate: AddBottomSheetTemplate(
+          isProjectPage: false,
           titleText: "Add Experience",
           hintTextOne: "Job Title / Position",
           hintTextTwo: "Company / Organization",

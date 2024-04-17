@@ -39,7 +39,7 @@ final subTextStylebold = TextStyle(
   fontWeight: FontWeight.w600,
   fontSize: 12.sp,
   fontFamily: fontFamily,
-  color: subTextColor,
+  color: tabTitleColor,
 );
 final subTextStylePrimary = TextStyle(
   fontWeight: FontWeight.w400,
@@ -85,6 +85,12 @@ final boldTextStyle = TextStyle(
   fontSize: 16.sp,
   fontFamily: fontFamily,
   color: tabTitleColor,
+);
+final boldTextStyleBlack = TextStyle(
+  fontWeight: FontWeight.w700,
+  fontSize: 16.sp,
+  fontFamily: fontFamily,
+  color: black,
 );
 
 final primaryTextStyle = TextStyle(

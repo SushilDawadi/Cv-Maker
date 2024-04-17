@@ -11,6 +11,7 @@ class EducationEmpty extends StatelessWidget {
     return const SingleChildScrollView(
       child: MyCustomErrorPageTemplate(
         addBottomSheetTemplate: AddBottomSheetTemplate(
+            isProjectPage: false,
             titleText: "Add Education",
             hintTextOne: "School / College / University",
             hintTextTwo: "Course/Degree",

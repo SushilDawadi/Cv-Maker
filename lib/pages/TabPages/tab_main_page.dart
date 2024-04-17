@@ -1,11 +1,14 @@
 import 'package:cv_maker/assets/colors/color.dart';
 import 'package:cv_maker/components/custom/app_bar/my_custom_app_bar.dart';
+import 'package:cv_maker/pages/authview/project_data_page.dart';
 import 'package:cv_maker/pages/tabpages/education_empty_tab.dart';
 import 'package:cv_maker/pages/tabpages/experience_empty_tab.dart';
 import 'package:cv_maker/pages/tabpages/general_information_tab.dart';
 import 'package:cv_maker/pages/tabpages/objective_page_tab.dart';
 import 'package:cv_maker/pages/authview/education_data_page.dart';
 import 'package:cv_maker/pages/authview/experience_data_page.dart';
+import 'package:cv_maker/pages/tabpages/others_tab.dart';
+import 'package:cv_maker/pages/tabpages/project_empty_tab.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -23,7 +26,7 @@ class _MyCustomTabBarState extends State<MyCustomTabBar>
   @override
   void initState() {
     super.initState();
-    _tabController = TabController(length: 6, vsync: this);
+    _tabController = TabController(length: 9, vsync: this);
   }
 
   @override
@@ -43,8 +46,6 @@ class _MyCustomTabBarState extends State<MyCustomTabBar>
         padding: const EdgeInsets.only(),
         child: Column(
           children: [
-          
-           
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 18.w),
               child: TabBar(
@@ -85,7 +86,22 @@ class _MyCustomTabBarState extends State<MyCustomTabBar>
                   ),
                   Tab(
                     child: Text(
-                      "Additional",
+                      "Education Data",
+                    ),
+                  ),
+                  Tab(
+                    child: Text(
+                      "Experience Data",
+                    ),
+                  ),
+                  Tab(
+                    child: Text(
+                      "Projects Data",
+                    ),
+                  ),
+                  Tab(
+                    child: Text(
+                      "Others",
                     ),
                   ),
                 ],
@@ -101,8 +117,11 @@ class _MyCustomTabBarState extends State<MyCustomTabBar>
                   Objective(),
                   EducationEmpty(),
                   ExperienceEmpty(),
+                  ProjectEmpty(),
                   ExperienceData(),
                   EducationData(),
+                  ProjectData(),
+                  Others(),
                   // second tab bar view widget
                 ],
               ),

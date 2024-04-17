@@ -15,6 +15,7 @@ class AddBottomSheetTemplate extends StatefulWidget {
   final String hintTextThree;
   final String statusText;
   final String descriptionText;
+  final bool isProjectPage;
   const AddBottomSheetTemplate(
       {super.key,
       required this.titleText,
@@ -22,7 +23,8 @@ class AddBottomSheetTemplate extends StatefulWidget {
       required this.hintTextTwo,
       required this.hintTextThree,
       required this.statusText,
-      required this.descriptionText});
+      required this.descriptionText,
+      required this.isProjectPage});
 
   @override
   State<AddBottomSheetTemplate> createState() => _AddBottomSheetTemplateState();
@@ -106,10 +108,16 @@ class _AddBottomSheetTemplateState extends State<AddBottomSheetTemplate> {
                         value: 1,
                         hintText: widget.hintTextTwo,
                         icon: Icons.school),
-                    MyTextField(
-                        value: 1,
-                        hintText: widget.hintTextThree,
-                        icon: Icons.edit),
+                    widget.isProjectPage
+                        ? const SizedBox()
+                        : MyTextField(
+                            value: 1,
+                            hintText: widget.hintTextThree,
+                            icon: Icons.edit),
+                    // MyTextField(
+                    //     value: 1,
+                    //     hintText: widget.hintTextThree,
+                    //     icon: Icons.edit),
                     Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [

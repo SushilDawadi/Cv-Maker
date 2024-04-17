@@ -2,6 +2,7 @@ import 'package:cv_maker/assets/colors/color.dart';
 import 'package:cv_maker/assets/fonts/font.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
 
 class MyCustomCardTemplate extends StatelessWidget {
   final String titleText;
@@ -57,15 +58,18 @@ class MyCustomCardTemplate extends StatelessWidget {
                         fontWeight: FontWeight.w700,
                         color: black),
                   ),
-                  Padding(
-                    padding: EdgeInsets.only(bottom: 13.h),
-                    child: Text(
-                      subText,
-                      style: TextStyle(
-                          fontFamily: fontFamily,
-                          fontSize: 14.sp,
-                          fontWeight: FontWeight.w700,
-                          color: subTextColor),
+                  SizedBox(
+                    width: Get.width / 1.8,
+                    child: Padding(
+                      padding: EdgeInsets.only(bottom: 13.h),
+                      child: Text(
+                        subText,
+                        style: TextStyle(
+                            fontFamily: fontFamily,
+                            fontSize: 14.sp,
+                            fontWeight: FontWeight.w700,
+                            color: subTextColor),
+                      ),
                     ),
                   ),
                   Padding(
