@@ -8,10 +8,10 @@ class InterestChild extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
         color: containerBackgroundColor,
       ),
-      child: Wrap(
+      child: const Wrap(
         children: [
           SelectedElement(selectedText: "Reading"),
           SelectedElement(selectedText: "Writing"),
@@ -20,7 +20,6 @@ class InterestChild extends StatelessWidget {
           SelectedElement(selectedText: "Fitness and Exercise"),
           SelectedElement(selectedText: "Mediation and Mindfulness"),
           SelectedElement(selectedText: "Gaming"),
-         
         ],
       ),
     );

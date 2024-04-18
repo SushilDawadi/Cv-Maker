@@ -12,58 +12,60 @@ class AwardInputDialogBox extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Text(
-              titleText,
-              style: boldTextStyleBlack,
-            ),
-            Container(
-              decoration: BoxDecoration(
-                color: primaryColor,
-                borderRadius: BorderRadius.circular(12.5.r),
+    return SingleChildScrollView(
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Text(
+                titleText,
+                style: boldTextStyleBlack,
               ),
-              child: GestureDetector(
-                onTap: () {
-                  Get.back();
-                },
-                child: Icon(
-                  Icons.close,
-                  size: 20.sp,
-                  color: white,
+              Container(
+                decoration: BoxDecoration(
+                  color: primaryColor,
+                  borderRadius: BorderRadius.circular(12.5.r),
+                ),
+                child: GestureDetector(
+                  onTap: () {
+                    Get.back();
+                  },
+                  child: Icon(
+                    Icons.close,
+                    size: 20.sp,
+                    color: white,
+                  ),
                 ),
               ),
+            ],
+          ),
+          Padding(
+            padding: EdgeInsets.only(top: 26.h),
+            child: const MyTextField(
+              wValue: 1,
+              hValue: 0.062,
+              hintText: "Award/Certificate Name",
+              icon: Icons.featured_play_list,
             ),
-          ],
-        ),
-        Padding(
-          padding: EdgeInsets.only(top: 26.h),
-          child: const MyTextField(
+          ),
+          const MyTextField(
             wValue: 1,
             hValue: 0.062,
-            hintText: "Award/Certificate Name",
-            icon: Icons.featured_play_list,
+            hintText: "Award/Certificate Number",
+            icon: Icons.format_list_numbered,
           ),
-        ),
-        const MyTextField(
-          wValue: 1,
-          hValue: 0.062,
-          hintText: "Award/Certificate Number",
-          icon: Icons.format_list_numbered,
-        ),
-        SizedBox(height: Get.height * 0.019),
-        MyButton(
-          text: "Add",
-          fontSize: 20.sp,
-          value: 1,
-          showIcon: false,
-          borderColor: false,
-        )
-      ],
+          SizedBox(height: Get.height * 0.019),
+          MyButton(
+            text: "Add",
+            fontSize: 20.sp,
+            value: 1,
+            showIcon: false,
+            borderColor: false,
+          )
+        ],
+      ),
     );
   }
 }

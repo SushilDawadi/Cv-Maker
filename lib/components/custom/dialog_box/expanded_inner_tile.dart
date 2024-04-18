@@ -13,7 +13,7 @@ class ExpandedInnerContent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.only(
+      padding:const EdgeInsets.only(
         left: 6,
         right: 5,
       ),

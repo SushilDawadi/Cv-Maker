@@ -11,79 +11,82 @@ class ResearchDialog extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Text(
-              "Add Research Works",
-              style: boldTextStyleBlack,
-            ),
-            Container(
-              decoration: BoxDecoration(
-                color: primaryColor,
-                borderRadius: BorderRadius.circular(12.5.r),
+    return SingleChildScrollView(
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Text(
+                "Add Research Works",
+                style: boldTextStyleBlack,
               ),
-              child: GestureDetector(
-                onTap: () {
-                  Get.back();
-                },
-                child: Icon(
-                  Icons.close,
-                  size: 20.sp,
-                  color: white,
+              Container(
+                decoration: BoxDecoration(
+                  color: primaryColor,
+                  borderRadius: BorderRadius.circular(12.5.r),
+                ),
+                child: GestureDetector(
+                  onTap: () {
+                    Get.back();
+                  },
+                  child: Icon(
+                    Icons.close,
+                    size: 20.sp,
+                    color: white,
+                  ),
                 ),
               ),
-            ),
-          ],
-        ),
-        Column(
-          crossAxisAlignment: CrossAxisAlignment.end,
-          children: [
-            Padding(
-              padding: EdgeInsets.only(top: 8.h),
-              child: const MyTextField(
-                wValue: 1,
-                hValue: 0.062,
-                hintText: "Publication",
-                icon: Icons.featured_play_list,
+            ],
+          ),
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.end,
+            children: [
+              Padding(
+                padding: EdgeInsets.only(top: 8.h),
+                child: const MyTextField(
+                  wValue: 1,
+                  hValue: 0.062,
+                  hintText: "Publication",
+                  icon: Icons.featured_play_list,
+                ),
               ),
-            ),
-            Container(
-              decoration: BoxDecoration(
-                border: Border.all(color: textFieldInputColor),
-                borderRadius: BorderRadius.circular(12.5.r),
-              ),
-              child: Padding(
-                padding: EdgeInsets.only(left: 24.w),
-                child: TextField(
-                  maxLines: 2,
-                  decoration: InputDecoration(
-                    border: InputBorder.none,
-                    hintText: "Description",
-                    hintStyle: hintTextStyle,
-                    counterText: "",
-                    suffixIcon: Icon(
-                      Icons.format_list_numbered,
-                      size: 20.sp,
+              Container(
+                decoration: BoxDecoration(
+                  border: Border.all(color: textFieldInputColor),
+                  borderRadius: BorderRadius.circular(12.5.r),
+                ),
+                child: Padding(
+                  padding: EdgeInsets.only(left: 24.w),
+                  child: TextField(
+                    maxLines: 2,
+                    decoration: InputDecoration(
+                      border: InputBorder.none,
+                      hintText: "Description",
+                      hintStyle: hintTextStyle,
+                      counterText: "",
+                      suffixIcon: Icon(
+                        Icons.format_list_numbered,
+                        size: 20.sp,
+                      ),
                     ),
                   ),
                 ),
               ),
-            ),
-            Text("0/150 words", style: subTextStylethin),
-          ],
-        ),
-        MyButton(
-          text: "Add",
-          fontSize: 20.sp,
-          value: 1,
-          showIcon: false,
-          borderColor: false,
-        )
-      ],
+              SizedBox(height: Get.height * 0.02),
+              Text("0/150 words", style: subTextStylethin),
+            ],
+          ),
+          MyButton(
+            text: "Add",
+            fontSize: 20.sp,
+            value: 1,
+            showIcon: false,
+            borderColor: false,
+          )
+        ],
+      ),
     );
   }
 }

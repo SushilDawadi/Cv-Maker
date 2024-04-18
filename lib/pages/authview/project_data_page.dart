@@ -3,6 +3,7 @@ import 'package:cv_maker/components/custom/button/my_custom_botton.dart';
 import 'package:cv_maker/components/custom/card/my_custom_card_template.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
 
 class ProjectData extends StatelessWidget {
   const ProjectData({super.key});
@@ -15,7 +16,7 @@ class ProjectData extends StatelessWidget {
           padding: containerPadding,
           child: SingleChildScrollView(
             child: SizedBox(
-              height: MediaQuery.of(context).size.height * 0.8.h,
+              height: Get.height * 0.767,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [

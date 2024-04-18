@@ -112,7 +112,7 @@ class DialogBox extends StatelessWidget {
                 content: Builder(
                   builder: (context) {
                     return SizedBox(
-                        height: Get.height * 0.33,
+                        height: Get.height * 0.31,
                         width: Get.width,
                         child: children);
                   },

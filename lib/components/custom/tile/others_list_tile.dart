@@ -81,9 +81,9 @@ class _OtherListTileState extends State<OtherListTile> {
                                     builder: (context) {
                                       return SizedBox(
                                           height: widget.smallDialogBox
-                                              ? Get.height * 0.31
+                                              ? Get.height * 0.32
                                               : widget.mediumDialogBox
-                                                  ? Get.height * 0.42
+                                                  ? Get.height * 0.4
                                                   : Get.height * 0.65,
                                           width: Get.width,
                                           child: widget.children);

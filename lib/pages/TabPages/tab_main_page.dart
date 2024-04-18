@@ -3,6 +3,7 @@ import 'package:cv_maker/components/custom/app_bar/my_custom_app_bar.dart';
 import 'package:cv_maker/pages/authview/project_data_page.dart';
 import 'package:cv_maker/pages/tabpages/education_empty_tab.dart';
 import 'package:cv_maker/pages/tabpages/experience_empty_tab.dart';
+import 'package:cv_maker/pages/tabpages/final_preview.dart';
 import 'package:cv_maker/pages/tabpages/general_information_tab.dart';
 import 'package:cv_maker/pages/tabpages/objective_page_tab.dart';
 import 'package:cv_maker/pages/authview/education_data_page.dart';
@@ -26,7 +27,7 @@ class _MyCustomTabBarState extends State<MyCustomTabBar>
   @override
   void initState() {
     super.initState();
-    _tabController = TabController(length: 9, vsync: this);
+    _tabController = TabController(length: 10, vsync: this);
   }
 
   @override
@@ -104,6 +105,11 @@ class _MyCustomTabBarState extends State<MyCustomTabBar>
                       "Others",
                     ),
                   ),
+                  Tab(
+                    child: Text(
+                      "Final Preview",
+                    ),
+                  ),
                 ],
               ),
             ),
@@ -122,6 +128,7 @@ class _MyCustomTabBarState extends State<MyCustomTabBar>
                   EducationData(),
                   ProjectData(),
                   Others(),
+                  FinalPreview(),
                   // second tab bar view widget
                 ],
               ),

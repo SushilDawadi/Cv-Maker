@@ -7,8 +7,9 @@ class MyCustomBox extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final mobile = Get.width < 700;
     return SizedBox(
-      width: Get.width * 0.13,
+      width: mobile ? Get.width * 0.13 : Get.width * 0.2,
       child: TextField(
         decoration: InputDecoration(
           border: OutlineInputBorder(

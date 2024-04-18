@@ -30,7 +30,7 @@ class MyCustomErrorPageTemplate extends StatelessWidget {
           Column(
             children: [
               SizedBox(
-                height: 170.h,
+                height: Get.height * 0.2,
               ),
               Icon(
                 Icons.not_interested_rounded,

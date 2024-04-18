@@ -20,6 +20,7 @@ class MyCustomAppBar extends StatelessWidget implements PreferredSizeWidget {
         bottom: 16.h,
       ),
       child: AppBar(
+        toolbarHeight: 100.h,
         surfaceTintColor: white,
         leading: Image.asset(
           'lib/assets/images/cvMaker.png',
@@ -55,7 +56,7 @@ class MyCustomAppBar extends StatelessWidget implements PreferredSizeWidget {
                       child: Text(
                         "Subtle Me ",
                         style: TextStyle(
-                            fontSize: 16,
+                            fontSize: 16.sp,
                             fontFamily: fontFamily,
                             fontWeight: FontWeight.w600),
                       ),
@@ -66,7 +67,7 @@ class MyCustomAppBar extends StatelessWidget implements PreferredSizeWidget {
                         "Basic  •  Prasiddha Nepane",
                         style: TextStyle(
                             fontFamily: fontFamily,
-                            fontSize: 14,
+                            fontSize: 14.sp,
                             color: subTextColor),
                       ),
                     ),

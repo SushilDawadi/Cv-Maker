@@ -98,6 +98,13 @@ final boldTextStyleBlack = TextStyle(
   fontFamily: fontFamily,
   color: black,
 );
+final moreSizeBoldTextStyleBlack = TextStyle(
+  fontWeight: FontWeight.w700,
+  fontSize: 20.sp,
+  fontFamily: fontFamily,
+  color: black,
+);
+
 final selectedElementColor = TextStyle(
   fontWeight: FontWeight.w700,
   fontSize: 14.sp,
