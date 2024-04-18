@@ -101,17 +101,20 @@ class _AddBottomSheetTemplateState extends State<AddBottomSheetTemplate> {
                       ],
                     ),
                     MyTextField(
-                        value: 1,
+                        wValue: 1,
+                        hValue: 0.062,
                         hintText: widget.hintTextOne,
                         icon: Icons.apartment),
                     MyTextField(
-                        value: 1,
+                        wValue: 1,
+                        hValue: 0.062,
                         hintText: widget.hintTextTwo,
                         icon: Icons.school),
                     widget.isProjectPage
                         ? const SizedBox()
                         : MyTextField(
-                            value: 1,
+                            wValue: 1,
+                            hValue: 0.062,
                             hintText: widget.hintTextThree,
                             icon: Icons.edit),
                     // MyTextField(

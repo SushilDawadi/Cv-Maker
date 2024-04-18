@@ -22,12 +22,14 @@ class ExperienceData extends StatelessWidget {
                   const Column(
                     children: [
                       MyCustomCardTemplate(
+                        forProject: false,
                         forEducation: false,
                         titleText: "Developer’s Hub",
                         subText: "Senior Software Developer",
                         dateText: "Feb 2021 - Current",
                       ),
                       MyCustomCardTemplate(
+                        forProject: false,
                         forEducation: false,
                         titleText: "IT Solutions",
                         subText: "Junior Developer",

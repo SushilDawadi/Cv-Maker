@@ -59,22 +59,43 @@ class GeneralInformation extends StatelessWidget {
                 ),
               ),
               const MyTextField(
-                  value: 1, hintText: "Firstname", icon: Icons.person),
+                  wValue: 1,
+                  hValue: 0.062,
+                  hintText: "Firstname",
+                  icon: Icons.person),
               const MyTextField(
-                  value: 1, hintText: "Middlename", icon: Icons.person),
+                  wValue: 1,
+                  hValue: 0.062,
+                  hintText: "Middlename",
+                  icon: Icons.person),
               const MyTextField(
-                  value: 1, hintText: "Lastname", icon: Icons.person),
+                  wValue: 1,
+                  hValue: 0.062,
+                  hintText: "Lastname",
+                  icon: Icons.person),
               const MyTextField(
-                  value: 1, hintText: "Address", icon: Icons.location_on),
+                  wValue: 1,
+                  hValue: 0.062,
+                  hintText: "Address",
+                  icon: Icons.location_on),
               const MyTextField(
-                  value: 1, hintText: "Phonenumber", icon: Icons.phone),
-              const MyTextField(value: 1, hintText: "Email", icon: Icons.mail),
+                  wValue: 1,
+                  hValue: 0.062,
+                  hintText: "Phonenumber",
+                  icon: Icons.phone),
               const MyTextField(
-                  value: 1,
+                  wValue: 1,
+                  hValue: 0.062,
+                  hintText: "Email",
+                  icon: Icons.mail),
+              const MyTextField(
+                  wValue: 1,
+                  hValue: 0.062,
                   hintText: "Profession(Job Title)",
                   icon: Icons.work),
               const MyTextField(
-                  value: 1,
+                  wValue: 1,
+                  hValue: 0.062,
                   hintText: "Portfolio link(i.e Linked/Behance etc)",
                   icon: Icons.link),
               Row(

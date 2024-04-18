@@ -1,13 +1,14 @@
 import 'package:cv_maker/assets/colors/color.dart';
 import 'package:cv_maker/assets/styles/text_styles.dart';
+import 'package:cv_maker/components/custom/button/my_custom_botton.dart';
 import 'package:cv_maker/components/custom/text_field/my_custom_text_field.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 
-class InputDialogBox extends StatelessWidget {
+class AwardInputDialogBox extends StatelessWidget {
   final String titleText;
-  const InputDialogBox({super.key, required this.titleText});
+  const AwardInputDialogBox({super.key, required this.titleText});
 
   @override
   Widget build(BuildContext context) {
@@ -39,10 +40,29 @@ class InputDialogBox extends StatelessWidget {
             ),
           ],
         ),
-        MyTextField(
+        Padding(
+          padding: EdgeInsets.only(top: 26.h),
+          child: const MyTextField(
+            wValue: 1,
+            hValue: 0.062,
             hintText: "Award/Certificate Name",
             icon: Icons.featured_play_list,
-            value: 0.8.w)
+          ),
+        ),
+        const MyTextField(
+          wValue: 1,
+          hValue: 0.062,
+          hintText: "Award/Certificate Number",
+          icon: Icons.format_list_numbered,
+        ),
+        SizedBox(height: Get.height * 0.019),
+        MyButton(
+          text: "Add",
+          fontSize: 20.sp,
+          value: 1,
+          showIcon: false,
+          borderColor: false,
+        )
       ],
     );
   }

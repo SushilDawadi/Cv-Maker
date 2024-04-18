@@ -53,6 +53,12 @@ final subTextIconOne = TextStyle(
   fontFamily: fontFamily,
   color: iconColor,
 );
+final dialogSubText = TextStyle(
+  fontWeight: FontWeight.w500,
+  fontSize: 12.sp,
+  fontFamily: fontFamily,
+  color: iconColor,
+);
 
 final buttonTextStyle = TextStyle(
   fontWeight: FontWeight.w600,
@@ -89,6 +95,12 @@ final boldTextStyle = TextStyle(
 final boldTextStyleBlack = TextStyle(
   fontWeight: FontWeight.w700,
   fontSize: 16.sp,
+  fontFamily: fontFamily,
+  color: black,
+);
+final selectedElementColor = TextStyle(
+  fontWeight: FontWeight.w700,
+  fontSize: 14.sp,
   fontFamily: fontFamily,
   color: black,
 );
@@ -131,4 +143,10 @@ final bottomSheetheadingStyle = TextStyle(
   fontSize: 20.sp,
   fontFamily: fontFamily,
   color: black,
+);
+final dialogBoxText = TextStyle(
+  fontWeight: FontWeight.w500,
+  fontSize: 12.sp,
+  fontFamily: fontFamily,
+  color: tabTitleColor,
 );

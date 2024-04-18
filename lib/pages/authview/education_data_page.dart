@@ -22,12 +22,14 @@ class EducationData extends StatelessWidget {
                   const Column(
                     children: [
                       MyCustomCardTemplate(
+                        forProject: false,
                         forEducation: true,
                         titleText: "Harvards University",
                         subText: "Bachelors in computing",
                         dateText: "Feb 2018 - Feb 2021",
                       ),
                       MyCustomCardTemplate(
+                        forProject: false,
                         forEducation: true,
                         titleText: "Step By Step Secondary School",
                         subText: "Bachelors in computing",

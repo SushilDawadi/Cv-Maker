@@ -13,6 +13,8 @@ class OtherListTile extends StatefulWidget {
   final String subText;
   final bool showAddButton;
   final bool showSubText;
+  final bool smallDialogBox;
+  final bool mediumDialogBox;
   const OtherListTile(
       {super.key,
       required this.expandedContent,
@@ -20,7 +22,9 @@ class OtherListTile extends StatefulWidget {
       required this.subText,
       required this.showAddButton,
       required this.showSubText,
-      required this.children});
+      required this.children,
+      required this.smallDialogBox,
+      required this.mediumDialogBox});
 
   @override
   _OtherListTileState createState() => _OtherListTileState();
@@ -76,7 +80,11 @@ class _OtherListTileState extends State<OtherListTile> {
                                   content: Builder(
                                     builder: (context) {
                                       return SizedBox(
-                                          height: Get.height * 0.65,
+                                          height: widget.smallDialogBox
+                                              ? Get.height * 0.31
+                                              : widget.mediumDialogBox
+                                                  ? Get.height * 0.42
+                                                  : Get.height * 0.65,
                                           width: Get.width,
                                           child: widget.children);
                                     },

@@ -44,6 +44,7 @@ dependencies:
   carousel_slider:
   dropdown_button2: ^2.3.9
   expandable: ^5.0.1
+  syncfusion_flutter_sliders: ^25.1.40
 
 dev_dependencies:
   flutter_test:

@@ -22,12 +22,14 @@ class ProjectData extends StatelessWidget {
                   const Column(
                     children: [
                       MyCustomCardTemplate(
+                        forProject: true,
                         forEducation: false,
                         titleText: "CV Maker",
                         subText: "https://play.google.com/apps/cvmaker",
                         dateText: "Feb 2018 - Sep 2021",
                       ),
                       MyCustomCardTemplate(
+                        forProject: true,
                         forEducation: false,
                         titleText: "Library Management",
                         subText: "https://librarymanagement.com",

@@ -29,44 +29,52 @@ class GeneralExampleContainer extends StatelessWidget {
             child: Column(
               children: [
                 const MyTextField(
+                  wValue: 1,
+                  hValue: 0.062,
                   hintText: "John",
                   icon: Icons.person,
-                  value: 1,
                 ),
                 const MyTextField(
+                  wValue: 1,
+                  hValue: 0.062,
                   hintText: "Something",
                   icon: Icons.person,
-                  value: 1,
                 ),
                 const MyTextField(
+                  wValue: 1,
+                  hValue: 0.062,
                   hintText: "Doe",
                   icon: Icons.person,
-                  value: 1,
                 ),
                 const MyTextField(
+                  wValue: 1,
+                  hValue: 0.062,
                   hintText: "123 Main Street, apt 4B",
                   icon: Icons.location_on,
-                  value: 1,
                 ),
                 const MyTextField(
+                  wValue: 1,
+                  hValue: 0.062,
                   hintText: "0198787827",
                   icon: Icons.phone,
-                  value: 1,
                 ),
                 const MyTextField(
+                  wValue: 1,
+                  hValue: 0.062,
                   hintText: "johndoe@example.com",
                   icon: Icons.mail,
-                  value: 1,
                 ),
                 const MyTextField(
+                  wValue: 1,
+                  hValue: 0.062,
                   hintText: "Software Engineer",
                   icon: Icons.work,
-                  value: 1,
                 ),
                 const MyTextField(
+                  wValue: 1,
+                  hValue: 0.062,
                   hintText: "https://linktoyourportfolio.com",
                   icon: Icons.link,
-                  value: 1,
                 ),
                 MyButton(
                   text: "Use example",

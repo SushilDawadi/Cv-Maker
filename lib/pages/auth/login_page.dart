@@ -34,9 +34,13 @@ class LoginPage extends StatelessWidget {
               Column(
                 children: [
                   const MyTextField(
-                      value: 1, hintText: "Email", icon: Icons.email),
+                      wValue: 1,
+                      hValue: 0.062,
+                      hintText: "Email",
+                      icon: Icons.email),
                   const MyTextField(
-                    value: 1,
+                    wValue: 1,
+                    hValue: 0.062,
                     hintText: "Password",
                     icon: Icons.vpn_key,
                     obscureText: true,

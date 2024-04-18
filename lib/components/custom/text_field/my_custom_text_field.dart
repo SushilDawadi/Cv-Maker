@@ -9,7 +9,8 @@ class MyTextField extends StatelessWidget {
   final IconData icon;
   final bool obscureText;
   final TextEditingController? controller;
-  final double value;
+  final double wValue;
+  final double hValue;
 
   const MyTextField({
     super.key,
@@ -17,7 +18,8 @@ class MyTextField extends StatelessWidget {
     required this.icon,
     this.obscureText = false,
     this.controller,
-    required this.value,
+    required this.wValue,
+    required this.hValue,
   });
 
   @override
@@ -25,7 +27,8 @@ class MyTextField extends StatelessWidget {
     return Padding(
       padding: EdgeInsets.symmetric(vertical: 6.h),
       child: Container(
-        width: Get.width * value,
+        width: Get.width * wValue,
+        height: Get.height * hValue,
         decoration: BoxDecoration(
             border: Border.all(
               color: textFieldInputColor,

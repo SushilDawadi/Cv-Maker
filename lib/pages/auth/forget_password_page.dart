@@ -34,7 +34,10 @@ class ForgetPasswordPage extends StatelessWidget {
                   height: 20.h,
                 ),
                 const MyTextField(
-                    value: 1, hintText: 'Email', icon: Icons.email),
+                    wValue: 1,
+                    hValue: 0.062,
+                    hintText: 'Email',
+                    icon: Icons.email),
                 SizedBox(
                   height: 25.h,
                 ),

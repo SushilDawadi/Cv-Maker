@@ -9,12 +9,14 @@ class MyCustomCardTemplate extends StatelessWidget {
   final String subText;
   final String dateText;
   final bool forEducation;
+  final bool forProject;
   const MyCustomCardTemplate(
       {super.key,
       required this.titleText,
       required this.subText,
       required this.dateText,
-      required this.forEducation});
+      required this.forEducation,
+      required this.forProject});
 
   @override
   Widget build(BuildContext context) {
@@ -38,7 +40,11 @@ class MyCustomCardTemplate extends StatelessWidget {
                   padding:
                       EdgeInsets.symmetric(horizontal: 23.w, vertical: 23.h),
                   child: Icon(
-                    forEducation ? Icons.school : Icons.work,
+                    forEducation
+                        ? Icons.school
+                        : forProject
+                            ? Icons.cloud
+                            : Icons.work,
                     color: primaryColor,
                     size: 40.sp,
                   ),

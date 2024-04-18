@@ -2,8 +2,6 @@ import 'package:cv_maker/assets/colors/color.dart';
 import 'package:cv_maker/assets/styles/text_styles.dart';
 import 'package:cv_maker/components/custom/button/my_custom_botton.dart';
 import 'package:cv_maker/components/custom/text_field/my_custom_text_field.dart';
-import 'package:cv_maker/components/difficulty_dialog.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
@@ -11,11 +9,15 @@ import 'package:get/get.dart';
 class DialogBox extends StatelessWidget {
   final List list;
   final String titleText;
+  final Widget? children;
+  final IconData icon;
 
   const DialogBox({
     super.key,
     required this.list,
     required this.titleText,
+    this.children,
+    required this.icon,
   });
 
   @override
@@ -27,9 +29,12 @@ class DialogBox extends StatelessWidget {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text(
-                titleText,
-                style: boldTextStyleBlack,
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Text(
+                  titleText,
+                  style: boldTextStyleBlack,
+                ),
               ),
               Container(
                 decoration: BoxDecoration(
@@ -53,35 +58,41 @@ class DialogBox extends StatelessWidget {
         Padding(
           padding: EdgeInsets.only(bottom: 23.h),
           child: const MyTextField(
+            wValue: 1,
+            hValue: 0.05,
             hintText: "Search. . .",
             icon: Icons.search,
-            value: 0.69,
           ),
         ),
         Expanded(
           child: ListView.builder(
-              itemCount: list.length,
-              itemBuilder: (context, index) {
-                return Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
+            itemCount: list.length,
+            itemBuilder: (context, index) {
+              return Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Padding(
+                    padding: EdgeInsets.only(top: 7.h, bottom: 5.h),
+                    child: Text(
                       list[index],
                       style: boldTextStyleBlack,
                     ),
-                    const Divider(
-                      color: textFieldInputColor,
-                    ),
-                  ],
-                );
-              }),
+                  ),
+                  const Divider(
+                    color: textFieldInputColor,
+                  ),
+                ],
+              );
+            },
+          ),
         ),
         Padding(
           padding: EdgeInsets.only(bottom: 23.h),
-          child: const MyTextField(
+          child: MyTextField(
+            wValue: 1,
+            hValue: 0.05,
             hintText: "Add Custom",
-            icon: Icons.language,
-            value: 0.69,
+            icon: icon,
           ),
         ),
         MyButton(
@@ -101,10 +112,9 @@ class DialogBox extends StatelessWidget {
                 content: Builder(
                   builder: (context) {
                     return SizedBox(
-                      height: Get.height * 0.25,
-                      width: Get.width,
-                      child: const DifficultyDialog(),
-                    );
+                        height: Get.height * 0.33,
+                        width: Get.width,
+                        child: children);
                   },
                 ),
               ),

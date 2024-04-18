@@ -15,4 +15,5 @@ const Color downButtonBackgroundColor = Color.fromRGBO(243, 243, 243, 1);
 const Color containerBackgroundColor = Color.fromRGBO(245, 245, 245, 1);
 const Color tabTitleColor = Color.fromRGBO(154, 154, 154, 1);
 const Color checkedColor = Colors.green;
-const backgroundColorContainer = Color.fromRGBO(244, 244, 244, 1);
+const Color backgroundColorContainer = Color.fromRGBO(244, 244, 244, 1);
+const Color sliderInactiveColor = Color.fromRGBO(255, 221, 174, 1);

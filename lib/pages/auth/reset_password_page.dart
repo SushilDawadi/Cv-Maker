@@ -36,11 +36,18 @@ class ResetPasswordPage extends StatelessWidget {
                   height: 15.h,
                 ),
                 const MyTextField(
-                    value: 1, hintText: "Code", icon: Icons.fiber_smart_record),
+                    wValue: 1,
+                    hValue: 0.062,
+                    hintText: "Code",
+                    icon: Icons.fiber_smart_record),
                 const MyTextField(
-                    value: 1, hintText: "Password", icon: Icons.vpn_key),
+                    wValue: 1,
+                    hValue: 0.062,
+                    hintText: "Password",
+                    icon: Icons.vpn_key),
                 const MyTextField(
-                    value: 1,
+                    wValue: 1,
+                    hValue: 0.062,
                     hintText: "Re-type Password",
                     icon: Icons.vpn_key),
                 SizedBox(
